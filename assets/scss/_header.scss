@@ -246,6 +246,7 @@
 						}
 					}
 					&:after {
+						right: 28px;
 						@media #{$xl} {
 							right: 20px;
 						}
@@ -262,10 +263,6 @@
 					}
 				}
 			}
-		}
-		.dropdown:after {
-			top: 0;
-			right: 28px;
 		}
 		.header-action {
 			gap: 20px 45px;

@@ -1,0 +1,39 @@
+.mc-hero1-sec {
+	padding-top: 215px;
+	padding-bottom: 385px;
+}
+.mc-hero1-text {
+	max-width: 925px;
+	span {
+		font-size: 32px;
+		font-weight: 500;
+		margin-bottom: 10px;
+		color: var(--mc-title-color);
+		font-family: var(--mc-heading1);
+	}
+	.mc-hero1-title {
+		font-size: 162px;
+		font-weight: 500;
+		line-height: .9;
+	}
+	.mc-arrow-text {
+		margin-top: 70px;
+		max-width: 620px;
+		a {
+			color: #fff;
+			width: 140px;
+			height: 140px;
+			display: flex;
+			font-size: 30px;
+			border-radius: 100%;
+			align-items: center;
+			justify-content: center;
+			backdrop-filter: blur(60px);
+			background-color: var(--mc-pr-c1);
+			transform: rotate(-45deg);
+		}
+		p {
+			max-width: 385px;
+		}
+	}
+}
