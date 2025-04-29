@@ -1,0 +1,14 @@
+.mc-text-scroll {
+	h2 {
+		font-size: 200px;
+		font-weight: 500;
+		line-height: .9;
+		display: inline-block;
+		text-transform: capitalize;
+	}
+}
+.marquee-left,
+.marquee-right {
+	overflow: hidden;
+	display: flow-root;
+}

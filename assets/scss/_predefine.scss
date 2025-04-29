@@ -43,6 +43,7 @@ body {
 	}
 }
 .home-1 {
+	font-weight: 500;
 	background-color: #EAFAFF;
 }
 body::-webkit-scrollbar {
@@ -216,6 +217,9 @@ a {
 	padding: 0;
 	z-index: 1;
 }
+.over-hidden {
+	overflow: hidden;
+}
 .tx-tab-btn {
 	.nav-tabs .nav-item.show .nav-link,
 	.nav-tabs .nav-link.active,
@@ -235,7 +239,76 @@ a {
 		display: inherit;
 	}
 }
-
+.img-cover {
+	width: 100%;
+	height: 100%;
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+.mc-btn-1 {
+	a {
+		color: #fff;
+		line-height: 1;
+		font-size: 16px;
+		font-weight: 600;
+		padding: 28px 40px;
+		white-space: nowrap;
+		font-family: var(--mc-heading1);
+		background-color: var(--mc-pr-c1);
+		@media #{$xs} { 
+			padding: 24px 30px;
+		}
+		@media #{$xxs} { 
+			padding: 20px 25px;
+		}
+		i {
+			margin-left: 5px;
+			transform: rotate(-45deg);
+		}
+	}
+}
+.mc-sec-title1 {
+	.subtitle {
+		color: #000000;
+		font-size: 24px;
+		font-weight: 500;
+		margin-bottom: 20px;
+		padding-bottom: 12px;
+		font-family: var(--mc-heading1);
+		border-bottom: 1px solid #D3EAF2;
+		@media #{$xxs} { 
+			font-size: 20px;
+			padding-bottom: 8px;
+			margin-bottom: 12px;
+		}
+	}
+	.sec_title {
+		font-size: 70px;
+		font-weight: 500;
+		line-height: 1;
+		@media #{$xl} {
+			font-size: 60px;
+		}
+		@media #{$lg} {
+			font-size: 55px;
+		}
+		@media #{$md,$sm} {
+			font-size: 50px;
+		}
+		@media #{$xs} {
+			font-size: 45px;
+		}
+		@media #{$xxs} {
+			font-size: 40px;
+		}
+		@media #{$xxxs} {
+			font-size: 35px;
+		}
+	}
+}
 // txa-common-css-start
 
 @for $i from 1 through 40 {

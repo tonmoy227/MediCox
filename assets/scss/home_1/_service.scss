@@ -1,0 +1,147 @@
+.mc-ser1-bg {
+	top: 50%;
+	left: 0;
+	right: 0;
+	opacity: .3;
+	z-index: -1;
+	text-align: center;
+	transform: translateY(-50%);
+}
+.mc-ser1-title-content {
+	.mc_ser_title1 {
+		font-weight: 500;
+		line-height: 1.2;
+	}
+}
+.mc_ser_title1 {
+	font-size: 160px;
+
+	@media #{$lg} {
+		font-size: 120px;
+	}
+	@media #{$md} {
+		font-size: 90px;
+	}
+	@media #{$sm} {
+		font-size: 70px;
+	}
+	@media #{$xs} {
+		font-size: 60px;
+	}
+	@media #{$xxs} {
+		font-size: 45px;
+	}
+	@media #{$xxs} {
+		font-size: 40px;
+	}
+	span {
+		gap: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@media #{$sm,$xs} {
+			gap: 20px;
+		}
+		svg {
+			@media #{$md} {
+				width: 60px;
+				height: 60px;
+			}
+			@media #{$sm,$xs} {
+				width: 50px;
+				height: 50px;
+			}
+			@media #{$xxs} {
+				display: none;
+			}
+		}
+	}
+}
+
+.mc-ser1-sec {
+	background-color: var(--mc-pr-c1);
+	@media #{$md,$sm,$xs,$xxs} {
+		padding-top: 80px;
+		padding-left: 15px;
+	}
+}
+.mc-ser1-sec {
+	.mc-ser1-side {
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		@media #{$md,$sm,$xs,$xxs} {
+			display: none;
+		}
+	}
+}
+.mc-ser1-list-area {
+	width: 100%;
+	max-width: 1220px;
+	@media #{$xxl} {
+		max-width: 1100px;
+	}
+	@media #{$xl} {
+		max-width: 890px;
+	}
+	@media #{$lg} {
+		max-width: 700px;
+	}
+	.mc_ser1_verticale {
+		top: 50%;
+		margin: 0 ;
+		color: #fff;
+		left: -200px;
+		font-weight: 500;
+		font-size: 110px;
+		writing-mode: vertical-lr;
+		transform: translateY(-50%);
+		@media #{$xxl,$xl} {
+			left: -120px;
+		}
+		@media #{$lg} {
+			left: -90px;
+			font-size: 80px;
+		}
+		@media #{$md,$sm,$xs,$xxs} {
+			font-size: 80px;
+			padding-bottom: 40px;
+			transform: translateY(0);
+			writing-mode: horizontal-tb;
+			position: static !important;
+		}
+		@media #{$xxs} {
+			font-size: 60px;
+		}
+	}
+}
+.mc-ser1-list-wrap {
+	border-left: 1px solid #1560A6;
+}
+.mc-ser1-list {
+	border-bottom: 1px solid #1560A6;
+	a {
+		max-width: 1000px;
+		padding: 55px 80px;
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			gap: 15px 30px;
+			flex-wrap: wrap;
+			padding: 40px 20px;
+		}
+		.item-icon-title {
+			gap: 30px;
+		}
+		.item-icon {
+			width: 50px;
+			height: 50px;
+		}
+		.item-title {
+			color: #fff;
+			font-family: var(--mc-heading1);
+		}
+		.item-text {
+			color: #fff;
+			max-width: 395px;
+		}
+	}
+}

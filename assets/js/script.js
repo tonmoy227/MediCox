@@ -107,7 +107,33 @@ Last change:    00/00/00
 		preloader: false,
 		fixedContentPos: false,
 	});
+	$('.mc-item-active').each(function () {
+		var group = $(this);
+		var items = group.find('.mc-active');
 
+		items.mouseover(function () {
+			items.removeClass('active');
+			$(this).addClass('active');
+		});
+	});
+	$('.marquee-left').marquee({
+		gap: 0,
+		speed: 60,
+		delayBeforeStart: 0,
+		direction: 'left',
+		duplicated: true,
+		pauseOnHover: true,
+		startVisible:true,
+	});
+	$('.marquee-right').marquee({
+		gap: 0,
+		speed: 60,
+		delayBeforeStart: 0,
+		direction: 'right',
+		duplicated: true,
+		pauseOnHover: true,
+		startVisible:true,
+	});
 	// windows-loaded-before-functions
 	document.addEventListener("DOMContentLoaded", function () {
 		window.addEventListener('load', function(){

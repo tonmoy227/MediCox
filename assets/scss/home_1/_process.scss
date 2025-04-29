@@ -1,0 +1,132 @@
+.mc-process1-sec {
+	@media #{$xl,$lg,$md} {
+		padding: 100px 15px 0px;
+	}
+	@media #{$sm,$xs,$xxs} {
+		padding: 30px 15px 0px;
+	}
+}
+.mc-process1-item-wrap {
+	max-width: 1445px;
+	h3 {
+		font-size: 24px;
+		font-weight: 600;
+	}
+}
+.mc-process1-items {
+	gap: 30px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+.mc-proc-item {
+	overflow: hidden;
+	max-width: 358px;
+	position: relative;
+	height: 594px;
+	transition: all 500ms ease-in-out;
+	@media #{$lg,$md} {
+		max-width: 45%;
+	}
+	@media #{$sm,$xs,$xxs} {
+		max-width: 100%;
+	}
+	@media #{$xxs} {
+		height: 500px;
+	}
+	.item-img {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		transition: all 500ms ease-in-out;
+		&:before,
+		&:after {
+			left: 0;
+			bottom: 0;
+			height: 100%;
+			content: '';
+			width: 100%;
+			position: absolute;
+			transition: all 500ms ease-in-out;
+			background: linear-gradient(179.62deg, #FFFFFF -4.3%, rgba(255, 255, 255, 0) 12.41%, rgba(255, 255, 255, 0) 33.64%, rgba(255, 255, 255, 0.22) 48.12%, rgba(255, 255, 255, 0.82232) 60.68%, #FFFFFF 70.37%);
+		}
+		&:after {
+			bottom: 0;
+			height: 0%;
+			opacity: 0;
+			background: #095091F0;
+		}
+	}
+	.item-text {
+		left: 30px;
+		bottom: 40px;
+		position: absolute;
+		transition: all 500ms ease-in-out;
+		@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+			padding-right: 15px;
+		}
+		h3 {
+			color: #000000;
+			font-size: 48px;
+			font-weight: 600;
+			margin-bottom: 20px;
+			transition: all 500ms ease-in-out
+		}
+		h4 {
+			font-size: 24px;
+			font-weight: 600;
+			padding-bottom: 20px;
+			transition: all 500ms ease-in-out
+		}
+		p {
+			height: 0;
+			opacity: 0;
+			height: 0;
+			max-width: 450px;
+			transition: all 500ms ease-in-out;
+			@media #{$lg,$md,$sm,$xs,$xxs} {
+				opacity: 1;
+				color: #000;
+				height: auto;
+			}
+		}
+	}
+	&:is(.active) {
+		max-width: 670px;
+		@media #{$lg,$md} {
+			max-width: 45%;
+		}
+		@media #{$sm,$xs,$xxs} {
+			max-width: 100%;
+		}
+		.item-text {
+			left: 60px;
+			bottom: 60px;
+			@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+				left: 30px;
+				bottom: 60px;
+			}
+			h3, h4,p {
+				color: #fff;
+			}
+			p {
+				opacity: 1;
+				height: 84px;
+				@media #{$lg,$md,$sm,$xs,$xxs} {
+					opacity: 1;
+					height: auto;
+				}
+			}
+		}
+		.item-img {
+			&:after {
+				opacity: 1;
+				height: 100%;
+			}
+			&:before {
+				opacity: 0;
+			}
+		}
+	}
+}
