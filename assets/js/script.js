@@ -134,6 +134,42 @@ Last change:    00/00/00
 		pauseOnHover: true,
 		startVisible:true,
 	});
+	$('.bi-btn-hover').on('mouseenter', function (e) {
+		var x = e.pageX - $(this).offset().left;
+		var y = e.pageY - $(this).offset().top;
+
+		$(this).find('b').css({
+			top: y,
+			left: x
+		});
+	});
+	$('.bi-btn-hover').on('mouseout', function (e) {
+		var x = e.pageX - $(this).offset().left;
+		var y = e.pageY - $(this).offset().top;
+
+		$(this).find('b').css({
+			top: y,
+			left: x
+		});
+	});
+	const all_btns = gsap.utils.toArray(".bi-btn-area");
+	if (all_btns.length > 0) {
+		var all_btn = gsap.utils.toArray(".bi-btn-area");
+
+
+		const all_btn_cirlce = gsap.utils.toArray(".bi-btn-item");
+		all_btn.forEach((btn, i) => {
+
+			$(btn).mouseleave(function (e) {
+				gsap.to(all_btn_cirlce[i], 0.5, {
+					x: 0,
+					y: 0,
+					ease: Power2.easeOut,
+				});
+			});
+		});
+		let arr2 = gsap.utils.toArray(".bi-btn-area");
+	};
 	// windows-loaded-before-functions
 	document.addEventListener("DOMContentLoaded", function () {
 		window.addEventListener('load', function(){
@@ -154,7 +190,43 @@ Last change:    00/00/00
 		})		
 	});
 	
-
+	// Team Slider		
+	if($(".mc-team1-slider").length) {
+		const swiper = new Swiper(".mc-team1-slider" , {
+			speed: 500,
+			loop: true,
+			spaceBetween: 0,
+			autoplay:  {
+				delay: 5000,
+			},
+			breakpoints: {
+				0: {
+					slidesPerView: 1,
+				},
+				576: {
+					slidesPerView: 1,
+				},
+				768: {
+					slidesPerView: 1,
+				},
+				992: {
+					slidesPerView: 2,
+				},
+				1199: {
+					slidesPerView: 2,
+				},
+				1400: {
+					slidesPerView: 3,
+				},
+				1600: {
+					slidesPerView: 3,
+				},
+				1800: {
+					slidesPerView: 3,
+				},
+			},
+		})
+	}
 
 
 

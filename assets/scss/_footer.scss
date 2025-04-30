@@ -1,0 +1,141 @@
+.mc-footer1-sec {
+	background-color: var(--mc-pr-c1);
+}
+.mc-footer1-cta {
+	border-bottom: 1px solid #165C9C;
+	@media #{$md,$sm,$xs,$xxs} {
+		gap: 30px;
+		flex-wrap: wrap;
+	}
+}
+.mc-ftr1-text {
+	h2 {
+		color: #fff;
+		font-size: 56px;
+		max-width: 865px;
+		font-weight: 600;
+		line-height: 1.15;
+		@media #{$lg,$md,$sm} {
+			font-size: 35px;
+			max-width: 100%;
+		}
+		@media #{$xs} {
+			font-size: 30px;
+			max-width: 100%;
+		}
+		@media #{$xxs} {
+			font-size: 28px;
+			max-width: 100%;
+		}
+	}
+}
+.mc-footer1-menu-newsletter {
+	@media #{$md,$sm,$xs,$xxs} {
+		gap: 30px;
+		flex-wrap: wrap;
+	}
+}
+.mc-ftr1-menu {
+	li {
+		color: #fff;
+		font-size: 12px;
+		font-weight: 700;
+		margin-right: 20px;
+		font-family: var(--mc-heading1);
+		@media #{$xxs} {
+			margin-right: 5px;
+		}
+		a {
+			padding: 5px 18px;
+			border-radius: 5px;
+			letter-spacing: 1px;
+			&:hover {
+				color: var(--mc-pr-c1);
+				background-color: #fff;
+			}
+		}
+	}
+}
+.mc-ftr1-newsletter {
+	width: 100%;
+	max-width: 500px;
+	form {
+		gap: 15px;
+		display: flex;
+		position: relative;
+		@media #{$xxs} {
+			flex-wrap: wrap;
+		}
+		input {
+			width: 100%;
+			height: 58px;
+			border: none;
+			color: #FFFFFF8C;
+			max-width: 324px;
+			padding-left: 15px;
+			border-radius: 6px;
+			background: #FFFFFF08;
+			border: 1.2px solid #FFFFFF1A;
+			&::placeholder {
+				color: #FFFFFF8C;
+			}
+		}
+		button {
+			color: #fff;
+			border: none;
+			font-weight: 700;
+			border-radius: 5px;
+			padding: 15px 40px;
+			white-space: nowrap;
+			background-color: #0EB6BD;
+		}
+	}
+}
+.mc-footer1-copyright {
+	color: #fff;
+	padding: 45px 0px;
+	border-top: 1px solid #165C9C;
+	a {
+		color: #0EB6BD;
+	}
+}
+.mc-footer1-bottom {
+	background-color: #DAF0F6;
+	@media #{$sm,$xs,$xxs} {
+		padding: 20px 0px;
+	}
+	.bottom-social {
+		a {
+			font-size: 14px;
+			margin: 0px 15px;
+		}
+	}
+	.appoint-btn {
+		a {
+			white-space: nowrap;
+			font-family: var(--mc-heading1);
+
+		}
+	}
+}
+.mc-ftr1-bottom-content {
+	@media #{$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+		justify-content: center !important;
+	}
+}
+.mc-ftr-part {
+	width: 33.33%;
+	padding: 25px 0px;
+	border-right: 1px solid #000000;
+	@media #{$sm,$xs,$xxs} {
+		width: 100%;
+		border: none;
+		padding: 10px 0px;
+		text-align: center !important;
+		justify-content: center !important;
+	}
+	&:last-child {
+		border-right: none;
+	}
+}

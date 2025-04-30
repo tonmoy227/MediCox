@@ -1,10 +1,22 @@
 .mc-text-scroll {
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		padding-top: 60px;
+	}
 	h2 {
 		font-size: 200px;
 		font-weight: 500;
 		line-height: .9;
 		display: inline-block;
 		text-transform: capitalize;
+		@media #{$lg,$md} {
+			font-size: 150px;
+		}
+		@media #{$sm,$xs} {
+			font-size: 100px;
+		}
+		@media #{$xxs} {
+			font-size: 80px;
+		}
 	}
 }
 .marquee-left,
