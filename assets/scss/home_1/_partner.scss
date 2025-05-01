@@ -1,3 +1,25 @@
+@keyframes hithere {
+	30% {
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
+	40%, 60% {
+		-webkit-transform: rotate(-10deg) scale(1.1);
+		transform: rotate(-10deg) scale(1.1);
+	}
+	50% {
+		-webkit-transform: rotate(10deg) scale(1.1);
+		transform: rotate(10deg) scale(1.1);
+	}
+	70% {
+		-webkit-transform: rotate(0deg) scale(1.1);
+		transform: rotate(0deg) scale(1.1);
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
 .mc-partner-content {
 	.mc-sec-title1 {
 		max-width: 448px;
@@ -26,6 +48,7 @@
 	}
 }
 .mc-sp-img {
+	cursor: pointer;
 	.item-img {
 		width: 224px;
 		height: 197px;
@@ -42,6 +65,13 @@
 			width: 130px;
 			height: 80px;
 			padding: 15px;
+		}
+	}
+	&:hover {
+		.item-img {
+			img {
+				animation: hithere 1s ease infinite;
+			}
 		}
 	}
 }

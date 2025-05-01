@@ -16,11 +16,11 @@
 	}
 }
 .mc-hero1-text {
-	max-width: 925px;
+	max-width: 950px;
 	@media #{$xl} {
 		max-width: 750px;
 	}
-	span {
+	.hero-slug {
 		font-size: 32px;
 		font-weight: 500;
 		margin-bottom: 10px;
@@ -77,9 +77,11 @@
 			border-radius: 100%;
 			align-items: center;
 			justify-content: center;
-			backdrop-filter: blur(60px);
 			background-color: var(--mc-pr-c1);
 			transform: rotate(-45deg);
+			b {
+				background-color: #F7CFB2;
+			}
 			@media #{$sm,$xs} {
 				width: 100px;
 				height: 100px;
@@ -87,6 +89,9 @@
 			@media #{$xxs} {
 				width: 80px;
 				height: 80px;
+			}
+			&:hover {
+				color: var(--mc-pr-c1);
 			}
 		}
 		p {

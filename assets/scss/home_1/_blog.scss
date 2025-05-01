@@ -29,6 +29,9 @@
 	}
 	.item-img {
 		margin-bottom: 35px;
+		img {
+			transition: all 500ms ease-in-out;
+		}
 	}
 	.item-text {
 		.blog_title {
@@ -68,6 +71,13 @@
 				i {
 					transform: rotate(0);
 				}
+			}
+		}
+	}
+	&:hover {
+		.item-img {
+			img {
+				transform: scale(1.08);
 			}
 		}
 	}

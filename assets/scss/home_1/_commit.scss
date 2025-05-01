@@ -50,3 +50,29 @@
 		background: linear-gradient(90.01deg, #FFFFFF 7.59%, rgba(255, 255, 255, 0) 26.91%, rgba(255, 255, 255, 0) 63.6%, rgba(255, 255, 255, 0.22) 76.18%, #FFFFFF 93.9%);
 	}
 }
+.mc-cg-img {
+	.item-img {
+		clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+		transition: 2000ms cubic-bezier(0.5, -0.75, 0.3, 2.5);
+	}
+	&:is(.active) {
+		.item-img {
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+		}
+		&:nth-child(2) {
+			.item-img {
+				transition-delay: 300ms;
+			}
+		}
+		&:nth-child(3) {
+			.item-img {
+				transition-delay: 400ms;
+			}
+		}
+		&:nth-child(4) {
+			.item-img {
+				transition-delay: 500ms;
+			}
+		}
+	}
+}

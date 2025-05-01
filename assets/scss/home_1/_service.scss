@@ -1,3 +1,35 @@
+@keyframes flip {
+	0% {
+		-webkit-transform: perspective(400px) scaleX(1) translateZ(0) rotateY(-1turn);
+		transform: perspective(400px) scaleX(1) translateZ(0) rotateY(-1turn);
+		-webkit-animation-timing-function: ease-out;
+		animation-timing-function: ease-out;
+	}
+	40% {
+		-webkit-transform: perspective(400px) scaleX(1) translateZ(150px) rotateY(-190deg);
+		transform: perspective(400px) scaleX(1) translateZ(150px) rotateY(-190deg);
+		-webkit-animation-timing-function: ease-out;
+		animation-timing-function: ease-out;
+	}
+	50% {
+		-webkit-transform: perspective(400px) scaleX(1) translateZ(150px) rotateY(-170deg);
+		transform: perspective(400px) scaleX(1) translateZ(150px) rotateY(-170deg);
+		-webkit-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
+	}
+	80% {
+		-webkit-transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translateZ(0) rotateY(0deg);
+		transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translateZ(0) rotateY(0deg);
+		-webkit-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
+	}
+	to {
+		-webkit-transform: perspective(400px) scaleX(1) translateZ(0) rotateY(0deg);
+		transform: perspective(400px) scaleX(1) translateZ(0) rotateY(0deg);
+		-webkit-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
+	}
+}
 .mc-ser1-bg {
 	top: 50%;
 	left: 0;
@@ -6,6 +38,11 @@
 	z-index: -1;
 	text-align: center;
 	transform: translateY(-50%);
+	video {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
 }
 .mc-ser1-title-content {
 	.mc_ser_title1 {
@@ -94,6 +131,7 @@
 		left: -200px;
 		font-weight: 500;
 		font-size: 110px;
+		white-space: nowrap;
 		writing-mode: vertical-lr;
 		transform: translateY(-50%);
 		@media #{$xxl,$xl} {
@@ -143,5 +181,18 @@
 			color: #fff;
 			max-width: 395px;
 		}
+	}
+	&:hover {
+		.item-icon {
+			animation: flip 1s;
+		}
+	}
+}
+.mc-bg1 {
+	max-height: 690px;
+	video {
+		width: 100%;
+		height: 100%;
+		overflow: cover;
 	}
 }

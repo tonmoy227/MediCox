@@ -9,6 +9,7 @@
 		&:before {
 			top: 0;
 			left: 0;
+			z-index: 2;
 			width: 100%;
 			height: 100%;
 			content: '';
@@ -52,11 +53,16 @@
 			margin-top: 60px;
 			padding: 24px 40px;
 			white-space: nowrap;
+			transition: all 300ms ease-in-out;
 			font-family: var(--mc-heading1);
 			background-color: var(--mc-pr-c1);
 			i {
 				margin-left: 5px;
 				transform: rotate(-45deg);
+			}
+			&:hover {
+				color: var(--mc-pr-c1);
+				background-color: #F7CFB2;
 			}
 		}
 	}

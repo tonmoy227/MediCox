@@ -88,6 +88,11 @@
 			padding: 15px 40px;
 			white-space: nowrap;
 			background-color: #0EB6BD;
+			transition: all 500ms ease-in-out;
+			&:hover {
+				color: var(--mc-pr-c1);
+				background-color: #F7CFB2;
+			}
 		}
 	}
 }
@@ -108,13 +113,31 @@
 		a {
 			font-size: 14px;
 			margin: 0px 15px;
+			&:hover {
+				color: var(--mc-pr-c1);
+			}
 		}
 	}
 	.appoint-btn {
 		a {
+			position: relative;
 			white-space: nowrap;
 			font-family: var(--mc-heading1);
-
+			&:before {
+				left: 0;
+				bottom: 0;
+				width: 0;
+				height: 1px;
+				content: '';
+				position: absolute;
+				background-color: var(--mc-pr-c1);
+				transition: all 500ms ease-in-out;
+			}
+			&:hover {
+				&:before {
+					width: 100%;
+				}
+			}
 		}
 	}
 }
