@@ -1,0 +1,131 @@
+.mc-team2-top {
+	gap: 30px 40px;
+	@media #{$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+	}
+	.mc-sec-title2 .sec_title {
+		line-height: 1;
+		max-width: 470px;
+	}
+	.mc-sec-title2 .sec_title span {
+		margin-left: 60px;
+	}
+	p {
+		max-width: 480px;
+	}
+}
+
+.mc-team2-item {
+	margin: 0 auto;
+	max-width: 445px;
+	margin-bottom: 30px;
+	&:before {
+		left: 0;
+		bottom: 0;
+		height: 0%;
+		width: 100%;
+		content: '';
+		position: absolute;
+		transition: 1000ms cubic-bezier(0.5, -0.75, 0.3, 2.5);
+		background: linear-gradient(179.7deg, rgba(255, 255, 255, 0) -4.32%, rgba(255, 255, 255, 0) 14.2%, rgba(255, 255, 255, 0) 37.72%, rgba(184, 213, 231, 0.22) 53.77%, rgba(184, 213, 231, 0.82232) 67.68%, #B8D5E7 78.41%);
+	}
+	.item-text {
+		left: 0;
+		right: 0;
+		opacity: 0;
+		bottom: 0px;
+		position: absolute;
+		text-align: center;
+		transition: 1000ms cubic-bezier(0.5, -0.75, 0.3, 1.5);
+		h3 {
+			font-size: 30px;
+			padding-bottom: 15px;
+		}
+		.item-social {
+			a {
+				opacity: 0;
+				color: #6B7280;
+				margin: 0px 10px;
+				transform: translateX(-10px);
+				transition: 1000ms cubic-bezier(0.5, -0.75, 0.3, 2.5);
+				&:hover {
+					color: var(--mc-title-color);
+				}
+			}
+		}
+	}
+	&:hover {
+		&:before {
+			height: 100%;
+		}
+		.item-text {
+			opacity: 1;
+			bottom: 45px;
+			.item-social {
+				a {
+					opacity: 1;
+					transform: translateX(0px);
+					&:nth-child(1) {
+						transition-delay: 100ms;
+					}
+					&:nth-child(2) {
+						transition-delay: 200ms;
+					}
+					&:nth-child(3) {
+						transition-delay: 300ms;
+					}
+					&:nth-child(4) {
+						transition-delay: 400ms;
+					}
+				}
+			}
+		}
+	}
+}
+.mc-team2-circle {
+	width: 375px;
+	height: 375px;
+	margin: 0 auto;
+	margin-top: 55px;
+	position: relative;
+	margin-bottom: 30px;
+	border-radius: 100%;
+	border: 1px solid var(--mc-title-color);
+	@media #{$xxs} {
+		width: 300px;
+		height: 300px;
+		margin-top: 0;
+	}
+	&:before {
+		top: 0;
+		left: -16px;
+		width: 100%;
+		height: 100%;
+		content: '';
+		position: absolute;
+		border-radius: 100%;
+		border: 1px solid var(--mc-title-color);
+		@media #{$xxs} {
+			display: none;
+		}
+	}
+	h3 {
+		font-size: 66px;
+		line-height: .75;
+		@media #{$xxs} {
+			font-size: 50px;
+		}
+		span {
+			font-size: 143px;
+			@media #{$xxs} {
+				font-size: 80px;
+			}
+		}
+	}
+	p {
+		font-size: 40px;
+		@media #{$xxs} {
+			font-size: 30px;
+		}
+	}
+}

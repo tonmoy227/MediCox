@@ -12,7 +12,7 @@ body {
 	line-height: 1.555;
 	position: relative;
 	overflow-x: hidden;
-	color: var(--ms-body-color);
+	color: var(--mc-body-color);
 	font-family: var(--mc-body-font);
 	background-color: #fff;     
 	-moz-osx-font-smoothing: antialiased;
@@ -47,6 +47,10 @@ body {
 .home-1 {
 	font-weight: 500;
 	background-color: #EAFAFF;
+}
+.home-2 {
+	font-weight: 500;
+	background-color: #fff;
 }
 // body::-webkit-scrollbar {
 // 	width: 6px;
@@ -92,6 +96,18 @@ body {
 	margin-bottom: 0;
 	color: var(--mc-title-color);
 	font-family: var(--mc-heading1);
+}
+.headline-2 h1,
+.headline-2 h2,
+.headline-2 h3,
+.headline-2 h4,
+.headline-2 h5,
+.headline-2 h6 {
+	line-height: 1;
+	font-weight: 400;
+	margin-bottom: 0;
+	color: var(--mc-title-color);
+	font-family: var(--mc-heading2);
 }
 #preloader { 
 	position: fixed; 
@@ -335,6 +351,25 @@ a {
 		}
 	}
 }
+.mc-btn-2 {
+	a {
+		font-weight: 700;
+		padding: 20px 35px;
+		color: var(--mc-title-color);
+		background-color: var(--mc-pr-c2);
+		i {
+			margin-left: 5px;
+		}
+		@media #{$xs} { 
+			padding: 16px 28px;
+		}
+		@media #{$xxs} { 
+			font-size: 14px;
+			font-weight: 600;
+			padding: 13px 20px;
+		}
+	}
+}
 .cg-circle-btn {
 	a {
 		color: #fff;
@@ -438,6 +473,36 @@ a {
 		@media #{$xxxs} {
 			font-size: 35px;
 		}
+	}
+}
+.mc-sec-title2 {
+	.sec_title {
+		font-size: 120px;
+		line-height: .85;
+		span {
+			margin-left: 140px;
+			@media #{$sm,$xs,$xxs} {
+				margin-left: 0;
+			}
+		}
+		@media #{$xl} {
+			font-size: 90px;
+		}
+		@media #{$lg} {
+			font-size: 70px;
+		}
+		@media #{$md,$sm} {
+			font-size: 60px;
+		}
+		@media #{$xs} {
+			font-size: 55px;
+		}
+		@media #{$xxs} {
+			font-size: 48px;
+		}
+	}
+	p {
+		padding-top: 50px;
 	}
 }
 // txa-common-css-start

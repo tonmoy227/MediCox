@@ -505,6 +505,10 @@ Last change:    00/00/00
 		})
 	}
 
-
+	if ($("#beforeafter").length) {
+		$(window).load(function() {
+			$("#beforeafter").twentytwenty();
+		});
+	} 
 
 })(jQuery);

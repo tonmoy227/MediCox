@@ -1,0 +1,30 @@
+.mc-counter2-content {
+	gap: 30px;
+	margin: 0 auto;
+	max-width: 1195px;
+	@media #{$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+		justify-content: center !important;
+	}
+}
+.mc-count-item2 {
+	width: 100%;
+	max-width: 235px;
+	h3 {
+		line-height: 1;
+		color: #EEF7FF;
+		font-size: 143px;
+		font-weight: 700;
+		margin-bottom: 0;
+	}
+	p {
+		left: 0;
+		right: 0;
+		top: 50%;
+		font-size: 22px;
+		font-weight: 600;
+		position: absolute;
+		transform: translateY(-50%);
+		font-family: var(--mc-title-color);
+	}
+}

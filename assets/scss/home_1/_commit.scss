@@ -1,5 +1,13 @@
 .mc-commit-sec {
 	background-color: #fff;
+	.mc-commit-shape1 {
+		left: 0;
+		bottom: 0;
+	}
+	.mc-commit-shape2 {
+		right: 50px;
+		bottom: 20px;
+	}
 }
 .mc-commit-content {
 	.commit-title {
@@ -7,6 +15,9 @@
 		line-height: 1.1;
 		margin-bottom: 65px;
 		span {
+			font-weight: 400;
+		}
+		&:is(.ver_2) {
 			font-weight: 400;
 		}
 	}
