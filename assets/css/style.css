@@ -6620,7 +6620,12 @@ a:hover, a:focus {
 }
 
 .cg-footer4-sec {
+  z-index: 1;
   background-color: var(--mc-pr-c4);
+}
+.cg-footer4-sec .mc-ftr2-shape {
+  top: -40%;
+  left: 0;
 }
 
 .cg-footer4-map {
