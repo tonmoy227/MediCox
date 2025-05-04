@@ -93,6 +93,15 @@ Last change:    00/00/00
 			e.stopPropagation();
 		})
 	});
+			// search-popup-start
+	$('.search_btn_toggle').on('click', function() {
+		$('.overlay, .search_box_active').addClass('active');
+	});
+
+	$('.overlay, .search_box_close').on('click', function() {
+		$('.search_box_active').removeClass('active');
+		$('.overlay').removeClass('active');
+	});
 	// Background Image
 	$('[data-background]').each(function() {
 		$(this).css('background-image', 'url('+ $(this).attr('data-background') + ')');
@@ -165,42 +174,34 @@ Last change:    00/00/00
 		delay: 10,
 		time: 5000
 	});
-	$('.bi-btn-hover').on('mouseenter', function (e) {
-		var x = e.pageX - $(this).offset().left;
-		var y = e.pageY - $(this).offset().top;
+	const all_btns = gsap.utils.toArray(".bi-btn-hover");
+	const all_btn_circles = gsap.utils.toArray(".bi-btn-item");
 
-		$(this).find('b').css({
-			top: y,
-			left: x
-		});
-	});
-	$('.bi-btn-hover').on('mouseout', function (e) {
-		var x = e.pageX - $(this).offset().left;
-		var y = e.pageY - $(this).offset().top;
-
-		$(this).find('b').css({
-			top: y,
-			left: x
-		});
-	});
-	const all_btns = gsap.utils.toArray(".bi-btn-area");
 	if (all_btns.length > 0) {
-		var all_btn = gsap.utils.toArray(".bi-btn-area");
+		all_btns.forEach((btn, i) => {
+			$(btn).mousemove(function (e) {
+				const rect = btn.getBoundingClientRect();
+				const relX = e.clientX - rect.left;
+				const relY = e.clientY - rect.top;
 
+				gsap.to(all_btn_circles[i], {
+					duration: 0.5,
+					x: relX - rect.width / 2,
+					y: relY - rect.height / 2,
+					ease: "power2.out",
+				});
+			});
 
-		const all_btn_cirlce = gsap.utils.toArray(".bi-btn-item");
-		all_btn.forEach((btn, i) => {
-
-			$(btn).mouseleave(function (e) {
-				gsap.to(all_btn_cirlce[i], 0.5, {
+			$(btn).mouseleave(function () {
+				gsap.to(all_btn_circles[i], {
+					duration: 0.5,
 					x: 0,
 					y: 0,
-					ease: Power2.easeOut,
+					ease: "power2.out",
 				});
 			});
 		});
-		let arr2 = gsap.utils.toArray(".bi-btn-area");
-	};
+	}
 	// windows-loaded-before-functions
 	document.addEventListener("DOMContentLoaded", function () {
 		window.addEventListener('load', function(){
@@ -244,6 +245,13 @@ Last change:    00/00/00
 								opacity: 0,
 							});
 						}
+						if( $(el).hasClass('hero_title_2') ){
+							gsap.set(el.split.chars, {
+								y: 100,
+								opacity: 0,
+								scaleX: 0,
+							});
+						}
 						el.anim = gsap.to(el.split.chars, {
 							scrollTrigger: {
 								trigger: el,
@@ -258,13 +266,18 @@ Last change:    00/00/00
 							opacity: 1,
 							duration: 1,
 							stagger: .05,
-							delay: .1,
 							ease: "power1.out",
 						});
 
 					});
 				};
-				
+				const MCoxH2 = gsap.timeline();
+				MCoxH2
+				.from(".mc-hero2-img", { opacity: 0,  yPercent: 200, duration: 1.5, transformOrigin: "bottom",  ease: "power1.out" })
+				.from(".mc-hr2-cta", { opacity: 0,  xPercent: 100, duration: 1, transformOrigin: "center",  ease: "power1.out" })
+				.from(".mc-hr2-btn-text", { opacity:0, y: 100, duration: 1.5, transformOrigin: "left", force3D: true,  ease: "power1.out" },"<= .3")
+				.from(".mc-hero2-content .mc-hr2-shape", {  yPercent: 100, duration: 1.5, transformOrigin: "left", force3D: true,  ease: "power1.out" },"<= .3")
+
 			}, 700);
 		})		
 	});
@@ -282,6 +295,13 @@ Last change:    00/00/00
 				gsap.set(el.split.chars, {
 					opacity: 0,
 					x: 15,
+					ease: "back.out",
+				});
+			}
+			if( jQuery(el).hasClass('split-in-left') ){
+				gsap.set(el.split.chars, {
+					opacity: 0,
+					y: 30,
 					ease: "back.out",
 				});
 			}
@@ -415,6 +435,39 @@ Last change:    00/00/00
 		.set(el, {transformOrigin: 'center center'})
 		.from(el, { opacity: 1,  xPercent: "100"}, {opacity: 1, xPercent: 0, duration: 1, immediateRender: false})
 	});
+	gsap.utils.toArray('.cta-img img').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 1.5,
+				end: "top 30%",
+				start: "top 100%",
+				toggleActions: "play none none reverse",
+				markers: false
+			}
+		})
+
+		tlcta
+		.from(el, { scale: 1.3 , y: 50, x: 30, filter: "blur(5px)"})
+	});
+	if (window.matchMedia("(min-width: 1400px)").matches) { 
+		gsap.utils.toArray(' .top_view_2').forEach((el, index) => { 
+			let tlcta = gsap.timeline({
+				scrollTrigger: {
+					trigger: el,
+					scrub: 3,
+					start: "top 40%",
+					end: "top -100%",
+					toggleActions: "play none none reverse",
+					markers: false,
+				}
+			})
+
+			tlcta
+			.set(el, {transformOrigin: 'center center'})
+			.fromTo(el, { opacity: 1,  y: "-=0"}, {opacity: 1, yPercent: 150, duration: 1, immediateRender: false})
+		}); 
+	}
 	gsap.utils.toArray('.zoom_view').forEach((el, index) => { 
 		let tlcta = gsap.timeline({
 			scrollTrigger: {
@@ -466,6 +519,22 @@ Last change:    00/00/00
 			yPercent: 30,
 			ease: "none",
 		}); 
+	});
+	gsap.utils.toArray(' .top_view').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 1.5,
+				end: "top 100%",
+				start: "top 100%",
+				toggleActions: "play none none reverse",
+				markers: false
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'center center'})
+		.from(el, { opacity: 1, scale: 1, y: "100"}, {opacity: 1, y: 0, duration: 1, immediateRender: false})
 	});
 	// Team Slider		
 	if($(".mc-team1-slider").length) {

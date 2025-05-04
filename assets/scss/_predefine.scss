@@ -283,6 +283,9 @@ a {
 		color: #fff;
 	}
 }
+.split-line {
+	overflow: hidden;
+}
 /*Button area*/
 /*-------------------------*/
 .mc-btn-1 {
@@ -353,8 +356,10 @@ a {
 }
 .mc-btn-2 {
 	a {
+		z-index: 1;
 		font-weight: 700;
 		padding: 20px 35px;
+		position: relative;
 		color: var(--mc-title-color);
 		background-color: var(--mc-pr-c2);
 		i {
@@ -367,6 +372,25 @@ a {
 			font-size: 14px;
 			font-weight: 600;
 			padding: 13px 20px;
+		}
+		&:before {
+			left: 0;
+			width: 0;
+			right: 0;
+			bottom: 0;
+			z-index: -1;
+			content: '';
+			height: 100%;
+			margin: 0 auto;
+			position: absolute;
+			background-color: var(--mc-pr-c3);
+			transition: all 500ms ease-in-out;
+		}
+		&:hover {
+			color: #fff;
+			&:before {
+				width: 100%;
+			}
 		}
 	}
 }
@@ -430,8 +454,8 @@ a {
 		}
 	}
 	b {
-		width: 350px;
-		height: 350px;
+		width: 650px;
+		height: 650px;
 	}
 } 
 /*Section Title area*/
@@ -474,6 +498,9 @@ a {
 			font-size: 35px;
 		}
 	}
+	.split-line {
+		padding-bottom: 5px;
+	}
 }
 .mc-sec-title2 {
 	.sec_title {
@@ -500,6 +527,9 @@ a {
 		@media #{$xxs} {
 			font-size: 48px;
 		}
+	}
+	.split-line {
+		padding-bottom: 5px;
 	}
 	p {
 		padding-top: 50px;

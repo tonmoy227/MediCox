@@ -412,6 +412,9 @@
 		@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
 			padding: 20px 15px;
 		}
+		&:is(.txa_sticky):is(.txa_sticky_show) {
+			padding: 15px;
+		}
 		.main-navigation {
 			font-family: var(--mc-body-font);
 			@media #{$md,$sm,$xs,$xxs} {
@@ -456,9 +459,20 @@
 					&:after {
 						right: 0px;
 					}
+					.dropdown-menu {
+						li {
+							a {
+								color: var(--mc-title-color);
+							}
+						}
+					}
 				}
 				&:hover {
+					&:after {
+						color: var(--mc-pr-c3);
+					}
 					a {
+						color: var(--mc-pr-c3);
 						&:before {
 							width: 100%;
 						}
@@ -480,19 +494,44 @@
 				height: 50px;
 				border-radius: 100%;
 				background-color: #fff;
+				transition: all 500ms ease-in-out;
 				box-shadow: 0px 4px 4px 0px #5F75AD05;
+				&:hover {
+					background-color: var(--mc-pr-c2);
+				}
 			}
 			.cta-btn {
 				@media #{$md,$sm,$xs,$xxs} {
 					display: none;
 				}
 				a {
+					z-index: 1;
 					font-size: 15px;
 					font-weight: 700;
 					padding: 17px 30px;
 					white-space: nowrap;
+					position: relative;
 					color: var(--mc-title-color);
 					background-color: var(--mc-pr-c2);
+					&:before {
+						left: 0;
+						width: 0;
+						right: 0;
+						bottom: 0;
+						z-index: -1;
+						content: '';
+						height: 100%;
+						margin: 0 auto;
+						position: absolute;
+						background-color: var(--mc-pr-c3);
+						transition: all 500ms ease-in-out;
+					}
+					&:hover {
+						color: #fff;
+						&:before {
+							width: 100%;
+						}
+					}
 					@media #{$lg} {
 						padding: 14px 20px;
 					}
