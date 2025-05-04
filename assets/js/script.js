@@ -221,7 +221,7 @@ Last change:    00/00/00
 				MCoxH1
 				.from(".mc-hero1-text .hero-slug", { opacity: 0,  x: 100, duration: 1.5, transformOrigin: "center",  ease: "power1.out" })
 				.from(".mc-hero1-text .mc-arrow-text p", { opacity: 0, x: -200,  duration: 1, transformOrigin: "left",   ease: "power1.inOut"})
-				.from(".mc-arrow-text .cg-circle-btn", {   x: -200, rotate: "-360deg", duration: 5, transformOrigin: "center",   ease: "elastic.inOut(1,0.3)"},"<= -1.6")
+				.from(".mc-arrow-text .cg-circle-btn", { opacity: 0,  x: -200, rotate: "-360deg", duration: 5, transformOrigin: "center",   ease: "elastic.inOut(1,0.3)"},"<= -1.6")
 				.from(".mc-hero1-img-wrap .mc-hero1-img1 img", { scale: 2,  duration: 3, transformOrigin: "center",   ease: "power1.inOut"},"<= -.5")
 				.from(".mc-hero1-img-wrap .mc-hero1-img2 img", { scale: 2,  duration: 3, transformOrigin: "center",   ease: "power1.inOut"},"<= -.4")
 				.from(".mc-hero1-img-wrap .mc-hero1-img3 img", { scale: 2,  duration: 3, transformOrigin: "center",   ease: "power1.inOut"},"<= -.2")

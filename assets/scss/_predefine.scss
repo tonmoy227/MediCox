@@ -12,6 +12,7 @@ body {
 	line-height: 1.555;
 	position: relative;
 	overflow-x: hidden;
+	font-weight: 500;
 	color: var(--mc-body-color);
 	font-family: var(--mc-body-font);
 	background-color: #fff;     
@@ -45,12 +46,13 @@ body {
 /*Home Reset area*/
 /*-------------------------*/
 .home-1 {
-	font-weight: 500;
 	background-color: #EAFAFF;
 }
 .home-2 {
-	font-weight: 500;
 	background-color: #fff;
+}
+.home-3 {
+	background-color: #FFF4EF;
 }
 // body::-webkit-scrollbar {
 // 	width: 6px;
@@ -108,6 +110,18 @@ body {
 	margin-bottom: 0;
 	color: var(--mc-title-color);
 	font-family: var(--mc-heading2);
+}
+.headline-3 h1,
+.headline-3 h2,
+.headline-3 h3,
+.headline-3 h4,
+.headline-3 h5,
+.headline-3 h6 {
+	line-height: 1;
+	font-weight: 400;
+	margin-bottom: 0;
+	color: var(--mc-title-color);
+	font-family: var(--mc-heading3);
 }
 #preloader { 
 	position: fixed; 
@@ -393,6 +407,15 @@ a {
 			}
 		}
 	}
+	&:is(.ver_2) {
+		a {
+			border-radius: 6px;
+			background-color: var(--mc-pr-c2);
+			&:before {
+				background-color: var(--mc-pr-c6);
+			}
+		}
+	}
 }
 .cg-circle-btn {
 	a {
@@ -529,10 +552,23 @@ a {
 		}
 	}
 	.split-line {
-		padding-bottom: 5px;
+		padding-bottom: 15px;
 	}
 	p {
 		padding-top: 50px;
+	}
+}
+.mc-sec-title3 {
+	.sec_title {
+		line-height: 1;
+		font-size: 70px;
+		font-weight: 700;
+		span {
+			color: var(--mc-pr-c6);
+		}
+	}
+	p {
+		padding-top: 15px;
 	}
 }
 // txa-common-css-start

@@ -1,0 +1,145 @@
+.mc-hero3-content {
+	padding-top: 205px;
+	@media #{$xl} {
+		padding-top: 250px;
+	}
+	@media #{$md,$sm,$xs,$xxs} {
+		padding-top: 170px;
+	}
+}
+.mc-hero3-text {
+	z-index: 1;
+	position: relative;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		gap: 20px 30px;
+		flex-wrap: wrap;
+	}
+	.hr3-title {
+		color: #fff;
+		line-height: .9;
+		font-size: 150px;
+		font-weight: 700;
+		@media #{$xl} {
+			font-size: 130px;
+		}
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			color: var(--mc-pr-c6);
+		}
+		@media #{$md} {
+			font-size: 100px;
+		}
+		@media #{$sm} {
+			font-size: 90px;
+		}
+		@media #{$xs} {
+			font-size: 80px;
+		}
+		@media #{$xxs} {
+			font-size: 60px;
+		}
+		@media #{$xxxs} {
+			font-size: 50px;
+		}
+		span {
+			color: var(--mc-pr-c6);
+		}
+	}
+}
+.mc-hr3-desc {
+	max-width: 375px;
+	padding-top: 16px;
+	p {
+		padding-bottom: 40px;
+		@media #{$xxs} {
+			padding-bottom: 20px;
+		}
+	}
+	.mc-btn-2 {
+		&:is(.ver_2) {
+			a {
+				color: #fff;
+				border-radius: 0;
+				background-color: var(--mc-pr-c6);
+				&:before {
+					background-color: var(--mc-pr-c2);
+				}
+				&:hover {
+					color: var(--mc-title-color);
+				}
+			}
+		}
+	}
+}
+.mc-hero3-img {
+	margin: 0px 50px;
+	overflow: hidden;
+	margin-top: -130px;
+	border-radius: 23px;
+	@media #{$xl} {
+		margin-left: 0;
+		margin-right: 0;
+		margin-top: -100px;
+	}
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		margin-top: 40px;
+		margin-left: 0;
+		margin-right: 0;
+
+	}
+	.inner-img {
+		display: inline-block;
+		@media #{$xxs} {
+			height: 350px;
+		}
+	}
+}
+.mc-hero3-dept {
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	position: absolute;
+	padding: 0px 80px;
+	background-color: #fff;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		padding: 0px 30px;
+	}
+	@media #{$sm,$xs,$xxs} {
+		gap: 15px 30px;
+		flex-wrap: wrap;
+		position: static;
+	}
+	a {
+		gap: 15px;
+		width: 50%;
+		display: flex;
+		padding: 25px 0px;
+		align-items: center;
+		border-right: 1px solid #E0D7D3;
+		@media #{$md,$sm,$xs,$xxs} {
+			border: none;
+		}
+		@media #{$sm,$xs,$xxs} {
+			width: 100%;
+		}
+		@media #{$xxs} {
+			flex-wrap: wrap;
+		}
+		.item-text {
+			gap: 20px;
+			color: #053765;
+			font-size: 36px;
+			font-weight: 700;
+			@media #{$md,$sm,$xs,$xxs} {
+				gap: 10px;
+				font-size: 26px;
+			}
+		}
+		&:last-child {
+			border-right: none;
+			justify-content: end;
+			@media #{$md,$sm,$xs,$xxs} {
+				justify-content: start;
+			}
+		}
+	}
+}
