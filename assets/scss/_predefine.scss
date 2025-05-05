@@ -563,6 +563,24 @@ a {
 		line-height: 1;
 		font-size: 70px;
 		font-weight: 700;
+		@media #{$xl} {
+			font-size: 60px;
+		}
+		@media #{$lg} {
+			font-size: 55px;
+		}
+		@media #{$md,$sm} {
+			font-size: 50px;
+		}
+		@media #{$xs} {
+			font-size: 45px;
+		}
+		@media #{$xxs} {
+			font-size: 40px;
+		}
+		@media #{$xxxs} {
+			font-size: 35px;
+		}
 		span {
 			color: var(--mc-pr-c6);
 		}

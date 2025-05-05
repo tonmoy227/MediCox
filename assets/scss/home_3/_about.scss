@@ -1,0 +1,35 @@
+.mc-ab3-content {
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+	}
+}
+.mc-ab3-text {
+	width: 50%;
+	background-color: #C7EBDE;
+	padding: 105px 90px 105px 120px;
+	@media #{$xxl,$xl} {
+		padding: 80px 50px 80px 50px;
+	}
+	@media #{$lg,$md,$sm,$xs,$xxs} { 
+		width: 100%;
+		padding: 80px 15px 80px 15px;
+	}
+}
+.mc-ab3-img-wrap {
+	width: 50%;
+	background-color: var(--mc-pr-c6);
+	@media #{$lg,$md,$sm,$xs,$xxs} { 
+		width: 100%;
+	}
+	.item-img,
+	.item-block {
+		width: 50%;
+	}
+	.item-img {
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}

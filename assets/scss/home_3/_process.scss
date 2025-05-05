@@ -1,0 +1,126 @@
+.mc-process3-sec {
+	.mc-sec-title3 {
+		margin: 0 auto;
+		max-width: 1020px;
+	}
+}
+.mc-process3-item {
+	@media #{$md,$sm,$xs,$xxs} {
+		margin-bottom: 30px;
+	}
+	.item-number {
+		line-height: 1;
+		color: #DFE6E9 ;
+		font-size: 200px;
+		font-weight: 700;
+		margin-bottom: 40px;
+		font-family: var(--mc-headline3);
+		@media #{$lg,$md,$sm,$xs} {
+			font-size: 150px;
+		}
+		@media #{$md,$sm,$xs} {
+			margin-bottom: 10px;
+		}
+		@media #{$xxs} {
+			font-size: 100px;
+			margin-bottom: 10px;
+		}
+	}
+	.item-text {
+		white-space: nowrap;
+		position: relative;
+		&:before {
+			right: 0;
+			top: 21px;
+			width: 13px;
+			content: '';
+			height: 13px;
+			position: absolute;
+			border-radius: 100%;
+			background-color: var(--mc-pr-c2);
+			@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+				display: none;
+			}
+		}
+		span {
+			font-size: 24px;
+			font-weight: 700;
+			padding: 8px 45px;
+			border-radius: 10px;
+			display: inline-block;
+			color: var(--mc-title-color);
+			background-color: var(--mc-pr-c2);
+			@media #{$lg,$md,$sm,$xs} {
+				font-size: 20px;
+				padding: 8px 20px;
+			}
+			@media #{$xxs} {
+				font-size: 16px;
+				padding: 8px 20px;
+			}
+		}
+	}
+}
+.col-lg-4 {
+	&:nth-child(1) {
+		.mc-process3-item {
+			.item-text {
+				span {
+					transform: rotate(4.5deg);
+					@media #{$md,$sm,$xs,$xxs} {
+						transform: rotate(0deg);
+					}
+				}
+			}
+		}
+	}
+	&:nth-child(2) {
+		.mc-process3-item {
+			.item-text {
+				&:before {
+					right: -55px;
+				}
+				span {
+					transform: rotate(-4.5deg);
+					@media #{$md,$sm,$xs,$xxs} {
+						transform: rotate(0deg);
+					}
+				}
+			}
+		}
+	}
+	&:nth-child(3) {
+		.mc-process3-item {
+			.item-text {
+				&:before {
+					display: none;
+				}
+				span {
+					transform: rotate(5.03deg);
+					@media #{$md,$sm,$xs,$xxs} {
+						transform: rotate(0deg);
+					}
+				}
+			}
+		}
+	}
+}
+.mc-process3-content {
+	z-index: 1;
+	&:before {
+		left: 0;
+		right: 0;
+		z-index: -1;
+		width: 80%;
+		height: 1px;
+		content: '';
+		bottom: 25px;
+		margin: 0 auto;
+		margin: 0 auto;
+		position: absolute;
+		background-color: #D9D9D9;
+		@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+			display: none;
+		}
+	}
+}

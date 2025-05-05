@@ -536,6 +536,67 @@ Last change:    00/00/00
 		.set(el, {transformOrigin: 'center center'})
 		.from(el, { opacity: 1, scale: 1, y: "100"}, {opacity: 1, y: 0, duration: 1, immediateRender: false})
 	});
+	gsap.utils.toArray(' .slide_view_1').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 1.5,
+				end: "top -80%",
+				start: "top 0%",
+				toggleActions: "play none none reverse",
+				markers: false
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'top'})
+		.from(el, { opacity: 1, scale: 1,  y: "-=500"}, {opacity: 1, y: 0, duration: 1, immediateRender: false})
+	});
+	gsap.utils.toArray(' .slide_view_2').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 1.5,
+				end: "top -100%",
+				start: "top 200%",
+				toggleActions: "play none none reverse",
+				markers: false
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'bottom bottom'})
+		.from(el, { opacity: 1, scale: 1, y: "+=500"}, {opacity: 1, y: 0, duration: 1, immediateRender: false})
+	});
+	if (window.matchMedia("(min-width: 767px)").matches) { 
+		const links = document.querySelectorAll('.eye-link');
+
+		links.forEach(link => {
+			const span = link.querySelector('.eye-icon');
+
+			link.addEventListener('mousemove', (e) => {
+				const rect = link.getBoundingClientRect();
+				const x = e.clientX - rect.left - rect.width / 2;
+				const y = e.clientY - rect.top - rect.height / 2;
+
+				gsap.to(span, {
+					x: x * 1,
+					y: y * 1,
+					duration: 0.5,
+					ease: "power2.out"
+				});
+			});
+
+			link.addEventListener('mouseleave', () => {
+				gsap.to(span, {
+					x: 0,
+					y: 0,
+					duration: 0.5,
+					ease: "power2.out"
+				});
+			});
+		});
+	}
 	// Team Slider		
 	if($(".mc-team1-slider").length) {
 		const swiper = new Swiper(".mc-team1-slider" , {

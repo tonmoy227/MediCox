@@ -6,6 +6,28 @@
 	}
 }
 .beforeafter-area {
+	&:is(.ver_2) {
+		width: 100%;
+		padding: 15px;
+		height: 750px !important;
+		.twentytwenty-handle {
+			margin-left: -48px;
+		}
+		.twentytwenty-after,
+		.twentytwenty-before  {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		.twentytwenty-after-label:before,
+		.twentytwenty-before-label:before {
+			font-size: 20px;
+			width: 125px;
+		}
+		.twentytwenty-after-label:before {
+			right: 65px;
+		}
+	}
 	@media #{$sm,$xs,$xxs} {
 		height: 500px !important;
 	}
@@ -69,5 +91,20 @@
 	}
 	.twentytwenty-right-arrow {
 		border-left: 6px solid #000;
+	}
+}
+.mc-beforeafter2-text {
+	max-width: 600px;
+}
+.mc-beforeafter2-wrap {
+	.twentytwenty-wrapper {
+		width: 100%;
+		overflow: hidden;
+		max-width: 750px;
+		.beforeafter-area {
+			&:is(.ver_2) {
+				width: 100%;
+			}
+		}
 	}
 }
