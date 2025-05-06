@@ -123,3 +123,53 @@
 		}
 	}
 }
+.mc-cta4-content {
+	z-index: 1;
+	border-radius: 10px;
+	border: 10px solid #fff;
+	background-color: #C7EBDE;
+	.mc-dec-icon {
+		left: 50px;
+		z-index: -1;
+		bottom: 50px;
+		@media #{$sm,$xs,$xxs} {
+			display: none;
+		}
+	}
+	.mc-sec-title3 {
+		margin: 0 auto;
+		max-width: 1000px;
+		p {
+			margin: 0 auto;
+			max-width: 585px;
+		}
+	}
+}
+.mc-cta4-btn-grp {
+	a {
+		gap: 15px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		.item-icon {
+			color: #fff;
+			width: 75px;
+			height: 75px;
+			font-size: 30px;
+			border-radius: 100%;
+			background-color: var(--mc-pr-c6);
+		}
+		.item-text {
+			color: #fff;
+			font-size: 36px;
+			font-weight: 700;
+			padding: 5px 35px;
+			border-radius: 40px;
+			background-color: var(--mc-pr-c6);
+			@media #{$xxs} {
+				font-size: 28px;
+			}
+		}
+	}
+}

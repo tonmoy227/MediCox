@@ -40,6 +40,17 @@
 		transition: 1000ms cubic-bezier(0.5, -0.75, 0.3, 2.5);
 		background: linear-gradient(179.7deg, rgba(255, 255, 255, 0) -4.32%, rgba(255, 255, 255, 0) 14.2%, rgba(255, 255, 255, 0) 37.72%, rgba(184, 213, 231, 0.22) 53.77%, rgba(184, 213, 231, 0.82232) 67.68%, #B8D5E7 78.41%);
 	}
+	&:is(.ver_2) {
+		margin-bottom: 0;
+		&:before {
+			background: linear-gradient(179.7deg, rgba(199, 235, 222, 0) -4.32%, rgba(199, 235, 222, 0) 14.2%, rgba(199, 235, 222, 0) 37.72%, rgba(199, 235, 222, 0.22) 53.77%, rgba(199, 235, 222, 0.82232) 67.68%, #C7EBDE 78.41%);
+		}
+		.item-text {
+			h3 {
+				font-weight: 700;
+			}
+		}
+	}
 	.item-text {
 		left: 0;
 		right: 0;

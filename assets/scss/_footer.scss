@@ -459,3 +459,226 @@
 		}
 	}
 }
+.cg-footer-cta {
+	border-bottom: 1px dashed #D9D9D9;
+	@media #{$md,$sm,$xs} {
+		gap: 30px 40px;
+		flex-wrap: wrap;
+		padding: 40px 0px;
+		justify-content: center !important; 
+	}
+}
+.cg-ftr-cta-item {
+	gap: 15px 20px;
+	.item-icon {
+		width: 56px;
+		height: 56px;
+		font-size: 18px;
+		border-radius: 100%;
+		color: var(--mc-pr-c2);
+		background: rgba(255, 255, 255, 1);
+		box-shadow: 0px 4px 12px 0px #00000014;
+	}
+	.item-text {
+		span, a {
+			display: block;
+		}
+		a {
+			color: var(--mc-title-color);
+			font-size: 20px;
+			font-weight: 700;
+			white-space: nowrap;
+		}
+	}
+}
+.cg-footer-cta-wrap {
+	gap: 30px 70px;
+	padding: 55px 0 55px 65px;
+	border-left: 1px dashed #D9D9D9;
+	@media #{$md,$sm,$xs} {
+		flex-wrap: wrap;
+		border-left: none;
+		padding: 20px 0px;
+	}
+}
+.cg-footer-widget-wrap {
+	z-index: 1;
+	display: flex;
+	gap: 30px 110px;
+	justify-content: space-between;
+	@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+		gap: 30px 40px;
+	}
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		gap: 30px 20px;
+	}
+	@media #{$md,$sm,$xs,$xxs} {
+		gap: 30px;
+		flex-wrap: wrap;
+		padding-top: 50px;
+	}
+	.cg-ftr-shape {
+		top: 100px;
+		left: -100px;
+		opacity: .02;
+		z-index: -1;
+	}
+}
+.cg-ftr1-widget {
+	.widget-title {
+		color: var(--mc-title-color);
+		font-size: 22px;
+		font-weight: 700;
+		margin-bottom: 30px;
+	}
+	.newslatter-widget {
+		max-width: 430px;
+		h3 {
+			color: var(--mc-title-color);
+			font-size: 38px;
+			font-weight: 700;
+			max-width: 310px;
+			padding-bottom: 32px;
+		}
+		form {
+			gap: 15px;
+			display: flex;
+			flex-wrap: wrap;
+			margin-bottom: 35px;
+			input {
+				width: 280px;
+				height: 56px;
+				color: #FFFFFF8C;
+				border-radius: 6px;
+				padding-left: 35px;
+				background-color: #fff;
+				border: 1.2px solid #FFFFFF1A;
+				&:placeholder {
+					color: #FFFFFF8C;
+				}
+			}
+			button {
+				color: var(--mc-title-color);
+				border: none;
+				font-weight: 700;
+				border-radius: 6px;
+				padding: 14px 24px;
+				transition: all 500ms ease-in-out;
+				background-color: var(--mc-pr-c2);
+				i {
+					font-size: 14px;
+					margin-left: 5px;
+				}
+				&:hover {
+					color: #fff;
+					background-color: var(--mc-pr-c6);
+				}
+			}
+		}
+		p {
+			color:  var(--mc-title-color);
+			a {
+				color: var(--mc-pr-c2);
+				position: relative;
+				&:before {
+					left: 0;
+					right: 0;
+					bottom: 0;
+					width: 0%;
+					height: 1px;
+					content: '';
+					margin: 0 auto;
+					position: absolute;
+					background-color: var(--mc-pr-c2);
+					transition: all 500ms ease-in-out;
+				}
+				&:hover {
+					&:before {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	.menu-widget {
+		li {
+			margin-bottom: 12px;
+			a {
+				color: var(--mc-title-color);
+				font-weight: 500;
+				&:hover {
+					transform: translateX(6px);
+					color: var(--mc-pr-c6);
+				}
+			}
+		}
+	}
+	.cta-widget {
+		h3 {
+			color: var(--mc-title-color);
+			font-size: 22px;
+			font-weight: 700;
+			margin-bottom: 30px;
+			letter-spacing: -1px;
+		}
+		.item-text {
+			font-family: var(--mc-heading);
+			a {
+				color: var(--mc-title-color);
+				display: block;
+			}
+			.txt_mail {
+				font-size: 14px;
+				font-weight: 700;
+				margin-bottom: 10px;
+			}
+			.txt_call {
+				font-size: 20px;
+				font-weight: 700;
+			}
+		}
+	}
+	.cg-circle-btn {
+		a {
+			background-color: #032532;
+			i {
+				color: #fff;
+			}
+		}
+		.bi-btn-main b {
+			background-color: var(--mc-pr-c2);
+		}
+	}
+}
+
+.cg-footer-bottom {
+	h3 {
+		line-height: 1;
+		font-size: 170px;
+		font-weight: 700;
+		opacity: .7;
+		background: linear-gradient(-180deg, #032532 -29.62%, rgba(186, 231, 249, 0) 141.49%, #032532 219.52%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		@media #{$xl} {
+			font-size: 150px;
+		}
+		@media #{$lg,$md,$sm} {
+			font-size: 120px;
+		}
+		@media #{$xs} {
+			font-size: 80px;
+		}
+		@media #{$xxs} {
+			font-size: 60px;
+		}
+	}
+	p {
+		color: var(--mc-title-color);
+		padding: 40px 0px 25px;
+		font-family: var(--mc-heading3);
+		a {
+			color: var(--mc-pr-c6);
+		}
+	}
+}

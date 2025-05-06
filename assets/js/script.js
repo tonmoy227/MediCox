@@ -635,10 +635,53 @@ Last change:    00/00/00
 		})
 	}
 
+	if($(".mc-team3-slider").length) {
+		const swiper = new Swiper(".mc-team3-slider" , {
+			speed: 500,
+			spaceBetween: 30,
+			loop: true,
+			autoplay:  {
+				delay: 5000,
+			},
+			pagination: {
+				el: ".mc-team3--pagi",
+				clickable: true,
+			},
+			breakpoints: {
+				0: {
+					slidesPerView: 1,
+				},
+				576: {
+					slidesPerView: 1,
+				},
+				768: {
+					slidesPerView: 2,
+				},
+				992: {
+					slidesPerView: 2,
+				},
+				1200: {
+					slidesPerView: 3,
+				},
+				1400: {
+					slidesPerView: 3,
+				},
+				1600: {
+					slidesPerView: 3,
+				},
+				1800: {
+					slidesPerView: 3,
+				},
+			},
+		})
+	}
+
 	if ($("#beforeafter").length) {
 		$(window).load(function() {
 			$("#beforeafter").twentytwenty();
 		});
 	} 
-
+	$(document).on('click', '.cg-faq3-item-area .accordion-item', function(){
+		$(this).addClass('faq_active').siblings().removeClass('faq_active')
+	});
 })(jQuery);

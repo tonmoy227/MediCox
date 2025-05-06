@@ -1,0 +1,26 @@
+.mc-team3-sec {
+	z-index: 1;
+	.mc-sec-title3 {
+		margin: 0 auto;
+		max-width: 630px;
+	}
+	.mc-team3-shape {
+		top: 0;
+		z-index: -1;
+		left: -200px;
+	}
+}
+.mc-team3--pagi {
+	.swiper-pagination-bullet {
+		opacity: .33;
+		height: 4px;
+		width: 29px;
+		border-radius: 3px;
+		transition: all 500ms ease-in-out;
+		background-color: var(--mc-pr-c6);
+		&:is(.swiper-pagination-bullet-active) {
+			opacity: 1;
+			width: 62px;
+		}
+	}
+}

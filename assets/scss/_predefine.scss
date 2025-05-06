@@ -409,6 +409,7 @@ a {
 	}
 	&:is(.ver_2) {
 		a {
+			overflow: hidden;
 			border-radius: 6px;
 			background-color: var(--mc-pr-c2);
 			&:before {
