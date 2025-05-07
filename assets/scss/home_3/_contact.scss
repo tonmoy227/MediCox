@@ -74,7 +74,12 @@
 			font-size: 16px;
 			font-weight: 700;
 			border-radius: 6px;
+			transition: all 300ms ease-in-out;
 			background-color: var(--mc-pr-c2);
+			&:hover {
+				color: #fff;
+				background-color: var(--mc-pr-c6);
+			}
 		}
 	}
 }

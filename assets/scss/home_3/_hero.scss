@@ -16,7 +16,7 @@
 	}
 	.hr3-title {
 		color: #fff;
-		line-height: .9;
+		line-height: .92;
 		font-size: 150px;
 		font-weight: 700;
 		@media #{$xl} {
@@ -73,7 +73,7 @@
 .mc-hero3-img {
 	margin: 0px 50px;
 	overflow: hidden;
-	margin-top: -130px;
+	margin-top: -136px;
 	border-radius: 23px;
 	@media #{$xl} {
 		margin-left: 0;
@@ -91,6 +91,20 @@
 		@media #{$xxs} {
 			height: 350px;
 		}
+	}
+}
+@keyframes icon-bounce {
+	0%, 100%, 20%, 50%, 80% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+	40% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+	60% {
+		-webkit-transform: translateY(-5px);
+		transform: translateY(-5px);
 	}
 }
 .mc-hero3-dept {
@@ -115,6 +129,9 @@
 		padding: 25px 0px;
 		align-items: center;
 		border-right: 1px solid #E0D7D3;
+		span {
+			transition: all 500ms ease-in-out;
+		}
 		@media #{$md,$sm,$xs,$xxs} {
 			border: none;
 		}
@@ -139,6 +156,14 @@
 			justify-content: end;
 			@media #{$md,$sm,$xs,$xxs} {
 				justify-content: start;
+			}
+		}
+		&:hover {
+			.item-icon {
+				animation: icon-bounce 1s ease-out infinite;
+			}
+			span {
+				padding-left: 10px;
 			}
 		}
 	}

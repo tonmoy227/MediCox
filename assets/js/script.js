@@ -252,6 +252,13 @@ Last change:    00/00/00
 								scaleX: 0,
 							});
 						}
+						if( $(el).hasClass('hero_title_3') ){
+							gsap.set(el.split.chars, {
+								x: 100,
+								scaleX: 0,
+								opacity: 0,
+							});
+						}
 						el.anim = gsap.to(el.split.chars, {
 							scrollTrigger: {
 								trigger: el,
@@ -266,11 +273,12 @@ Last change:    00/00/00
 							opacity: 1,
 							duration: 1,
 							stagger: .05,
-							ease: "power1.out",
+							ease: "back.out",
 						});
 
 					});
 				};
+
 				const MCoxH2 = gsap.timeline();
 				MCoxH2
 				.from(".mc-hero2-img", { opacity: 0,  yPercent: 200, duration: 1.5, transformOrigin: "bottom",  ease: "power1.out" })
@@ -278,410 +286,547 @@ Last change:    00/00/00
 				.from(".mc-hr2-btn-text", { opacity:0, y: 100, duration: 1.5, transformOrigin: "left", force3D: true,  ease: "power1.out" },"<= .3")
 				.from(".mc-hero2-content .mc-hr2-shape", {  yPercent: 100, duration: 1.5, transformOrigin: "left", force3D: true,  ease: "power1.out" },"<= .3")
 
+				const MCoxH3 = gsap.timeline();
+				MCoxH3
+				.from(".mc-hero3-img .inner-img", { scale: 3,  xPercent: 100, xPercent: 100, duration: 2, transformOrigin: "top",  ease: "power1.out" })
+				.from(".mc-hr3-desc p", { opacity: 0, yPercent: 100,  duration: 1, transformOrigin: "bottom",  ease: "back.out" },"<= .4")
+				.from(".mc-hr3-desc .mc-btn-2", { opacity: 0,  scaleY: 0, yPercent: 100,  duration: 1, transformOrigin: "left",  ease: "back.out" },"<= .8")
+
 			}, 700);
 		})		
 	});
-	if($('.tx-split-text').length) {
-		var st = jQuery(".tx-split-text");
-		if(st.length == 0) return;
-		gsap.registerPlugin(SplitText);
-		st.each(function(index, el) {
-			el.split = new SplitText(el, { 
-				type: "lines,words,chars",
-				linesClass: "split-line"
-			});
-			gsap.set(el, { perspective: 400 });
-			if( jQuery(el).hasClass('split-in-up') ){
-				gsap.set(el.split.chars, {
-					opacity: 0,
-					x: 15,
-					ease: "back.out",
-				});
-			}
-			if( jQuery(el).hasClass('split-in-left') ){
-				gsap.set(el.split.chars, {
-					opacity: 0,
-					y: 30,
-					ease: "back.out",
-				});
-			}
-			el.anim = gsap.to(el.split.chars, {
-				scrollTrigger: {
-					trigger: el,
-					start: "top 90%",
-				},
-				x: "0",
-				y: "0",
-				rotateX: "0",
-				rotationX: "0",
-				color: 'inherit',
-				webkitTextStroke: "0px white",
-				scale: 1,
-				opacity: 1,
-				duration: 0.8, 
-				stagger: 0.015,
-			});
+if($('.tx-split-text').length) {
+	var st = jQuery(".tx-split-text");
+	if(st.length == 0) return;
+	gsap.registerPlugin(SplitText);
+	st.each(function(index, el) {
+		el.split = new SplitText(el, { 
+			type: "lines,words,chars",
+			linesClass: "split-line"
 		});
-	};
-	document.addEventListener("mousemove", (e) => {
-		window.requestAnimationFrame(() => {
-			document.querySelectorAll(".img_move").forEach((move) => {
-				const movingValue = parseFloat(move.dataset.value);
-				const x = (e.clientX * movingValue) / 250;
-				const y = (e.clientY * movingValue) / 250;
-
-				move.style.transform = `translate(${x}px, ${y}px)`;
-			});
-		});
-	});
-	if($('.title_text').length) {
-		gsap.utils.toArray(".title_text").forEach(e => {
-			let i = gsap.timeline({
-				scrollTrigger: {
-					trigger: e,
-					start: "top 90%",
-					duration: 2,
-					end: "bottom 60%",
-					scrub: !1,
-					markers: !1,
-					toggleActions: "play none none none"
-				}
-			}),
-			t = new SplitText(e, {
-				type: "lines"
-			});
-			gsap.set(e, {
-				perspective: 400
-			}), t.split({
-				type: "lines"
-			}), i.from(t.lines, {
-				duration: 1,
-				delay: .5,
+		gsap.set(el, { perspective: 400 });
+		if( jQuery(el).hasClass('split-in-up') ){
+			gsap.set(el.split.chars, {
 				opacity: 0,
-				rotationX: -80,
-				force3D: !0,
-				transformOrigin: "top center -50",
-				stagger: .1
-			})
-		})
-	}
-	if($(".mc-sub-head").length) {
-		var tzSplit = $(".mc-sub-head");
-		if(tzSplit.length == 0) return; gsap.registerPlugin(SplitText); tzSplit.each(function(index, el) {
-
-			el.split = new SplitText(el, { 
-				type: "lines,words,chars",
-				linesClass: "split-line",
+				x: 15,
+				ease: "back.out",
 			});
-
-			let delayValue = $(el).attr("data-split-delay") || "0s";
-			delayValue = parseFloat(delayValue) || 0; 
-
-			if( $(el).hasClass('mc-sub-head') ){
-				gsap.set(el.split.chars, {
-					xPercent: -100 , 
-				});
-			}
-
-			el.anim = gsap.to(el.split.chars, {
-				scrollTrigger: {
-					trigger: el,
-					start: "top 86%",
-					toggleActions: 'play none none reverse',
-				},
-				opacity: 1,
-				yPercent: 0,
-				xPercent: 0,
-				duration: .8,
-				ease: "back.out(2)",
-				stagger: {
-					amount: .7, 
-					from: "random", 
-				},
-				delay: delayValue, 
+		}
+		if( jQuery(el).hasClass('split-in-left') ){
+			gsap.set(el.split.chars, {
+				opacity: 0,
+				y: 30,
+				ease: "back.out",
 			});
-
-		});
-	}
-	gsap.utils.toArray(' .left_view').forEach((el, index) => { 
-		let tlcta = gsap.timeline({
+		}
+		if( jQuery(el).hasClass('split-in-right') ){
+			gsap.set(el.split.chars, {
+				opacity: 0,
+				y: 30,
+				ease: "back.out",
+			});
+		}
+		el.anim = gsap.to(el.split.chars, {
 			scrollTrigger: {
 				trigger: el,
-				scrub: 1.5,
-				end: "top 30%",
-				start: "top 100%",
-				toggleActions: "play none none reverse",
-				markers: false
-			}
-		})
-
-		tlcta
-		.set(el, {transformOrigin: 'center center'})
-		.from(el, { opacity: 1, scale: 1, xPercent: "-100"}, {opacity: 1, xPercent: 0, duration: 1, immediateRender: false})
-	});
-	gsap.utils.toArray(' .right_view').forEach((el, index) => { 
-		let tlcta = gsap.timeline({
-			scrollTrigger: {
-				trigger: el,
-				scrub: 1.5,
-				end: "top 30%",
-				start: "top 100%",
-				toggleActions: "play none none reverse",
-				markers: false
-			}
-		})
-
-		tlcta
-		.set(el, {transformOrigin: 'center center'})
-		.from(el, { opacity: 1,  xPercent: "100"}, {opacity: 1, xPercent: 0, duration: 1, immediateRender: false})
-	});
-	gsap.utils.toArray('.cta-img img').forEach((el, index) => { 
-		let tlcta = gsap.timeline({
-			scrollTrigger: {
-				trigger: el,
-				scrub: 1.5,
-				end: "top 30%",
-				start: "top 100%",
-				toggleActions: "play none none reverse",
-				markers: false
-			}
-		})
-
-		tlcta
-		.from(el, { scale: 1.3 , y: 50, x: 30, filter: "blur(5px)"})
-	});
-	if (window.matchMedia("(min-width: 1400px)").matches) { 
-		gsap.utils.toArray(' .top_view_2').forEach((el, index) => { 
-			let tlcta = gsap.timeline({
-				scrollTrigger: {
-					trigger: el,
-					scrub: 3,
-					start: "top 40%",
-					end: "top -100%",
-					toggleActions: "play none none reverse",
-					markers: false,
-				}
-			})
-
-			tlcta
-			.set(el, {transformOrigin: 'center center'})
-			.fromTo(el, { opacity: 1,  y: "-=0"}, {opacity: 1, yPercent: 150, duration: 1, immediateRender: false})
-		}); 
-	}
-	gsap.utils.toArray('.zoom_view').forEach((el, index) => { 
-		let tlcta = gsap.timeline({
-			scrollTrigger: {
-				trigger: el,
-				scrub: 2,
-				end: "top -10%",
 				start: "top 90%",
-				ease: "back.out(1.5)",
-				toggleActions: "play none none reverse",
-				markers: false
-			}
-		})
-
-		tlcta
-		.set(el, {transformOrigin: 'center center'})
-		.from(el, { opacity: 0, scale: .5, }, {opacity: 1, scale: 1, duration: 1, immediateRender: false})
-	});
-	jQuery(window).on('load', function(){
-		const boxes = gsap.utils.toArray('.txt_item_active');
-		boxes.forEach(svg => {
-			gsap.to(svg, {
-				scrollTrigger: {
-					trigger: svg,
-					start: "top 100%",
-					end: "bottom bottom",
-					toggleClass: "active",
-					duration: 3,
-					delay:1,
-					toggleActions: "play play play reverse",
-					once: true,
-				}
-			});
+			},
+			x: "0",
+			y: "0",
+			rotateX: "0",
+			rotationX: "0",
+			color: 'inherit',
+			webkitTextStroke: "0px white",
+			scale: 1,
+			opacity: 1,
+			duration: .5, 
+			stagger: 0.05,
 		});
 	});
-	gsap.utils.toArray(".img-parallax").forEach(function(container) {
-		let image = container.querySelector("img");
-
-		let tl = gsap.timeline({
+};
+if($('.tx-split-line').length) {
+	var st = jQuery(".tx-split-line");
+	if(st.length == 0) return;
+	gsap.registerPlugin(SplitText);
+	st.each(function(index, el) {
+		el.split = new SplitText(el, { 
+			type: "words,lines",
+			linesClass: "split-line"
+		});
+		gsap.set(el, { perspective: 400 });
+		if( jQuery(el).hasClass('split-in-line') ){
+			gsap.set(el.split.lines, {
+				opacity: 0,
+				y: 50,
+				ease: "back.out",
+			});
+		}
+		el.anim = gsap.to(el.split.lines, {
 			scrollTrigger: {
-				trigger: container,
-				scrub: true,
-				pin: false,
+				trigger: el,
+				start: "top 90%",
 			},
-		}); 
-		tl.from(image, {
-			yPercent: -30,
-			ease: "none",
-		}).to(image, {
-			yPercent: 30,
-			ease: "none",
-		}); 
+			x: "0",
+			y: "0",
+			rotateX: "0",
+			rotationX: "0",
+			color: 'inherit',
+			webkitTextStroke: "0px white",
+			scale: 1,
+			opacity: 1,
+			duration: 0.5, 
+			stagger: 0.3,
+		});
 	});
-	gsap.utils.toArray(' .top_view').forEach((el, index) => { 
-		let tlcta = gsap.timeline({
-			scrollTrigger: {
-				trigger: el,
-				scrub: 1.5,
-				end: "top 100%",
-				start: "top 100%",
-				toggleActions: "play none none reverse",
-				markers: false
-			}
-		})
+};
+document.addEventListener("mousemove", (e) => {
+	window.requestAnimationFrame(() => {
+		document.querySelectorAll(".img_move").forEach((move) => {
+			const movingValue = parseFloat(move.dataset.value);
+			const x = (e.clientX * movingValue) / 250;
+			const y = (e.clientY * movingValue) / 250;
 
-		tlcta
-		.set(el, {transformOrigin: 'center center'})
-		.from(el, { opacity: 1, scale: 1, y: "100"}, {opacity: 1, y: 0, duration: 1, immediateRender: false})
+			move.style.transform = `translate(${x}px, ${y}px)`;
+		});
 	});
-	gsap.utils.toArray(' .slide_view_1').forEach((el, index) => { 
-		let tlcta = gsap.timeline({
+});
+if($('.title_text').length) {
+	gsap.utils.toArray(".title_text").forEach(e => {
+		let i = gsap.timeline({
 			scrollTrigger: {
-				trigger: el,
-				scrub: 1.5,
-				end: "top -80%",
-				start: "top 0%",
-				toggleActions: "play none none reverse",
-				markers: false
+				trigger: e,
+				start: "top 90%",
+				duration: 2,
+				end: "bottom 60%",
+				scrub: !1,
+				markers: !1,
+				toggleActions: "play none none none"
 			}
+		}),
+		t = new SplitText(e, {
+			type: "lines"
+		});
+		gsap.set(e, {
+			perspective: 400
+		}), t.split({
+			type: "lines"
+		}), i.from(t.lines, {
+			duration: 1,
+			delay: .5,
+			opacity: 0,
+			rotationX: -80,
+			force3D: !0,
+			transformOrigin: "top center -50",
+			stagger: .1
 		})
+	})
+}
+if($(".mc-sub-head").length) {
+	var tzSplit = $(".mc-sub-head");
+	if(tzSplit.length == 0) return; gsap.registerPlugin(SplitText); tzSplit.each(function(index, el) {
 
-		tlcta
-		.set(el, {transformOrigin: 'top'})
-		.from(el, { opacity: 1, scale: 1,  y: "-=500"}, {opacity: 1, y: 0, duration: 1, immediateRender: false})
+		el.split = new SplitText(el, { 
+			type: "lines,words,chars",
+			linesClass: "split-line",
+		});
+
+		let delayValue = $(el).attr("data-split-delay") || "0s";
+		delayValue = parseFloat(delayValue) || 0; 
+
+		if( $(el).hasClass('mc-sub-head') ){
+			gsap.set(el.split.chars, {
+				xPercent: -100 , 
+			});
+		}
+
+		el.anim = gsap.to(el.split.chars, {
+			scrollTrigger: {
+				trigger: el,
+				start: "top 86%",
+				toggleActions: 'play none none reverse',
+			},
+			opacity: 1,
+			yPercent: 0,
+			xPercent: 0,
+			duration: .8,
+			ease: "back.out(2)",
+			stagger: {
+				amount: .7, 
+				from: "random", 
+			},
+			delay: delayValue, 
+		});
+
 	});
-	gsap.utils.toArray(' .slide_view_2').forEach((el, index) => { 
+}
+gsap.utils.toArray(' .left_view').forEach((el, index) => { 
+	let tlcta = gsap.timeline({
+		scrollTrigger: {
+			trigger: el,
+			scrub: 1.5,
+			end: "top 30%",
+			start: "top 100%",
+			toggleActions: "play none none reverse",
+			markers: false
+		}
+	})
+
+	tlcta
+	.set(el, {transformOrigin: 'center center'})
+	.from(el, { opacity: 1, scale: 1, xPercent: "-100"}, {opacity: 1, xPercent: 0, duration: 1, immediateRender: false})
+});
+gsap.utils.toArray(' .right_view').forEach((el, index) => { 
+	let tlcta = gsap.timeline({
+		scrollTrigger: {
+			trigger: el,
+			scrub: 1.5,
+			end: "top 30%",
+			start: "top 100%",
+			toggleActions: "play none none reverse",
+			markers: false
+		}
+	})
+
+	tlcta
+	.set(el, {transformOrigin: 'center center'})
+	.from(el, { opacity: 1,  xPercent: "100"}, {opacity: 1, xPercent: 0, duration: 1, immediateRender: false})
+});
+gsap.utils.toArray('.cta-img img').forEach((el, index) => { 
+	let tlcta = gsap.timeline({
+		scrollTrigger: {
+			trigger: el,
+			scrub: 1.5,
+			end: "top 30%",
+			start: "top 100%",
+			toggleActions: "play none none reverse",
+			markers: false
+		}
+	})
+
+	tlcta
+	.from(el, { scale: 1.3 , y: 50, x: 30, filter: "blur(5px)"})
+});
+if (window.matchMedia("(min-width: 1400px)").matches) { 
+	gsap.utils.toArray(' .top_view_2').forEach((el, index) => { 
 		let tlcta = gsap.timeline({
 			scrollTrigger: {
 				trigger: el,
-				scrub: 1.5,
+				scrub: 3,
+				start: "top 40%",
 				end: "top -100%",
-				start: "top 200%",
 				toggleActions: "play none none reverse",
-				markers: false
+				markers: false,
 			}
 		})
 
 		tlcta
-		.set(el, {transformOrigin: 'bottom bottom'})
-		.from(el, { opacity: 1, scale: 1, y: "+=500"}, {opacity: 1, y: 0, duration: 1, immediateRender: false})
+		.set(el, {transformOrigin: 'center center'})
+		.fromTo(el, { opacity: 1,  y: "-=0"}, {opacity: 1, yPercent: 150, duration: 1, immediateRender: false})
+	}); 
+}
+gsap.utils.toArray('.zoom_view').forEach((el, index) => { 
+	let tlcta = gsap.timeline({
+		scrollTrigger: {
+			trigger: el,
+			scrub: 2,
+			end: "top -10%",
+			start: "top 90%",
+			ease: "back.out(1.5)",
+			toggleActions: "play none none reverse",
+			markers: false
+		}
+	})
+
+	tlcta
+	.set(el, {transformOrigin: 'center center'})
+	.from(el, { opacity: 0, scale: .5, }, {opacity: 1, scale: 1, duration: 1, immediateRender: false})
+});
+jQuery(window).on('load', function(){
+	const boxes = gsap.utils.toArray('.txt_item_active');
+	boxes.forEach(svg => {
+		gsap.to(svg, {
+			scrollTrigger: {
+				trigger: svg,
+				start: "top 100%",
+				end: "bottom bottom",
+				toggleClass: "active",
+				duration: 3,
+				delay:1,
+				toggleActions: "play play play reverse",
+				once: true,
+			}
+		});
 	});
-	if (window.matchMedia("(min-width: 767px)").matches) { 
-		const links = document.querySelectorAll('.eye-link');
+});
+gsap.utils.toArray(".img-parallax").forEach(function(container) {
+	let image = container.querySelector("img");
 
-		links.forEach(link => {
-			const span = link.querySelector('.eye-icon');
+	let tl = gsap.timeline({
+		scrollTrigger: {
+			trigger: container,
+			scrub: true,
+			pin: false,
+		},
+	}); 
+	tl.from(image, {
+		yPercent: -30,
+		ease: "none",
+	}).to(image, {
+		yPercent: 30,
+		ease: "none",
+	}); 
+});
+gsap.utils.toArray(' .top_view').forEach((el, index) => { 
+	let tlcta = gsap.timeline({
+		scrollTrigger: {
+			trigger: el,
+			scrub: 1.5,
+			end: "top 100%",
+			start: "top 100%",
+			toggleActions: "play none none reverse",
+			markers: false
+		}
+	})
 
-			link.addEventListener('mousemove', (e) => {
-				const rect = link.getBoundingClientRect();
-				const x = e.clientX - rect.left - rect.width / 2;
-				const y = e.clientY - rect.top - rect.height / 2;
+	tlcta
+	.set(el, {transformOrigin: 'center center'})
+	.from(el, { opacity: 1, scale: 1, y: "100"}, {opacity: 1, y: 0, duration: 1, immediateRender: false})
+});
+gsap.utils.toArray(' .slide_view_1').forEach((el, index) => { 
+	let tlcta = gsap.timeline({
+		scrollTrigger: {
+			trigger: el,
+			scrub: 1.5,
+			end: "top -80%",
+			start: "top 0%",
+			toggleActions: "play none none reverse",
+			markers: false
+		}
+	})
 
-				gsap.to(span, {
-					x: x * 1,
-					y: y * 1,
-					duration: 0.5,
-					ease: "power2.out"
-				});
-			});
+	tlcta
+	.set(el, {transformOrigin: 'top'})
+	.from(el, { opacity: 1, scale: 1,  y: "-=500"}, {opacity: 1, y: 0, duration: 1, immediateRender: false})
+});
+gsap.utils.toArray(' .slide_view_2').forEach((el, index) => { 
+	let tlcta = gsap.timeline({
+		scrollTrigger: {
+			trigger: el,
+			scrub: 1.5,
+			end: "top -100%",
+			start: "top 200%",
+			toggleActions: "play none none reverse",
+			markers: false
+		}
+	})
 
-			link.addEventListener('mouseleave', () => {
-				gsap.to(span, {
-					x: 0,
-					y: 0,
-					duration: 0.5,
-					ease: "power2.out"
-				});
+	tlcta
+	.set(el, {transformOrigin: 'bottom bottom'})
+	.from(el, { opacity: 1, scale: 1, y: "+=500"}, {opacity: 1, y: 0, duration: 1, immediateRender: false})
+});
+if (window.matchMedia("(min-width: 767px)").matches) { 
+	const links = document.querySelectorAll('.eye-link');
+
+	links.forEach(link => {
+		const span = link.querySelector('.eye-icon');
+
+		link.addEventListener('mousemove', (e) => {
+			const rect = link.getBoundingClientRect();
+			const x = e.clientX - rect.left - rect.width / 2;
+			const y = e.clientY - rect.top - rect.height / 2;
+
+			gsap.to(span, {
+				x: x * 1,
+				y: y * 1,
+				duration: 0.5,
+				ease: "power2.out"
 			});
 		});
-	}
+
+		link.addEventListener('mouseleave', () => {
+			gsap.to(span, {
+				x: 0,
+				y: 0,
+				duration: 0.5,
+				ease: "power2.out"
+			});
+		});
+	});
+}
+gsap.utils.toArray(' .list_top').forEach((el, index) => { 
+	let tlcta = gsap.timeline({
+		scrollTrigger: {
+			trigger: el,
+			scrub: 1.5,
+			end: "top 80%",
+			start: "top 100%",
+			toggleActions: "play none none reverse",
+			markers: false
+		}
+	})
+
+	tlcta
+	.set(el, {transformOrigin: 'center center'})
+	.from(el, { opacity: 0,  y: "100"}, {opacity: 1, xPercent: 0, duration: 1, immediateRender: false})
+});
+gsap.utils.toArray(' .bottom_text').forEach((el, index) => { 
+	let tlcta = gsap.timeline({
+		scrollTrigger: {
+			trigger: el,
+			scrub: 1.5,
+			end: "top 80%",
+			start: "top 100%",
+			toggleActions: "play none none reverse",
+			markers: false
+		}
+	})
+
+	tlcta
+	.set(el, {transformOrigin: 'center center'})
+	.from(el, { opacity: 0, scale: .5,  y: "100"}, {opacity: 1, xPercent: 0, duration: 1, immediateRender: false})
+});
+gsap.utils.toArray('.mc-item1').forEach((el) => {
+	const tl = gsap.timeline({
+		scrollTrigger: {
+			trigger: el,
+			scrub: 1,
+			start: "top 100%",
+			end: "bottom 70%",
+			toggleActions: "play none none reverse",
+			markers: false
+		}
+	});
+
+	tl.set(el, {
+		perspective: 2000,
+		transformStyle: "preserve-3d",
+		transformOrigin: "0% 50%"
+	}).from(el, {
+		xPercent: 100,
+		opacity: 1
+	});
+});
+gsap.utils.toArray('.mc-item2').forEach((el, index) => {
+	const tl = gsap.timeline({
+		scrollTrigger: {
+			trigger: el,
+			scrub: 1,
+			start: "top 120%",
+			end: "bottom 100%",
+			toggleActions: "play none none reverse",
+			markers: false
+		}
+	});
+
+	tl.set(el, {
+		perspective: 2000,
+		transformStyle: "preserve-3d",
+		transformOrigin: "100% 50%"
+	}).from(el, {
+		xPercent: -100,
+		opacity: 1
+	});
+});
+if (window.matchMedia("(min-width: 1200px)").matches) { 
+	var Testi_pin = document.querySelectorAll(".mc-testi3-text-wrap")
+	Testi_pin.forEach((item) => {
+		gsap.to(item, {
+			scrollTrigger: {
+				trigger: item,
+				markers: false,
+				pin: true,
+				pinSpacing: false,
+				start: "top 10%",
+				end: "bottom 70%",
+			},
+		});
+	});
+}
 	// Team Slider		
-	if($(".mc-team1-slider").length) {
-		const swiper = new Swiper(".mc-team1-slider" , {
-			speed: 500,
-			loop: true,
-			spaceBetween: 0,
-			autoplay:  {
-				delay: 5000,
+if($(".mc-team1-slider").length) {
+	const swiper = new Swiper(".mc-team1-slider" , {
+		speed: 500,
+		loop: true,
+		spaceBetween: 0,
+		autoplay:  {
+			delay: 5000,
+		},
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
 			},
-			breakpoints: {
-				0: {
-					slidesPerView: 1,
-				},
-				576: {
-					slidesPerView: 1,
-				},
-				768: {
-					slidesPerView: 1,
-				},
-				992: {
-					slidesPerView: 2,
-				},
-				1199: {
-					slidesPerView: 2,
-				},
-				1400: {
-					slidesPerView: 3,
-				},
-				1600: {
-					slidesPerView: 3,
-				},
-				1800: {
-					slidesPerView: 3,
-				},
+			576: {
+				slidesPerView: 1,
 			},
-		})
-	}
+			768: {
+				slidesPerView: 1,
+			},
+			992: {
+				slidesPerView: 2,
+			},
+			1199: {
+				slidesPerView: 2,
+			},
+			1400: {
+				slidesPerView: 3,
+			},
+			1600: {
+				slidesPerView: 3,
+			},
+			1800: {
+				slidesPerView: 3,
+			},
+		},
+	})
+}
 
-	if($(".mc-team3-slider").length) {
-		const swiper = new Swiper(".mc-team3-slider" , {
-			speed: 500,
-			spaceBetween: 30,
-			loop: true,
-			autoplay:  {
-				delay: 5000,
+if($(".mc-team3-slider").length) {
+	const swiper = new Swiper(".mc-team3-slider" , {
+		speed: 500,
+		spaceBetween: 30,
+		loop: true,
+		autoplay:  {
+			delay: 5000,
+		},
+		pagination: {
+			el: ".mc-team3--pagi",
+			clickable: true,
+		},
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
 			},
-			pagination: {
-				el: ".mc-team3--pagi",
-				clickable: true,
+			576: {
+				slidesPerView: 1,
 			},
-			breakpoints: {
-				0: {
-					slidesPerView: 1,
-				},
-				576: {
-					slidesPerView: 1,
-				},
-				768: {
-					slidesPerView: 2,
-				},
-				992: {
-					slidesPerView: 2,
-				},
-				1200: {
-					slidesPerView: 3,
-				},
-				1400: {
-					slidesPerView: 3,
-				},
-				1600: {
-					slidesPerView: 3,
-				},
-				1800: {
-					slidesPerView: 3,
-				},
+			768: {
+				slidesPerView: 2,
 			},
-		})
-	}
+			992: {
+				slidesPerView: 2,
+			},
+			1200: {
+				slidesPerView: 3,
+			},
+			1400: {
+				slidesPerView: 3,
+			},
+			1600: {
+				slidesPerView: 3,
+			},
+			1800: {
+				slidesPerView: 3,
+			},
+		},
+	})
+}
 
-	if ($("#beforeafter").length) {
-		$(window).load(function() {
-			$("#beforeafter").twentytwenty();
-		});
-	} 
-	$(document).on('click', '.cg-faq3-item-area .accordion-item', function(){
-		$(this).addClass('faq_active').siblings().removeClass('faq_active')
+if ($("#beforeafter").length) {
+	$(window).load(function() {
+		$("#beforeafter").twentytwenty();
 	});
+} 
+$(document).on('click', '.cg-faq3-item-area .accordion-item', function(){
+	$(this).addClass('faq_active').siblings().removeClass('faq_active')
+});
 })(jQuery);
