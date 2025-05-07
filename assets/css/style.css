@@ -8858,7 +8858,7 @@ a:hover, a:focus {
 .cg-footer-cta {
   border-bottom: 1px dashed #D9D9D9;
 }
-@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 481px) and (max-width: 575px) {
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 481px) and (max-width: 575px), (max-width: 480px) {
   .cg-footer-cta {
     gap: 30px 40px;
     -ms-flex-wrap: wrap;
@@ -8898,7 +8898,7 @@ a:hover, a:focus {
   padding: 55px 0 55px 65px;
   border-left: 1px dashed #D9D9D9;
 }
-@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 481px) and (max-width: 575px) {
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 481px) and (max-width: 575px), (max-width: 480px) {
   .cg-footer-cta-wrap {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
