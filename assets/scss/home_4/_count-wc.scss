@@ -1,0 +1,95 @@
+.mc-counter-wc-sec {
+	border-radius: 23px;
+	margin: 50px 50px 0px;
+	background: linear-gradient(181.44deg, #E8F3FF 1.22%, rgba(232, 244, 255, 0) 117.41%);
+	@media #{$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+}
+.mc-count4-item {
+	width: 295px;
+	height: 295px;
+	border-radius: 100%;
+	background-color: #fff;
+	@media #{$xl} {
+		width: 250px;
+		height: 250px;
+	}
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		width: 200px;
+		height: 200px;
+		margin: 0 auto;
+		margin-bottom: 30px;
+	}
+	h3 {
+		font-size: 70px;
+		font-weight: 700;
+		padding-bottom: 15px;
+		color: var(--mc-title-color);
+		@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+			font-size: 55px;
+			padding-bottom: 0;
+		}
+	}
+	p {
+		margin: 0 auto;
+		max-width: 170px;
+	}
+}
+.mc-why-choose3 {
+	gap: 40px 30px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+		justify-content: center !important;
+	}
+}
+.mc-why-choose3-img {
+	gap: 25px;
+	max-width: 615px;
+	@media #{$xxs} {
+		flex-wrap: wrap;
+	}
+	.item-img {
+		overflow: hidden;
+		border-radius: 13px;
+	}
+}
+.mc-circle-wrap {
+	max-width: 300px;
+	padding: 50px 25px;
+	border-radius: 17px;
+	background-color: #B1E2F6;
+	.mc-circle {
+		width: 130px; 
+		height: 130px;
+		margin: 0 auto;
+		border-radius: 100%;
+		position: relative;
+		margin-bottom: 25px;
+		border: 10px solid #1351D8;
+		&:before {
+			top: 8px;
+			left: 8px;
+			width: 95px;
+			height: 95px;
+			content: '';
+			border-radius: 100%;
+			position: absolute;
+			border: 1px solid #fff;
+		}
+		h3 {
+			font-size: 24px;
+			font-weight: 700;
+		}
+	}
+	p {
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 1.2;
+	}
+}
+
+.mc-why-choose3-text {
+	max-width: 690px;
+}

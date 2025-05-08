@@ -113,6 +113,10 @@
 	margin-bottom: 30px;
 	border-radius: 100%;
 	border: 1px solid var(--mc-title-color);
+	@media #{$lg,$md,$sm,$sm,$xs,$xxs} {
+		margin: 0;
+		border: none;
+	}
 	@media #{$xxs} {
 		width: 300px;
 		height: 300px;
@@ -128,7 +132,7 @@
 		border-radius: 100%;
 		border: 1px solid var(--mc-title-color);
 		animation: moveLeftRight 2s ease-in-out infinite;
-		@media #{$xxs} {
+		@media #{$lg,$md,$sm,$sm,$xs,$xxs} {
 			display: none;
 		}
 	}

@@ -106,4 +106,17 @@
 			}
 		}
 	}
+	&:is(.ver_2) {
+		width: 100%;
+		max-width: 544px;
+		padding-bottom: 60px;
+		.item-img {
+			overflow: hidden;
+			max-width: 544px;
+			border-radius: 15px;
+		}
+		.item-text {
+			left: 15px;
+		}
+	}
 }

@@ -1,0 +1,34 @@
+.mc-about4-content {
+	gap: 40px 30px;
+	justify-content: space-between;
+	@media #{$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+.mc-about4-text-wrap {
+	max-width: 760px;
+	@media #{$lg} {
+		max-width: 450px;
+	}
+	.mc-sec-title4 {
+		p {
+			font-size: 20px;
+		}
+	}
+	li {
+		color: #000000;
+		font-size: 22px;
+		font-weight: 700;
+		max-width: 440px;
+		padding: 25px 0px;
+		border-bottom: 1px solid #000000;
+		@media #{$lg} {
+			padding: 18px 0px;
+		}
+		i {
+			color: #00BA00;
+			margin-right: 18px;
+		}
+	}
+}
