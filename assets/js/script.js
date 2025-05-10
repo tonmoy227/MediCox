@@ -779,7 +779,19 @@ if($(".mc-team1-slider").length) {
 		},
 	})
 }
-
+	// Testimonial Slider		
+if($(".mc-testi4-img-slide, .mc-testi4-text-slide").length) {
+	const swiper = new Swiper(".mc-testi4-img-slide, .mc-testi4-text-slide" , {
+		speed: 500,
+		loop: true,
+		spaceBetween: 0,
+		slidesPerView: 1,
+		navigation: {
+			nextEl: ".mc-testi4-next",
+			prevEl: ".mc-testi4-prev",
+		},
+	})
+}
 if($(".mc-team3-slider").length) {
 	const swiper = new Swiper(".mc-team3-slider" , {
 		speed: 500,
