@@ -682,3 +682,140 @@
 		}
 	}
 }
+.mc-footer4-sec {
+	bottom: 0;
+	margin: 50px;
+	position: sticky;
+	border-radius: 20px;
+	background-color: var(--mc-pr-c4);
+	@media #{$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
+		margin: 50px 0px 0px;
+		border-radius: 0;
+	}
+}
+.mc-footer4-widget-area {
+	padding-top: 70px;
+	position: relative;
+	padding-bottom: 70px;
+	border-top: 1px solid #232222;
+	border-bottom: 1px solid #232222;
+	@media #{$md,$sm,$xs,$xxs} {
+		gap: 30px;
+		flex-wrap: wrap;
+	}
+	&:before {
+		top: 0;
+		left: 50%;
+		content: '';
+		width: 1px;
+		height: 100%;
+		position: absolute;
+		transform: translateX(-50%);
+		background-color: #232222;
+		@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+			display: none;
+		}
+	}
+	.mc-team2-circle {
+		margin: 0;
+		width: 282px;
+		height: 282px;
+	}
+	.mc-team2-circle p {
+		font-size: 25px;
+	}
+}
+.mc-footer4-text {
+	margin: 0 auto;
+	max-width: 1020px;
+	padding: 60px 0px;
+	h2 {
+		font-size: 108px;
+		font-weight: 700;
+		@media #{$sm} {
+			font-size: 80px;
+		}
+		@media #{$xs} {
+			font-size: 50px;
+		}
+		@media #{$xxs} {
+			font-size: 40px;
+		}
+		span {
+			display: block;
+			text-align: right;
+		}
+	}
+}
+.mc-footer4-widget {
+	.widget-title {
+		font-size: 24px;
+		font-weight: 700;
+		padding-bottom: 20px;
+	}
+	.menu-widget {
+		li {
+			margin-bottom: 15px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			a {
+				color: var(--mc-title-color);
+				&:hover {
+					color: var(--mc-pr-c3);
+					transform: translateX(10px);
+				}
+			}
+		}
+	}
+	.cta-widget {
+		@media #{$lg} {
+			max-width: 240px;
+		}
+		.cta-info {
+			color: var(--mc-title-color);
+			h3 {
+				font-size: 28px;;
+				font-weight: 700;
+				padding-top: 10px;
+			}
+		}
+		.cta-social {
+			a {
+				margin-right: 20px;
+				&:last-child {
+					margin-right: 0;
+				}
+				&:hover {
+					color: var(--mc-pr-c2);
+				}
+			}
+		}
+	}
+}
+.mc-footer4-copyright {
+	gap: 20px;
+	@media #{$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+		justify-content: center !important;
+	}
+	.copyright-menu {
+		@media #{$sm,$xs,$xxs} {
+			text-align: center;
+		}
+		li {
+			margin-left: 30px;
+			@media #{$sm,$xs,$xxs} {
+				margin: 0px 10px;
+			}
+			a {
+				font-size: 15px;
+				font-weight: 600;
+				color: var(--mc-title-color);
+				&:hover {
+					color: var(--mc-pr-c3);
+				}
+			}
+		}
+	}
+}

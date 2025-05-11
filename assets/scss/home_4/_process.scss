@@ -1,10 +1,14 @@
 .mc-process4-sec {
+	z-index: 2;
 	margin: 0 50px;
-	border-radius: 23px;
-	background-color: #B1E2F6;
+	position: relative;
 	@media #{$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
 		margin: 0px;
 	}
+}
+.mc-process4-pin {
+	border-radius: 23px;
+	background-color: #B1E2F6;
 }
 .mc-process4-content {
 	margin: 0 auto;

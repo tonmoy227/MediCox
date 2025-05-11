@@ -13,7 +13,7 @@
 	background-color: #fff;
 	border: 1px dashed #C3C3C3;
 	transition: all 500ms ease-in-out;
-	@media #{$md,$sm,$xs} {
+	@media #{$md,$sm,$xs,$xxs} {
 		flex-wrap: wrap;
 		padding: 40px 30px;
 		justify-content: center !important;

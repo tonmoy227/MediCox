@@ -54,6 +54,13 @@ body {
 .home-3 {
 	background-color: #FFF4EF;
 }
+.home-4 {
+	main {
+		z-index: 2;
+		position: relative;
+		background-color: #fff;
+	}
+}
 // body::-webkit-scrollbar {
 // 	width: 6px;
 // }

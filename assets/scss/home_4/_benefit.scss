@@ -1,5 +1,7 @@
 .mc-benefit-sec {
+	z-index: 3;
 	margin: 0 50px;
+	position: relative;
 	border-radius: 23px;
 	background-color: #092D3C;
 	@media #{$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {

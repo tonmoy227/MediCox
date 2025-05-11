@@ -20,6 +20,12 @@
 	width: 100%;
 	overflow: hidden;
 	border-radius: 35px;
+	img {
+		opacity: 0;
+		visibility: hidden;
+		transform: scale(1.2);
+		transition: all 500ms ease-in-out;
+	}
 	span {
 		left: 15px;
 		top: 15px;
@@ -49,20 +55,37 @@
 		font-size: 24px;
 		font-weight: 700;
 		color: var(--mc-title-color);
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(20px);
+		transition: 1000ms cubic-bezier(0.5, -0.75, 0.3, 2.5);
 	}
 	p {
 		font-size: 26px;
 		padding: 40px 0px 50px;
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(20px);
+		transition: 1000ms cubic-bezier(0.5, -0.75, 0.3, 2.5);
 	}
 	.mc-testi4-author {
 		h3 {
 			font-size: 22px;
 			font-weight: 700;
 			color: var(--mc-title-color);
+			opacity: 0;
+			visibility: hidden;
+			transform: translateY(20px);
+			transition: 1000ms cubic-bezier(0.5, -0.75, 0.3, 2.5);
 		}
 		b {
 			font-size: 14px;
 			font-weight: 500;
+			opacity: 0;
+			visibility: hidden;
+			display: inline-block;
+			transform: translateY(20px);
+			transition: 1000ms cubic-bezier(0.5, -0.75, 0.3, 2.5);
 		}
 		.item-rate {
 			font-size: 15px;
@@ -71,6 +94,10 @@
 			border-radius: 35px;
 			color: var(--mc-title-color);
 			background-color: var(--mc-pr-c2);
+			opacity: 0;
+			visibility: hidden;
+			transform: translateY(20px);
+			transition: 1000ms cubic-bezier(0.5, -0.75, 0.3, 2.5);
 		}
 	}
 }
@@ -94,6 +121,49 @@
 		transition: all 300ms ease-in-out;
 		&:hover {
 			background-color: var(--mc-pr-c2);
+		}
+	}
+}
+.swiper-slide-active {
+	.mc-test4-img {
+		img {
+			opacity: 1;
+			transform: scale(1);
+			visibility: visible;
+		}
+	}
+	.mc-testi4-text-item { 
+		span {
+			opacity: 1;
+			visibility: visible;
+			transform: translateY(0);
+			transition-delay: 100ms;
+		}
+		p {
+			opacity: 1;
+			visibility: visible;
+			transform: translateY(0);
+			transition-delay: 200ms;
+		}	
+		.mc-testi4-author {
+			h3 {
+				opacity: 1;
+				visibility: visible;
+				transform: translateY(0);
+				transition-delay: 300ms;
+			}
+			b {
+				opacity: 1;
+				visibility: visible;
+				transform: translateY(0);
+				transition-delay: 500ms;
+			}
+			.item-rate {
+				opacity: 1;
+				visibility: visible;
+				transform: translateY(0);
+				transition-delay: 500ms;
+			}
 		}
 	}
 }

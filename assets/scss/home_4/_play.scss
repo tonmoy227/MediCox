@@ -22,6 +22,7 @@
 		&:before {
 			top: 0;
 			left: 0;
+			z-index: 1;
 			width: 100%;
 			height: 100%;
 			content: '';
@@ -52,12 +53,22 @@
 			&:before {
 				left: 0;
 				right: 0;
-				width: 100%;
+				width: 0%;
 				content: '';
 				height: 6px;
+				margin: 0 auto;
 				bottom: -15px;
 				position: absolute;
+				transition: 1000ms all ease-in-out;
 				background-color: var(--mc-pr-c2);
+			}
+		}
+		&:is(.active) {
+			h3 {
+				&:before {
+					width: 100%;
+					transition-delay: 600ms;
+				}
 			}
 		}
 	}

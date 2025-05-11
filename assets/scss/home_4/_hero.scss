@@ -11,7 +11,7 @@
 	}
 }
 .mc-hero4-content {
-	gap: 20px 30px;
+	gap: 20px;
 	@media #{$md,$sm,$xs,$xxs} {
 		flex-wrap: wrap;
 	}
@@ -39,7 +39,7 @@
 	}
 	.mc-hero4-text {
 		margin: 0 auto;
-		max-width: 615px;
+		max-width: 630px;
 		@media #{$md,$sm,$xs,$xxs} {
 			margin: 0;
 		}
@@ -92,6 +92,7 @@
 			left: 0;
 			bottom: 0;
 			width: 100%;
+			z-index: 1;
 			content: '';
 			height: 65%;
 			position: absolute;
@@ -101,6 +102,7 @@
 	.item-text-wrap {
 		left: 50px;
 		bottom: 65px;
+		z-index: 2;
 		gap: 20px 25px;
 		position: absolute;
 		@media #{$xs,$xxs} {

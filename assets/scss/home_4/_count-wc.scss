@@ -53,6 +53,14 @@
 	.item-img {
 		overflow: hidden;
 		border-radius: 13px;
+		transition: all 800ms ease-in-out;
+		clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+	}
+	&:is(.active) {
+		.item-img {
+			transition-delay: 300ms;
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+		}
 	}
 }
 .mc-circle-wrap {
