@@ -1,0 +1,139 @@
+.mc-hero5-sec {
+	padding-left: 15px;
+	padding-top: 180px;
+	padding-right: 15px;
+	@media #{$md,$sm,$xs,$xxs} {
+		padding-top: 66px;
+	}
+}
+.mc-hero5-content {
+	gap: 25px;
+	margin: 0 auto;
+	max-width: 1710px;
+	@media #{$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+.mc-hero5-text1 {
+	z-index: 1;
+	width: 100%;
+	max-width: 985px;
+	border-radius: 22px;
+	padding: 160px 80px 235px;
+	background-color: #3644FD;
+	@media #{$xl,$lg} {
+		padding: 160px 40px 235px;
+	}
+	@media #{$md,$sm} {
+		padding: 120px 40px 100px;
+	}
+	@media #{$xs,$xxs} {
+		padding: 120px 20px 100px;
+	}
+	.mc-hr5-img {
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+		@media #{$xs,$xxs} {
+			width: 60%;
+		}
+	}
+	.hero_title {
+		color: #fff;
+		line-height: 1;
+		font-size: 60px;
+		font-weight: 700;
+		letter-spacing: -2px;
+		max-width: 640px;
+		padding-bottom: 15px;
+		@media #{$xl} {
+			font-size: 55px;
+		}
+		@media #{$lg} {
+			font-size: 48px;
+		}
+		@media #{$md,$sm} {
+			font-size: 45px;
+		}
+		@media #{$xs,$xxs} {
+			font-size: 40px;
+		}
+	}
+	p {
+		color: #fff;
+		max-width: 410px;
+		padding-bottom: 30px;
+	}
+	form {
+		width: 100%;
+		max-width: 415px;
+		position: relative;
+		input {
+			width: 100%;
+			height: 58px;
+			border: none;
+			font-size: 13px;
+			padding-left: 25px;
+			border-radius: 50px;
+			&::placeholder {
+				color: #84898D;
+				font-size: 13px;
+				font-style: italic;
+			}
+		}
+		button {
+			top: 15px;
+			right: 25px;
+			padding: 0;
+			border: none;
+			color: #0B566A;
+			position: absolute;
+			background: transparent;
+		}
+	}
+}
+.hr5-slug {
+	color: #fff;
+	font-size: 15px;
+	padding: 8px 24px;
+	border-radius: 25px;
+	display: inline-block;
+	background-color: #FFFFFF26;
+	img {
+		margin-right: 8px;	
+	}
+}
+.mc-hero5-img-wrap {
+	max-width: 696px;
+	@media #{$md,$sm,$xs,$xxs} {
+		width: 100%;
+		max-width: 100%;
+	}
+}
+.mc-hero5-img-area {
+	gap: 25px;
+	.item-img {
+		height: 273px;
+		border-radius: 22px;
+	}
+}
+.mc-hero5-img-list {
+	border-radius: 22px;
+	padding: 40px 50px 65px;
+	background-color: #016542;
+	h3 {
+		color: #fff;
+		font-size: 36px;
+		max-width: 295px;
+		font-weight: 700;
+		padding-bottom: 30px;
+	}
+	li {
+		color: #fff;
+		font-size: 16px;
+		font-weight: 700;
+		padding: 15px 0px;
+		border-bottom: 1px dashed #fff;
+	}
+}

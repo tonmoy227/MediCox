@@ -1,0 +1,44 @@
+.mc-trend-pro-sec {
+	padding-left: 15px;
+	padding-right: 15px;
+	.mc-sec-title5 {
+		p {
+			margin: 0 auto;
+			max-width: 470px;
+		}
+	}
+} 
+.mc-trend-pro-content {
+	margin: 0 auto;
+	max-width: 1715px;
+}
+.mc-trend-pro-btn {
+	border-bottom: 1px solid #E9EAED;
+	.nav-tabs .nav-link {
+		line-height: 1;
+		font-size: 15px;
+		font-weight: 700;
+		margin: 0px 5px;
+		position: relative;
+		padding: 0px 10px 10px !important;
+		color: var(--mc-title-color);
+		&:before {
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: 0%;
+			content: '';
+			height: 1px;
+			margin: 0 auto;
+			position: absolute;
+			transition: all 500ms ease-in-out;
+			background-color: var(--mc-pr-c3);
+		}
+		&:is(.active) {
+			color: var(--mc-pr-c3);
+			&:before {
+				width: 100%;
+			}
+		}
+	}
+}
