@@ -61,6 +61,15 @@ body {
 		background-color: #fff;
 	}
 }
+.home-6 {
+	color: #626363;
+	font-weight: 300;
+	line-height: 1.55;
+	font-family: var(--mc-body-font2);
+	.container {
+		max-width: 1344px;
+	}
+}
 // body::-webkit-scrollbar {
 // 	width: 6px;
 // }
@@ -142,6 +151,18 @@ body {
 	margin-bottom: 0;
 	color: var(--mc-title-color);
 	font-family: var(--mc-heading4);
+}
+.headline-5 h1,
+.headline-5 h2,
+.headline-5 h3,
+.headline-5 h4,
+.headline-5 h5,
+.headline-5 h6 {
+	line-height: 1;
+	font-weight: 400;
+	margin-bottom: 0;
+	color: var(--mc-title-color2);
+	font-family: var(--mc-heading5);
 }
 
 #preloader { 

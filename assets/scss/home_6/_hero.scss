@@ -1,0 +1,137 @@
+.mc-hero6-content {
+	padding-bottom: 15px;
+	background-color: var(--mc-pr-c10);
+	clip-path: polygon( 0% 78.644%,0% 0%,99.948% 0%,99.974% 68.87%,84.487% 88.023%,30.349% 100%,0% 78.644% );
+	@media #{$xs,$xxs} {
+		clip-path: none;
+		padding-bottom: 0;
+	}
+}
+.mc-hero6-item {
+	z-index: 1;
+	background-color: #EEE4E2;
+	padding: 230px 0px 260px;
+	clip-path: polygon( 0% 82.562%,0% 0%,100% 0%,100% 66.311%,84.531% 92.408%,56.068% 98.814%,30.286% 100%,0% 82.562% );
+	@media #{$sm} {
+		padding: 150px 0px 160px;
+	}
+	@media #{$xs,$xxs} {
+		clip-path: none;
+		padding: 200px 0px 120px;
+	}
+	.mc-hero6-img {
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+	}
+	.mc-hr6-shape1 {
+		top: -12%;
+		left: -12%;
+	}
+	.mc-hr6-shape2 {
+		bottom: -5%;
+		left: 25%;
+	}
+	.mc-hr6-shape3 {
+		right: 0;
+		bottom: 40%;
+		@media #{$xs,$xxs} {
+			display: none;
+		}
+	}
+}
+.mc-hero6-text {
+	z-index: 1;
+	max-width: 480px;
+	position: relative;
+	@media #{$xxl} {
+		margin-left: 50px;
+	}
+	.hr6-title {
+		font-size: 60px;
+		font-weight: 500;
+		line-height: 1.067;
+		padding-bottom: 25px;
+		@media #{$xxs} {
+			font-size: 50px;
+		}
+		@media #{$xxxs} {
+			font-size: 45px;
+		}
+	}
+	p {
+		padding-bottom: 32px;
+	}
+	.mc-hr6-btn {
+		a {
+			color: #fff;
+			font-weight: 600;
+			border-radius: 8px;
+			padding: 14px 28px;
+			font-family: var(--mc-heading5);
+			background-color: var(--mc-pr-c10);
+			i {
+				margin-left: 8px;
+			}
+		}
+	}
+}
+.mc-slide-counter {
+	top: 42%;
+	left: 60px;
+	position: absolute;
+	transform: translateY(-50%);
+	@media #{$xxl} {
+		left: 30px;
+	}
+	@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+		display: none;
+	}
+	.swiper-pagination-bullet {
+		height: 50%;
+		width: 2px;
+	}
+	.total,
+	.current {
+		font-size: 20px;
+		font-weight: 500;
+		color: var(--mc-pr-c10);
+		font-family: var(--mc-heading5);
+	}
+}
+.mc-hr6-pagi {
+	opacity: 1;
+	height: 258px;
+	overflow: hidden;
+	margin: 15px 10px !important;
+	width: 2px !important;
+	background-color: rgba(38, 38, 38, .16);
+	.swiper-pagination-bullet {
+		width: 2px;
+		height: 33%;
+		display: block;
+		border-radius: 0;
+		margin: 0 !important;
+		position: relative; 
+		transform-origin: top;
+		transition: all 500ms ease-in-out;
+		background-color: transparent;
+		&:before {
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 0%;
+			content: '';
+			position: absolute;
+			transition: all 800ms ease-in-out;
+			background-color: var(--mc-pr-c10);
+		}
+		&:is(.swiper-pagination-bullet-active) {
+			&:before {
+				height: 100%;
+			}
+		}
+	}
+}
