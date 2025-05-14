@@ -822,3 +822,119 @@
 		}
 	}
 }
+.mc-footer5-content {
+	margin: 0 auto;
+	gap: 30px 40px;
+	max-width: 1635px;
+	padding-left: 15px;
+	padding-right: 15px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+	}
+}
+.mc-footer5-widget {
+	.widget-title {
+		font-size: 18px;
+		font-weight: 700;
+		padding-bottom: 30px;
+		color: var(--mc-title-color);
+	}
+	.newsletter-widget {
+		max-width: 595px;
+		h4 {
+			font-size: 32px;
+			font-weight: 700;
+			padding-bottom: 30px;
+			color: var(--mc-title-color);
+		}
+		p {
+			max-width: 545px;
+			padding-bottom: 40px;
+		}
+		form {
+			gap: 15px 30px;
+			display: flex;
+			margin-bottom: 20px;
+			@media #{$xxs} {
+				flex-wrap: wrap;
+			}
+			input {
+				width: 100%;
+				height: 58px;
+				max-width: 480px;
+				padding-left: 45px;
+				border-radius: 6px;
+				border: 1px solid var(--mc-title-color);
+			}
+			button {
+				height: 58px;
+				border: none;
+				font-weight: 700;
+				padding: 0px 20px;
+				border-radius: 6px;
+				white-space: nowrap;
+				color: var(--mc-title-color);
+				transition: all 500ms ease-in-out;
+				background-color: var(--mc-pr-c2);
+				&:hover {
+					color: #fff;
+					background-color: var(--mc-pr-c3);
+				}
+			}
+		}
+		span {
+			a {
+				text-decoration: underline;
+			}
+		}
+	}
+	.menu-widget {
+		li {
+			margin-bottom: 15px;
+			a {
+				font-size: 16px;
+				font-weight: 500;
+				color: var(--mc-title-color);
+				&:hover {
+					color: var(--mc-pr-c3);
+					transform: translateX(10px);
+				}
+			}
+		}
+	}
+	.cta-widget {
+		p {
+			max-width: 235px;
+			padding-bottom: 25px;
+		}
+		span {
+			font-weight: 700;
+			padding-bottom: 25px;
+			color: var(--mc-title-color);
+		}
+		a {
+			display: block;
+			font-size: 20px;
+			font-weight: 700;
+			color: var(--mc-title-color);
+		}
+	}
+}
+.mc-footer5-copyright {
+	gap: 15px 30px;
+	margin: 0 auto;
+	max-width: 1740px;
+	padding: 18px 15px;
+	border-top: 1px solid rgba(107, 114, 128, .4);
+	@media #{$md,$sm,$xs,$xxs} {
+		justify-content: center !important;
+	}
+	p {
+		a {
+			color: var(--mc-pr-c2);
+		}
+		@media #{$md,$sm,$xs,$xxs} {
+			text-align: center;
+		}
+	}
+}

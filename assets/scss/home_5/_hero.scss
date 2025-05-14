@@ -39,14 +39,17 @@
 			width: 60%;
 		}
 	}
-	.hero_title {
+	.hr5_title {
 		color: #fff;
 		line-height: 1;
 		font-size: 60px;
 		font-weight: 700;
-		letter-spacing: -2px;
+		letter-spacing: -1px;
 		max-width: 640px;
 		padding-bottom: 15px;
+		.split-line {
+			padding-bottom: 6px;
+		}
 		@media #{$xl} {
 			font-size: 55px;
 		}
@@ -90,6 +93,10 @@
 			color: #0B566A;
 			position: absolute;
 			background: transparent;
+			transition: all 500ms ease-in-out;
+			&:hover {
+				color: var(--mc-pr-c3);
+			}
 		}
 	}
 }
@@ -127,7 +134,10 @@
 		font-size: 36px;
 		max-width: 295px;
 		font-weight: 700;
-		padding-bottom: 30px;
+		padding-bottom: 28px;
+		.split-line {
+			padding-bottom: 5px;
+		}
 	}
 	li {
 		color: #fff;

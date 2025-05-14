@@ -102,6 +102,14 @@ Last change:    00/00/00
 		$('.search_box_active').removeClass('active');
 		$('.overlay').removeClass('active');
 	});
+	$('.cart_close_btn, .body-overlay').on('click', function () {
+		$('.cart_sidebar').removeClass('active');
+		$('.body-overlay').removeClass('active');
+	});
+	$('.header-cart-btn').on('click', function () {
+		$('.cart_sidebar').addClass('active');
+		$('.body-overlay').addClass('active');
+	});
 	// Background Image
 	$('[data-background]').each(function() {
 		$(this).css('background-image', 'url('+ $(this).attr('data-background') + ')');
@@ -259,9 +267,9 @@ Last change:    00/00/00
 								opacity: 0,
 							});
 						}
-						if( $(el).hasClass('hero_title_3') ){
-							gsap.set(el.split.chars, {
-								x: 100,
+						if( $(el).hasClass('hero_title_4') ){
+							gsap.set(el.split.words, {
+								x: -350,
 								scaleX: 0,
 								opacity: 0,
 							});
@@ -282,7 +290,22 @@ Last change:    00/00/00
 							stagger: .05,
 							ease: "back.out",
 						});
-
+						el.anim = gsap.to(el.split.words, {
+							scrollTrigger: {
+								trigger: el,
+								start: "top 90%",
+								end: "top -100%",
+								toggleActions: "play reverse play reverse",
+								markers: false,
+							},
+							x: 0,
+							y: 0,
+							scaleX: 1,
+							opacity: 1,
+							duration: 1,
+							stagger: .05,
+							ease: "power1.out",
+						});
 					});
 				};
 
@@ -304,7 +327,13 @@ Last change:    00/00/00
 				.from(".mc-hero4-text-wrap .mc-hero4-text p", { opacity: 0,  yPercent: 100,  duration: 1, transformOrigin: "bottom",  ease: "power1.out" })
 				.from(".mc-hero4-text-wrap .mc-hero4-text .mc-btn-2", {  opacity: 0,   yPercent: 100,  duration: 1, transformOrigin: "left",  ease: "power1.out" },"<= .5")
 				.from(".mc-hero4-img-wrap .item-img img", {  scale: 2.5,    filter: "blur(10px)" , duration: 1, transformOrigin: "left",  ease: "power1.out" },"<= -1")
-
+				const MCoxH5 = gsap.timeline();
+				MCoxH5
+				.from(".mc-hero5-text1 .mc-hr5-img", { scale: .5,  yPercent: 100,  duration: 1.5, transformOrigin: "bottom",  ease: "back.out" })
+				.from(".mc-hero5-text1 p", { opacity: 0, scale: .5,  yPercent: 100,  duration: 1, transformOrigin: "bottom",  ease: "power1.out" },"<= .5")
+				.from(".mc-hero5-text1 form", { opacity: 0,   yPercent: 100,  duration: 1, transformOrigin: "bottom",  ease: "back.out" },"<= .5")
+				.from(".mc-hero5-img-area .item-img", { opacity: 0,   yPercent: -100,  duration: .6, transformOrigin: "bottom",  ease: "power1.out" },"<= -.7")
+				.from(".mc-hero5-img-list ul", { opacity: 0,   yPercent: 100,  duration: .6, transformOrigin: "bottom",  ease: "power1.out" },"<= .5")
 			}, 700);
 })		
 });

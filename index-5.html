@@ -200,8 +200,8 @@
 							<li><a href="index.html">Cardiologist Home</a></li>
 							<li><a href="index-2.html">Dental Home</a></li>
 							<li><a href="index-3.html">Eye & Ent Home</a></li>
-							<li><a class="active" href="index-4.html">Cancer Home</a></li>
-							<li><a href="index-5.html">Medicine Home</a></li>
+							<li><a href="index-4.html">Cancer Home</a></li>
+							<li><a class="active" href="index-5.html">Medicine Home</a></li>
 							<li><a href="index-6.html">Cosmetic Surgery Home</a></li>
 							<li><a href="index-7.html">Pediatrics Home</a></li>
 						</ul>
@@ -258,7 +258,7 @@
 				<div class="mc-shop-action headline d-flex pera-content align-items-center">
 					<button><i class="fa-regular fa-user"></i></button>
 					<button><i class="fa-regular fa-heart"></i><span>0</span></button>
-					<button><i class="fa-solid fa-cart-shopping"></i><span>0</span></button>
+					<button class="header-cart-btn"><i class="fa-solid fa-cart-shopping"></i><span>0</span></button>
 					<p>0 items $0.00</p>
 				</div>
 				<div class="mc-mobile-menu-btn mobile_menu_button open_mobile_menu">
@@ -496,6 +496,73 @@
 		</div>
 		<!-- /Mobile-Menu -->
 	</div> 
+	<!-- sidebar cart start -->
+	<div class="cart_sidebar">
+		<div class="cart_sidebar_top">
+			<h2 class="heading_title">Cart</h2>
+			<button type="button" class="cart_close_btn tx-close"><i class="fa-solid fa-xmark"></i></button>
+		</div>
+		<div class="cart_items_list">
+			<div class="cart_item">
+				<div class="item_image">
+					<img src="assets/img/shop/p8.png" alt="image_not_found">
+				</div>
+				<div class="item_content headline">
+					<h4 class="item_title">
+						Rorem ipsum dolor sit amet.
+					</h4>
+					<span class="item_price">$19.00</span>
+					<button type="button" class="remove_btn"><i class="fa-solid fa-xmark"></i></button>
+				</div>
+			</div>
+			<div class="cart_item">
+				<div class="item_image">
+					<img src="assets/img/shop/p2.png" alt="image_not_found">
+				</div>
+				<div class="item_content headline">
+					<h4 class="item_title">
+						Rorem ipsum dolor sit amet.
+					</h4>
+					<span class="item_price">$22.00</span>
+					<button type="button" class="remove_btn"><i class="fa-solid fa-xmark"></i></button>
+				</div>
+			</div>
+			<div class="cart_item">
+				<div class="item_image">
+					<img src="assets/img/shop/p3.png" alt="image_not_found">
+				</div>
+				<div class="item_content headline">
+					<h4 class="item_title">
+						Rorem ipsum dolor sit amet.
+					</h4>
+					<span class="item_price">$43.00</span>
+					<button type="button" class="remove_btn"><i class="fa-solid fa-xmark"></i></button>
+				</div>
+			</div>
+			<div class="cart_item">
+				<div class="item_image">
+					<img src="assets/img/shop/p4.png" alt="image_not_found">
+				</div>
+				<div class="item_content headline">
+					<h4 class="item_title">
+						Rorem ipsum dolor sit amet.
+					</h4>
+					<span class="item_price">$14.00</span>
+					<button type="button" class="remove_btn"><i class="fa-solid fa-xmark"></i></button>
+				</div>
+			</div>
+		</div>
+		<div class="cart_sidebar_bottom">
+			<div class="total_price">
+				<span>Sub Total:</span>
+				<span>$87.00</span>
+			</div>
+			<div class="cart_sidebar_button">
+				<a  href="#">View Cart</a>
+				<a  href="#">Checkout</a>
+			</div>
+		</div>
+	</div>
 <!-- Start of Header section
     ============================================= -->
 
@@ -508,7 +575,7 @@
 					<div class="hr5-slug mb-15">
 						<img src="assets/img/icon/ic22.svg" alt="">Limited offer 25% Off
 					</div>
-					<h1 class="hero_title">Get discounts on
+					<h1 class="hr5_title  hero_title hero_title_4">Get discounts on
 					10,000+ prescriptions.</h1>
 					<p>Stop paying too much for pharmacy prescriptions.
 					Search for discounts for drug prescriptions.</p>
@@ -529,7 +596,7 @@
 					</div>
 				</div>
 				<div class="mc-hero5-img-list mt-25 ul-li-block headline-4">
-					<h3>Pharmacy at your
+					<h3 class="hero_title hero_title_4">Pharmacy at your
 					fingertips!</h3>
 					<ul>
 						<li>Diet and weight management</li>
@@ -596,15 +663,15 @@
 	============================================= -->
 	<section id="mc-product5" class="mc-product5-sec pt-60 pb-80">
 		<div class="mc-product5-content">
-			<div class="mc-sec-title5 text-center">
-				<div class="subtitle text-capitalize">
+			<div class="mc-sec-title5 headline-4 text-center">
+				<div class="subtitle text-capitalize wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1000ms">
 					Top Choices from Trusted Brands
 				</div>
-				<h2 class="sec_title">Featured products</h2>
+				<h2 class="sec_title  tx-split-text split-in-up">Featured products</h2>
 			</div>
 			<div class="mc-product5-item-area pt-40">
 				<div class="row justify-content-center">
-					<div class="col-lg-3 col-md-6">
+					<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="100ms" data-wow-duration="1000ms">
 						<div class="mc-product5-item">
 							<div class="item-img-btn mb-20 position-relative">
 								<a class="mc-wish d-flex align-items-center justify-content-center position-absolute" href="#"><i class="fa-regular fa-heart"></i></a>
@@ -612,7 +679,7 @@
 									<img src="assets/img/shop/p1.png" alt="">
 								</div>
 								<div class="mc-shop-btn text-center">
-									<a class="mc-cart-btn text-uppercase" href="#"><i class="fa-solid fa-cart-shopping"></i> Shop Now</a>
+									<a class="mc-cart-btn text-uppercase" href="#"><i class="fa-solid fa-cart-shopping"></i>Add To Cart</a>
 								</div>
 							</div>
 							<div class="item-text headline-4">
@@ -622,7 +689,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-3 col-md-6">
+					<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1000ms">
 						<div class="mc-product5-item">
 							<div class="item-img-btn mb-20 position-relative">
 								<a class="mc-wish d-flex align-items-center justify-content-center position-absolute" href="#"><i class="fa-regular fa-heart"></i></a>
@@ -630,7 +697,7 @@
 									<img src="assets/img/shop/p2.png" alt="">
 								</div>
 								<div class="mc-shop-btn text-center">
-									<a class="mc-cart-btn text-uppercase" href="#"><i class="fa-solid fa-cart-shopping"></i> Shop Now</a>
+									<a class="mc-cart-btn text-uppercase" href="#"><i class="fa-solid fa-cart-shopping"></i>Add To Cart</a>
 								</div>
 							</div>
 							<div class="item-text headline-4">
@@ -640,7 +707,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-3 col-md-6">
+					<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1000ms">
 						<div class="mc-product5-item">
 							<div class="item-img-btn mb-20 position-relative">
 								<a class="mc-wish d-flex align-items-center justify-content-center position-absolute" href="#"><i class="fa-regular fa-heart"></i></a>
@@ -648,7 +715,7 @@
 									<img src="assets/img/shop/p3.png" alt="">
 								</div>
 								<div class="mc-shop-btn text-center">
-									<a class="mc-cart-btn text-uppercase" href="#"><i class="fa-solid fa-cart-shopping"></i> Shop Now</a>
+									<a class="mc-cart-btn text-uppercase" href="#"><i class="fa-solid fa-cart-shopping"></i>Add To Cart</a>
 								</div>
 							</div>
 							<div class="item-text headline-4">
@@ -658,7 +725,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-3 col-md-6">
+					<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1000ms">
 						<div class="mc-product5-item">
 							<div class="item-img-btn mb-20 position-relative">
 								<a class="mc-wish d-flex align-items-center justify-content-center position-absolute" href="#"><i class="fa-regular fa-heart"></i></a>
@@ -666,7 +733,7 @@
 									<img src="assets/img/shop/p4.png" alt="">
 								</div>
 								<div class="mc-shop-btn text-center">
-									<a class="mc-cart-btn text-uppercase" href="#"><i class="fa-solid fa-cart-shopping"></i> Shop Now</a>
+									<a class="mc-cart-btn text-uppercase" href="#"><i class="fa-solid fa-cart-shopping"></i>Add To Cart</a>
 								</div>
 							</div>
 							<div class="item-text headline-4">
@@ -676,7 +743,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-3 col-md-6">
+					<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="500ms" data-wow-duration="1000ms">
 						<div class="mc-product5-item">
 							<div class="item-img-btn mb-20 position-relative">
 								<a class="mc-wish d-flex align-items-center justify-content-center position-absolute" href="#"><i class="fa-regular fa-heart"></i></a>
@@ -684,7 +751,7 @@
 									<img src="assets/img/shop/p5.png" alt="">
 								</div>
 								<div class="mc-shop-btn text-center">
-									<a class="mc-cart-btn text-uppercase" href="#"><i class="fa-solid fa-cart-shopping"></i> Shop Now</a>
+									<a class="mc-cart-btn text-uppercase" href="#"><i class="fa-solid fa-cart-shopping"></i>Add To Cart</a>
 								</div>
 							</div>
 							<div class="item-text headline-4">
@@ -694,7 +761,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-3 col-md-6">
+					<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1000ms">
 						<div class="mc-product5-item">
 							<div class="item-img-btn mb-20 position-relative">
 								<a class="mc-wish d-flex align-items-center justify-content-center position-absolute" href="#"><i class="fa-regular fa-heart"></i></a>
@@ -702,7 +769,7 @@
 									<img src="assets/img/shop/p6.png" alt="">
 								</div>
 								<div class="mc-shop-btn text-center">
-									<a class="mc-cart-btn text-uppercase" href="#"><i class="fa-solid fa-cart-shopping"></i> Shop Now</a>
+									<a class="mc-cart-btn text-uppercase" href="#"><i class="fa-solid fa-cart-shopping"></i>Add To Cart</a>
 								</div>
 							</div>
 							<div class="item-text headline-4">
@@ -712,7 +779,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-3 col-md-6">
+					<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="700ms" data-wow-duration="1000ms">
 						<div class="mc-product5-item">
 							<div class="item-img-btn mb-20 position-relative">
 								<a class="mc-wish d-flex align-items-center justify-content-center position-absolute" href="#"><i class="fa-regular fa-heart"></i></a>
@@ -720,7 +787,7 @@
 									<img src="assets/img/shop/p7.png" alt="">
 								</div>
 								<div class="mc-shop-btn text-center">
-									<a class="mc-cart-btn text-uppercase" href="#"><i class="fa-solid fa-cart-shopping"></i> Shop Now</a>
+									<a class="mc-cart-btn text-uppercase" href="#"><i class="fa-solid fa-cart-shopping"></i>Add To Cart</a>
 								</div>
 							</div>
 							<div class="item-text headline-4">
@@ -730,7 +797,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-3 col-md-6">
+					<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="800ms" data-wow-duration="1000ms">
 						<div class="mc-product5-item">
 							<div class="item-img-btn mb-20 position-relative">
 								<a class="mc-wish d-flex align-items-center justify-content-center position-absolute" href="#"><i class="fa-regular fa-heart"></i></a>
@@ -738,7 +805,7 @@
 									<img src="assets/img/shop/p8.png" alt="">
 								</div>
 								<div class="mc-shop-btn text-center">
-									<a class="mc-cart-btn text-uppercase" href="#"><i class="fa-solid fa-cart-shopping"></i> Shop Now</a>
+									<a class="mc-cart-btn text-uppercase" href="#"><i class="fa-solid fa-cart-shopping"></i>Add To Cart</a>
 								</div>
 							</div>
 							<div class="item-text headline-4">
@@ -764,7 +831,7 @@
 					<div class="subtitle mb-15 text-capitalize">
 						Medicine box
 					</div>
-					<h2 class="sec_title"><a href="#">Powering Patient Care
+					<h2 class="sec_title  tx-split-text split-in-up"><a href="#">Powering Patient Care
 					with Precision Equipment</a></h2>
 					<p>Save up to 50% off on your first order</p>
 				</div>
@@ -776,7 +843,7 @@
 				<div class="mc-shop-btn mt-35">
 					<a href="#">Buy Products <i class="fa-solid fa-arrow-right-long"></i></a>
 				</div>
-				<span class="ft-product-img position-absolute"><img src="assets/img/about/ft.png" alt=""></span>
+				<span class="ft-product-img top_view position-absolute"><img src="assets/img/about/ft.png" alt=""></span>
 			</div>
 			<div class="mc-ft-product-2 d-flex flex-wrap">
 				<div class="mc-ft-pro-item-1 position-relative">
@@ -787,7 +854,7 @@
 						<p>Automatic inflation and deflation</p>
 						<a class="shop_now" href="#">Shop Now <i class="fa-solid fa-arrow-right-long"></i></a>
 					</div>
-					<span class="mc-ft-img position-absolute"><img src="assets/img/shop/ft1.png" alt=""></span>
+					<span class="mc-ft-img top_view position-absolute"><img src="assets/img/shop/ft1.png" alt=""></span>
 				</div>
 				<div class="mc-ft-pro-item-1 position-relative">
 					<div class="mc-ft-title headline-4 pera-content">
@@ -797,7 +864,7 @@
 						<p>Automatic inflation and deflation</p>
 						<a class="shop_now" href="#">Shop Now <i class="fa-solid fa-arrow-right-long"></i></a>
 					</div>
-					<span class="mc-ft-img position-absolute"><img src="assets/img/shop/ft2.png" alt=""></span>
+					<span class="mc-ft-img top_view position-absolute"><img src="assets/img/shop/ft2.png" alt=""></span>
 				</div>
 				<div class="mc-ft-pro-item-1 position-relative">
 					<div class="mc-ft-title headline-4 pera-content">
@@ -807,7 +874,7 @@
 						<p>Automatic inflation and deflation</p>
 						<a class="shop_now" href="#">Shop Now <i class="fa-solid fa-arrow-right-long"></i></a>
 					</div>
-					<span class="mc-ft-img position-absolute"><img src="assets/img/shop/ft3.png" alt=""></span>
+					<span class="mc-ft-img top_view position-absolute"><img src="assets/img/shop/ft3.png" alt=""></span>
 				</div>
 				<div class="mc-ft-pro-item-1 position-relative">
 					<div class="mc-ft-title ul-li-block headline-4 pera-content">
@@ -833,7 +900,7 @@
 	<section id="mc-about5" class="mc-about5-sec pt-120">
 		<div class="container">
 			<div class="mc-about5-content d-flex">
-				<div class="mc-about5-img-wrap position-relative">
+				<div class="mc-about5-img-wrap txt_item_active position-relative">
 					<div class="item-img1">
 						<img src="assets/img/about/ab9.png" alt="">
 					</div>
@@ -842,11 +909,11 @@
 					</div>
 				</div>
 				<div class="mc-about5-text-wrap">
-					<div class="mc-sec-title5">
-						<div class="subtitle text-capitalize">
+					<div class="mc-sec-title5 headline-4">
+						<div class="subtitle text-capitalize wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1000ms">
 							about our medical department
 						</div>
-						<h2 class="sec_title">Save with the most
+						<h2 class="sec_title  tx-split-text split-in-up">Save with the most
 						popular deals.</h2>
 						<p>communication and utilizes cutting edge logistic
 							planning to get your shipment completed on time. itself
@@ -854,12 +921,12 @@
 					</div>
 					<div class="mc-about5-list mt-30 d-flex align-items-center justify-content-between ul-li-block">
 						<ul>
-							<li>Stethoscopes</li>
-							<li>Digital Thermometers</li>
-							<li>Blood Pressure Monitors</li>
-							<li>Pulse Oximeters</li>
-							<li>Otoscopes & Ophthalmoscopes</li>
-							<li>Glucometers & Test Strips</li>
+							<li class="top_view">Stethoscopes</li>
+							<li class="top_view">Digital Thermometers</li>
+							<li class="top_view">Blood Pressure Monitors</li>
+							<li class="top_view">Pulse Oximeters</li>
+							<li class="top_view">Otoscopes & Ophthalmoscopes</li>
+							<li class="top_view">Glucometers & Test Strips</li>
 						</ul>
 						<div class="cg-circle-btn bi-btn-area">
 							<a class="bi-btn-hover bi-btn-item bi-btn-main" href="#">
@@ -903,9 +970,9 @@
 					<span class="prod_slug text-uppercase">Wear your brand with pride</span>
 					<h3 class="prod_title text-capitalize"><a href="#">E- cap tablet</a></h3>
 					<ul>
-						<li><img src="assets/img/icon/check5.svg"> Premium Quality Custom boxes</li>
-						<li><img src="assets/img/icon/check5.svg"> Free Standard Shipping</li>
-						<li><img src="assets/img/icon/check5.svg"> Unnique Design & custom cloths</li>
+						<li class="top_view"><img src="assets/img/icon/check5.svg"> Premium Quality Custom boxes</li>
+						<li class="top_view"><img src="assets/img/icon/check5.svg"> Free Standard Shipping</li>
+						<li class="top_view"><img src="assets/img/icon/check5.svg"> Unnique Design & custom cloths</li>
 					</ul>
 				</div>
 			</div>
@@ -917,11 +984,11 @@
 <!-- Start of Trending product section
 	============================================= -->
 	<section id="mc-trend-pro" class="mc-trend-pro-sec over-hidden pb-80">
-		<div class="mc-sec-title5 text-center">
-			<div class="subtitle text-capitalize">
+		<div class="mc-sec-title5 headline-4 text-center">
+			<div class="subtitle text-capitalize wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1000ms">
 				Top Choices from Trusted Brands
 			</div>
-			<h2 class="sec_title">Trending Products</h2>
+			<h2 class="sec_title  tx-split-text split-in-up">Trending Products</h2>
 			<p>communication and utilizes cutting edge logistic
 				planning to get your shipment completed on time. itself
 			founded of backgrounds, which simply.</p>
@@ -948,7 +1015,7 @@
 										<img src="assets/img/shop/p1.png" alt="">
 									</div>
 									<div class="mc-shop-btn text-center">
-										<a class="mc-cart-btn text-uppercase" href="#"><i class="fa-solid fa-cart-shopping"></i> Shop Now</a>
+										<a class="mc-cart-btn text-uppercase" href="#"><i class="fa-solid fa-cart-shopping"></i>Add To Cart</a>
 									</div>
 								</div>
 								<div class="item-text headline-4">
@@ -966,7 +1033,7 @@
 										<img src="assets/img/shop/p2.png" alt="">
 									</div>
 									<div class="mc-shop-btn text-center">
-										<a class="mc-cart-btn text-uppercase" href="#"><i class="fa-solid fa-cart-shopping"></i> Shop Now</a>
+										<a class="mc-cart-btn text-uppercase" href="#"><i class="fa-solid fa-cart-shopping"></i>Add To Cart</a>
 									</div>
 								</div>
 								<div class="item-text headline-4">
@@ -984,7 +1051,7 @@
 										<img src="assets/img/shop/p3.png" alt="">
 									</div>
 									<div class="mc-shop-btn text-center">
-										<a class="mc-cart-btn text-uppercase" href="#"><i class="fa-solid fa-cart-shopping"></i> Shop Now</a>
+										<a class="mc-cart-btn text-uppercase" href="#"><i class="fa-solid fa-cart-shopping"></i>Add To Cart</a>
 									</div>
 								</div>
 								<div class="item-text headline-4">
@@ -1002,7 +1069,7 @@
 										<img src="assets/img/shop/p4.png" alt="">
 									</div>
 									<div class="mc-shop-btn text-center">
-										<a class="mc-cart-btn text-uppercase" href="#"><i class="fa-solid fa-cart-shopping"></i> Shop Now</a>
+										<a class="mc-cart-btn text-uppercase" href="#"><i class="fa-solid fa-cart-shopping"></i>Add To Cart</a>
 									</div>
 								</div>
 								<div class="item-text headline-4">
@@ -1024,7 +1091,7 @@
 										<img src="assets/img/shop/p5.png" alt="">
 									</div>
 									<div class="mc-shop-btn text-center">
-										<a class="mc-cart-btn text-uppercase" href="#"><i class="fa-solid fa-cart-shopping"></i> Shop Now</a>
+										<a class="mc-cart-btn text-uppercase" href="#"><i class="fa-solid fa-cart-shopping"></i>Add To Cart</a>
 									</div>
 								</div>
 								<div class="item-text headline-4">
@@ -1042,7 +1109,7 @@
 										<img src="assets/img/shop/p6.png" alt="">
 									</div>
 									<div class="mc-shop-btn text-center">
-										<a class="mc-cart-btn text-uppercase" href="#"><i class="fa-solid fa-cart-shopping"></i> Shop Now</a>
+										<a class="mc-cart-btn text-uppercase" href="#"><i class="fa-solid fa-cart-shopping"></i>Add To Cart</a>
 									</div>
 								</div>
 								<div class="item-text headline-4">
@@ -1060,7 +1127,7 @@
 										<img src="assets/img/shop/p7.png" alt="">
 									</div>
 									<div class="mc-shop-btn text-center">
-										<a class="mc-cart-btn text-uppercase" href="#"><i class="fa-solid fa-cart-shopping"></i> Shop Now</a>
+										<a class="mc-cart-btn text-uppercase" href="#"><i class="fa-solid fa-cart-shopping"></i>Add To Cart</a>
 									</div>
 								</div>
 								<div class="item-text headline-4">
@@ -1078,7 +1145,7 @@
 										<img src="assets/img/shop/p8.png" alt="">
 									</div>
 									<div class="mc-shop-btn text-center">
-										<a class="mc-cart-btn text-uppercase" href="#"><i class="fa-solid fa-cart-shopping"></i> Shop Now</a>
+										<a class="mc-cart-btn text-uppercase" href="#"><i class="fa-solid fa-cart-shopping"></i>Add To Cart</a>
 									</div>
 								</div>
 								<div class="item-text headline-4">
@@ -1193,11 +1260,11 @@
 			<div class="container">
 				<div class="mc-deal-text-img  pt-120 pb-120 position-relative">
 					<div class="mc-deal-text">
-						<div class="mc-sec-title5">
-							<div class="subtitle text-capitalize">
+						<div class="mc-sec-title5 headline-4">
+							<div class="subtitle text-capitalize wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1000ms">
 								About Our Medical Department
 							</div>
-							<h2 class="sec_title">Up to 40% OFF on
+							<h2 class="sec_title  tx-split-text split-in-up">Up to 40% OFF on
 							Hospital-Grade Devices</h2>
 							<p>communication and utilizes cutting edge logistic planning to get your shipment
 							completed on time. itself founded of backgrounds, which simply.</p>
@@ -1210,7 +1277,7 @@
 							<a href="#">Deal Of The Weak <i class="fa-solid fa-arrow-right-long"></i></a>
 						</div>
 					</div>
-					<div class="mc-deal-img position-absolute">
+					<div class="mc-deal-img right_view position-absolute">
 						<img src="assets/img/about/deal.png" alt="">
 					</div>
 				</div>
@@ -1265,6 +1332,68 @@
 <!-- End of delivery cta section
 	============================================= -->	
 
+<!-- Start of  Footer section
+	============================================= -->
+	<footer id="mc-footer5" class="mc-footer5-sec">
+		<div class="mc-footer5-content pb-120 d-flex justify-content-between">
+			<div class="mc-footer5-widget  headline-4 pera-content">
+				<div class="newsletter-widget">
+					<h4>Subscribe Newsletter</h4>
+					<p>We understand that every challenge is an opportunity we are here seize a team of dedicated professionals and a culture</p>
+					<form action="#" method="#">
+						<input type="text" placeholder="Email Address">
+						<button>Sign Up <i class="fa-solid fa-chevron-right"></i></button>
+					</form>
+					<span>By subscribing, you’re accept <a href="#">Privacy Policy</a></span>
+				</div>
+			</div>
+			<div class="mc-footer5-widget  headline-4 pera-content">
+				<div class="menu-widget ul-li-block">
+					<h3 class="widget-title">Services</h3>
+					<ul>
+						<li><a href="#">Dental Bonding</a></li>
+						<li><a href="#">Dental CrownsI</a></li>
+						<li><a href="#">Bridgework</a></li>
+						<li><a href="#">Cosmetic Fillings</a></li>
+						<li><a href="#">Invisalign</a></li>
+						<li><a href="#">Dental Veneers</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="mc-footer5-widget  headline-4 pera-content">
+				<div class="menu-widget ul-li-block">
+					<h3 class="widget-title">Quick Link</h3>
+					<ul>
+						<li><a href="#">Dental Bonding</a></li>
+						<li><a href="#">Dental CrownsI</a></li>
+						<li><a href="#">Bridgework</a></li>
+						<li><a href="#">Cosmetic Fillings</a></li>
+						<li><a href="#">Invisalign</a></li>
+						<li><a href="#">Dental Veneers</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="mc-footer5-widget  headline-4 pera-content">
+				<div class="cta-widget">
+					<h3 class="widget-title">Locations</h3>
+					<p>55 Main Street, 2nd block
+					Malborne, Australia</p>
+					<span>Contact</span>
+					<a href="#">support@gmail.com</a>
+					<a href="#">+880 (123) 456 88</a>
+				</div>
+			</div>
+		</div>
+		<div class="mc-footer5-copyright pera-content d-flex justify-content-between flex-wrap">
+			<div class="brand-logo">
+				<a href="#"><img src="assets/img/logo/logo-1.svg" alt=""></a>
+			</div>
+			<p>© 2025 <a href="#">ThemeXriver</a>  - IT Services. All rights reserved.</p>
+			<span><img src="assets/img/logo/payment.png" alt=""></span>
+		</div>
+	</footer>
+<!-- End of  Footer  section
+	============================================= -->	
 
 
 	<!-- For Js Library -->

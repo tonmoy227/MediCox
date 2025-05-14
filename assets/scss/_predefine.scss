@@ -662,6 +662,7 @@ a {
 .mc-sec-title5 {
 	.subtitle {
 		font-weight: 700;
+		margin-bottom: 10px;
 		letter-spacing: -1px;
 		color: var(--mc-pr-c3);
 	}
@@ -670,6 +671,9 @@ a {
 		line-height: 1;
 		font-size: 60px;
 		font-weight: 700;
+		.split-line {
+			padding-bottom: 8px;
+		}
 		@media #{$xl} {
 			font-size: 55px;
 		}
@@ -690,7 +694,7 @@ a {
 		}
 	}
 	p {
-		padding-top: 15px;
+		padding-top: 25px;
 	}
 }
 .mc-shop-btn {
@@ -704,11 +708,19 @@ a {
 		i {
 			margin-left: 10px;
 		}
+		&:hover {
+			color: var(--mc-title-color);
+			background-color: var(--mc-pr-c2);
+		}
 	}
 	&:is(.ver_2) {
 		a {
 			color: #fff;
 			background-color: var(--mc-pr-c3);
+			&:hover {
+				color: var(--mc-title-color);
+				background-color: var(--mc-pr-c2);
+			}
 		}
 	}
 }
