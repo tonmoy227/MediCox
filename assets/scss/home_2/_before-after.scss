@@ -27,6 +27,29 @@
 			height: 550px !important;
 		}
 	}
+	&:is(.ver_3) {
+		width: 100%;
+		overflow: hidden;
+		border-radius: 20px;
+		height: 635px !important;
+		@media #{$sm,$xs,$xxs} {
+			height: 450px !important;
+		}
+		.twentytwenty-after-label,
+		.twentytwenty-before-label {
+			&:before {
+				font-size: 22px;
+				font-weight: 600;
+				text-transform: uppercase;
+				background-color: transparent;
+				color: var(--mc-title-color2);
+			}
+		}
+		.twentytwenty-handle {
+			width: 90px;
+			height: 90px;
+		}
+	}
 	@media #{$sm,$xs,$xxs} {
 		height: 500px !important;
 	}
@@ -169,5 +192,18 @@
 		&:nth-child(10) {
 			transform: rotate(4.46deg);
 		}
+	}
+}
+.mc-bf-af6-sec {
+	z-index: 1;
+	&:before {
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: -1;
+		content: '';
+		height: 300px;
+		position: absolute;
+		background-color: #BFDAC9;
 	}
 }

@@ -949,8 +949,8 @@ if($(".mc-team3-slider").length) {
 		},
 	})
 }
-if($(".mc-spon5-slider").length) {
-	const swiper = new Swiper(".mc-spon5-slider" , {
+if($(".mc-spon5-slider, .mc-spon6-slide").length) {
+	const swiper = new Swiper(".mc-spon5-slider, .mc-spon6-slide" , {
 		speed: 500,
 		spaceBetween: 40,
 		loop: true,
@@ -959,7 +959,7 @@ if($(".mc-spon5-slider").length) {
 		},
 		breakpoints: {
 			0: {
-				slidesPerView: 1,
+				slidesPerView: 2,
 			},
 			576: {
 				slidesPerView: 2,

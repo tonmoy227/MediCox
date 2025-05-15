@@ -1,0 +1,20 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_5_327)">
+<path d="M8.57057 1.31445C8.57057 1.31445 1.08435 13.2043 1.08435 31.0392C1.09755 41.821 3.00899 52.5164 6.73112 62.6354" stroke="#C7857A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+<path d="M55.245 1.31445C55.245 1.31445 62.7312 13.2043 62.7312 31.0392C62.718 41.821 60.8065 52.5164 57.0844 62.6354" stroke="#C7857A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+<path d="M29 43.5V63" stroke="#C7857A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+<path d="M35 43.5V63" stroke="#C7857A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+<path d="M5.9491 40.4023C6.8526 46.6595 8.6161 54.4973 12.0584 61.2549" stroke="#C7857A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+<path d="M58.0324 40.5291C57.123 46.768 55.3589 54.5499 51.9366 61.2641" stroke="#C7857A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+<path d="M10 22C12.4426 22.7948 19.6186 28.1032 32 28.1032C44.3814 28.1032 51.5574 22.7948 54 22" stroke="#C7857A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+<path d="M1.5 25.791H18.5" stroke="#C7857A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+<path d="M62.4142 30.6484C45.1742 32.178 44.0586 29.9115 35 43.4993H29C19.9098 29.864 18.8312 32.1645 1.31335 30.731" stroke="#C7857A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+<path d="M45.5 25.791H62.5" stroke="#C7857A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+<path d="M15.8282 14.7425C21.1047 16.1369 26.5426 16.8266 32.0001 16.7934C37.7846 16.8231 43.5452 16.0501 49.1172 14.4965C49.4832 14.4006 49.8249 14.3112 50.1511 14.2285" stroke="#C7857A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+</g>
+<defs>
+<clipPath id="clip0_5_327">
+<rect width="64" height="64" fill="white"/>
+</clipPath>
+</defs>
+</svg>

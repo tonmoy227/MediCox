@@ -1107,8 +1107,15 @@
 		}
 	}
 	&:is(.header_style_six) {
-		.mc-header-content {
-			padding-top: 28px;
+		padding-top: 28px;
+		&:is(.txa_sticky) {
+			padding: 15px 0px;
+			.mc-header-content { 
+				padding-top: 0;
+			}
+			.main-navigation .dropdown:is(.has-megamenu) .dropdown-menu {
+				top: 85px;
+			}
 		}
 		.main-navigation {
 			@media #{$md,$sm,$xs,$xxs} {

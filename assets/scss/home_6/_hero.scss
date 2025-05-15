@@ -2,7 +2,7 @@
 	padding-bottom: 15px;
 	background-color: var(--mc-pr-c10);
 	clip-path: polygon( 0% 78.644%,0% 0%,99.948% 0%,99.974% 68.87%,84.487% 88.023%,30.349% 100%,0% 78.644% );
-	@media #{$xs,$xxs} {
+	@media #{$sm,$xs,$xxs} {
 		clip-path: none;
 		padding-bottom: 0;
 	}
@@ -81,6 +81,7 @@
 .mc-slide-counter {
 	top: 42%;
 	left: 60px;
+	z-index: 2;
 	position: absolute;
 	transform: translateY(-50%);
 	@media #{$xxl} {

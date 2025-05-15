@@ -474,6 +474,19 @@ a {
 		}
 	}
 }
+.mc-btn-3 {
+	a {
+		font-size: 16px;
+		font-weight: 600;
+		padding: 14px 25px; 
+		border-radius: 8px;
+		border: 1px solid #626363;
+		font-family: var(--mc-heading5);
+		i {
+			margin-left: 10px;
+		}
+	}
+}
 .cg-circle-btn {
 	a {
 		color: #fff;
@@ -716,6 +729,43 @@ a {
 	}
 	p {
 		padding-top: 25px;
+	}
+}
+.mc-sec-title6 {
+	.sec_title {
+		font-size: 44px;
+		font-weight: 500;
+		line-height: 1.1;
+		@media #{$xs} {
+			font-size: 40px;
+		}
+		@media #{$xxs} {
+			font-size: 35px;
+		}
+		@media #{$xxxs} {
+			font-size: 32px;
+		}
+		&:is(.ver_2) {
+			font-size: 60px;
+			@media #{$xl} {
+				font-size: 55px;
+			}
+			@media #{$lg} {
+				font-size: 50px;
+			}
+			@media #{$md,$sm} {
+				font-size: 45px;
+			}
+			@media #{$xs} {
+				font-size: 40px;
+			}
+			@media #{$xxs} {
+				font-size: 35px;
+			}
+			@media #{$xxxs} {
+				font-size: 32px;
+			}
+		}
 	}
 }
 .mc-shop-btn {

@@ -1,0 +1,41 @@
+.mc-spon6-sec {
+	background-color: #EBE4DE;
+	.mc-spon6-shape {
+		right: 0;
+		bottom: 0;
+		width: 56px;
+		height: 56px;
+		background-color: #fff;
+		&:before {
+			top: 0;
+			left: 0;
+			content: '';
+			position: absolute;
+			width: 0;
+			height: 0;
+			border-top: 56px solid #D8CABF;
+			border-right: 56px solid transparent;
+		}
+	}
+}
+.mc-spon6-title {
+	h3 {
+		font-size: 28px;
+		font-weight: 500;
+		padding-bottom: 35px;
+		border-bottom: 1px solid #DAD1C9;
+	}
+	.item-text {
+		p {
+			max-width: 665px;
+		}
+	}
+}
+.mc-spon6-slide {
+	.item-img {
+		height: 52px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
