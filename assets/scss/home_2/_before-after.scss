@@ -35,10 +35,15 @@
 		@media #{$sm,$xs,$xxs} {
 			height: 450px !important;
 		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
 		.twentytwenty-after-label,
 		.twentytwenty-before-label {
 			&:before {
-				font-size: 22px;
+				font-size: 22px; 
 				font-weight: 600;
 				text-transform: uppercase;
 				background-color: transparent;
@@ -48,6 +53,7 @@
 		.twentytwenty-handle {
 			width: 90px;
 			height: 90px;
+			margin-left: -53px;
 		}
 	}
 	@media #{$sm,$xs,$xxs} {
@@ -205,5 +211,8 @@
 		height: 300px;
 		position: absolute;
 		background-color: #BFDAC9;
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			display: none;
+		}
 	}
 }

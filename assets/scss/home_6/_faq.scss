@@ -1,0 +1,125 @@
+.mc-faq6-content {
+	display: flex;
+	gap: 30px 50px;
+	justify-content: space-between;
+	@media #{$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+	}
+}
+.mc-faq6-text {
+	max-width: 510px;
+	@media #{$md,$sm,$xs,$xxs} {
+		max-width: 100%;
+	}
+	span {
+		@media #{$md,$sm,$xs,$xxs} {
+			display: none;
+		}
+	}
+}
+.mc-faq6-accordion {
+	width: 100%;
+	max-width: 735px;
+	@media #{$md,$xs} {
+		max-width: 100%;
+	}
+	.accordion-item,
+	.accordion-button:not(.collapsed),
+	.accordion-button {
+		background-color: transparent;
+		box-shadow: none;
+	}
+	.accordion-item {
+		border:  none;
+		border-radius: 0;
+		position: relative;		
+		margin-bottom: 12px;
+	}
+	.accordion-button {
+		font-size: 20px;
+		font-weight: 500;
+		position: relative;
+		transition: all 500ms ease;
+		border: 1px solid #26262629;
+		padding: 24px 0px 22px 45px;
+		color: var(--mc-title-color2);
+		border-radius: 8px !important;
+		@media #{$xxs} {
+			font-size: 20px;
+			padding: 20px 0px 22px 30px;
+		}
+		@media #{$xs,$xxs} {
+			padding-left: 15px;
+		}
+		span {
+			display: flex;
+			max-width: 90%;
+			position: relative;
+			align-items: center;
+			justify-content: center;
+			@media #{$xs,$xxs} {
+				max-width: 85%;
+			}
+			&:before {
+				top: 0;
+				left: -30px;
+				content: '';
+				width: 20px;
+				height: 20px;
+				position: absolute;
+				background-color: var(--mc-title-color2);
+				clip-path: polygon( 50% 3.125%,50% 3.125%,49.342% 14.846%,48.457% 24.337%,47.093% 31.847%,45% 37.628%,41.929% 41.929%,37.628% 45%,31.847% 47.093%,24.337% 48.457%,14.846% 49.342%,3.125% 50%,3.125% 50%,14.846% 50.658%,24.337% 51.543%,31.847% 52.907%,37.628% 55%,41.929% 58.071%,45% 62.372%,47.093% 68.153%,48.457% 75.663%,49.342% 85.154%,50% 96.875%,50% 96.875%,50.658% 85.154%,51.543% 75.663%,52.907% 68.153%,55% 62.372%,58.071% 58.071%,62.372% 55%,68.153% 52.907%,75.663% 51.543%,85.154% 50.658%,96.875% 50%,96.875% 50%,85.154% 49.342%,75.663% 48.457%,68.153% 47.093%,62.372% 45%,58.071% 41.929%,55% 37.628%,52.907% 31.847%,51.543% 24.337%,50.658% 14.846%,50% 3.125% );
+				@media #{$xs,$xxs} {
+					display: none;
+				}
+			}
+		}
+	}
+	.accordion-button:focus {
+		box-shadow: none;
+		border: 1px solid #26262629;
+	}
+	.accordion-body {
+		padding: 25px;
+		font-size: 18px;
+		margin-top: 8px;
+		border-radius: 8px;
+		background-color: #EEE4E2;
+	}
+	.accordion-button::after {
+		top: 23px;
+		right: 23px;
+		width: 24px;
+		height: 24px;
+		display: flex;
+		font-size: 12px;
+		color: #000000;
+		content: '\f067';
+		font-weight: 900;
+		border-radius: 6px;
+		position: absolute;
+		align-items: center;
+		background-image: none;
+		justify-content: center;
+		font-family: 'Font Awesome 5 Free';
+		background-color: #F5F5F5;
+		@media #{$xxs} {
+			top: 15px;
+			right: 10px;
+		}
+	}
+	.accordion-button:not(.collapsed) { 
+		color: #fff;
+		background-color: var(--mc-pr-c10);
+		span {
+			&:before {
+				background-color: #fff;
+			}
+		}
+		&:after {
+			color: #fff;
+			content: '\f068';
+			background-color: #E0A89F;
+		}
+	}
+}

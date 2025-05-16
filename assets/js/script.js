@@ -331,6 +331,18 @@ Last change:    00/00/00
 				.from(".mc-hero5-text1 form", { opacity: 0,   yPercent: 100,  duration: 1, transformOrigin: "bottom",  ease: "back.out" },"<= .5")
 				.from(".mc-hero5-img-area .item-img", { opacity: 0,   yPercent: -100,  duration: .6, transformOrigin: "bottom",  ease: "power1.out" },"<= -.7")
 				.from(".mc-hero5-img-list ul", { opacity: 0,   yPercent: 100,  duration: .6, transformOrigin: "bottom",  ease: "power1.out" },"<= .5")
+				
+
+				if($('.mc-split-2').length) {
+					var txtSplit = $('.mc-split-2');
+					if(txtSplit.length == 0) return; gsap.registerPlugin(SplitText); txtSplit.each(function(index, el) {
+						el.split = new SplitText(el, { 
+							type: "words",
+							wordsClass: "split-word"
+						});
+					});
+				}
+
 				if($(".mc-hero6-slider").length) {
 					var TZSlider = new Swiper(".mc-hero6-slider", {
 						loop: true,
@@ -338,6 +350,9 @@ Last change:    00/00/00
 						effect: "fade",
 						fadeEffect: {
 							crossFade: true
+						},
+						autoplay:  {
+							delay: 5000,
 						},
 						pagination: {
 							el: '.mc-hr6-pagi',

@@ -1,0 +1,84 @@
+.mc-contact6-sec {
+	z-index: 1;
+	padding-top: 400px;
+	background-color: #F6F3EE;
+	@media #{$md,$sm,$xs,$xxs} {
+		padding-top: 120px;
+	}
+	&:before {
+		left: 0;
+		bottom: 0;
+		z-index: -1;
+		width: 100%;
+		content: '';
+		height: 125px;
+		position: absolute;
+		background-image: url(../img/bg/ft-bg3.jpg);
+	}
+	.mc-contact6-bg {
+		top: 0;
+		left: 0;
+		z-index: -2;
+		width: 100%;
+		height: 100%;
+		clip-path: polygon( 100% 100%,0% 100%,0% 9.341%,30.26% 22.747%,84.74% 15.824%,100% 0%,100% 100% );
+		@media #{$md,$sm,$xs,$xxs} {
+			clip-path: none;
+		}
+	}
+}
+.mc-contact6-form-area {
+	padding: 60px 50px;
+	background-color: #D7DDCB;
+	@media #{$xxs} {
+		padding: 40px 20px;
+	}
+}
+.mc-contact6-form-area {
+	width: 100%;
+	max-width: 540px;
+	border-radius: 16px;
+	h3 {
+		font-size: 30px;
+		font-weight: 500;
+		padding-bottom: 38px;
+	}
+	.input-field {
+		margin-bottom: 30px;
+		label {
+			display: block;
+			line-height: 1;
+			font-size: 12px;
+			font-weight: 500;
+			letter-spacing: 2px;
+		}
+		input,textarea {
+			width: 100%;
+			height: 40px;
+			border: none;
+			background-color: transparent;
+			border-bottom: 1px solid #676869;
+			&::placeholder {
+				opacity: #676869B8;
+			}
+		}
+		textarea {
+			height: 75px;
+			padding-top: 10px;
+		}
+	}
+	button {
+		color: #fff;
+		border: none;
+		line-height: 1;
+		font-weight: 600;
+		border-radius: 4px;
+		padding: 20px 30px;
+		text-transform: capitalize;
+		background-color: #262626;
+		font-family: var(--mc-heading5);
+		i {
+			margin-left: 5px;
+		}
+	}
+}

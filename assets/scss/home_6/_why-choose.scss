@@ -1,6 +1,12 @@
 .mc-why-c6-sec {
+	z-index: 1;
 	.mc-sec-title6 {
 		max-width: 830px;
+	}
+	.mc-wc6-shape {
+		top: 10%;
+		right: 0;
+		z-index: -1;
 	}
 }
 .mc-why-c6-line {
