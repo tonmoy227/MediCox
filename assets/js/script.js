@@ -525,7 +525,11 @@ if($(".mc-sub-head").length) {
 				xPercent: -100 , 
 			});
 		}
-
+		if( $(el).hasClass('mc-sub-head2') ){
+			gsap.set(el.split.chars, {
+				yPercent: 100 , 
+			});
+		}
 		el.anim = gsap.to(el.split.chars, {
 			scrollTrigger: {
 				trigger: el,

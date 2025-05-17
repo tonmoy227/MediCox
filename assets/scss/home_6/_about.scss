@@ -64,12 +64,26 @@
 	top: 0;
 	left: 0;
 	position: absolute;
+	transition: all 2500ms ease-in-out;
 	@media #{$sm,$xs,$xxs} {
 		display: none;
 	}
 }
+.mc-ab6-line1 {
+	clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+	&:is(.active) {
+		transition-delay: 3000ms;
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	}
+}
 .mc-ab6-line2 {
 	left: -1px;
+	transition: all 2500ms ease-in-out;
+	clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+	&:is(.active) {
+		transition-delay: 3000ms;
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	}
 }
 .mc-ab6-client {
 	.item-text {
@@ -116,6 +130,25 @@
 }
 .mc-ab6-video {
 	gap: 30px 48px;
+	&:before {
+		left: -1px;
+		bottom: 0;
+		width: 1px;
+		content: '';
+		height: 0%;
+		position: absolute;
+		background-color: #D7DDCB;
+		transition: all 3000ms ease-in-out;
+		@media #{$sm,$xs,$xxs} {
+			display: none;
+		}
+	}
+	&:is(.active) {
+		&:before {
+			height: 90%;
+			transition-delay: 500ms;
+		}
+	}
 	@media #{$lg,$md,$sm,$xs,$xxs} {
 		gap: 30px 20px;
 	}

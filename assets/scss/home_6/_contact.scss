@@ -58,8 +58,12 @@
 			border: none;
 			background-color: transparent;
 			border-bottom: 1px solid #676869;
+			transition: all 200ms ease-in-out;
 			&::placeholder {
 				opacity: #676869B8;
+			}
+			&:focus {
+				border-bottom: 1px solid var(--mc-pr-c10);
 			}
 		}
 		textarea {
@@ -76,9 +80,13 @@
 		padding: 20px 30px;
 		text-transform: capitalize;
 		background-color: #262626;
+		transition: all 200ms ease-in-out;
 		font-family: var(--mc-heading5);
 		i {
 			margin-left: 5px;
+		}
+		&:hover {
+			background-color: var(--mc-pr-c10);
 		}
 	}
 }

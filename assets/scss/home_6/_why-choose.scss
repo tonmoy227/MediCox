@@ -13,20 +13,27 @@
 	top: 8%;
 	right: 18%;
 	z-index: 1;
+	transition: all 1500ms ease-in-out;
+	clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
 	@media #{$lg,$md,$sm,$xs,$xxs} {
 		display: none;
 	}
+	&:is(.active) {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	}
 }
 .mc-wc6-img {
-	height: 544px;
-	margin: 0 auto;
-	max-width: 1096px;
-	border-radius: 100%;
-	transform: rotate(-39.1deg);
-	@media #{$md,$sm,$xs,$xxs} {
-		height: 350px;
-		transform: rotate(0);
-		border-radius: 20px;
+	.inner-img {
+		height: 544px;
+		margin: 0 auto;
+		max-width: 1096px;
+		border-radius: 100%;
+		transform: rotate(-39.1deg);
+		@media #{$md,$sm,$xs,$xxs} {
+			height: 350px;
+			transform: rotate(0);
+			border-radius: 20px;
+		}
 	}
 }
 .mc-why-choose-content {
