@@ -22,6 +22,7 @@
 		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 	}
 }
+
 .mc-wc6-img {
 	.inner-img {
 		height: 544px;
@@ -29,6 +30,7 @@
 		max-width: 1096px;
 		border-radius: 100%;
 		transform: rotate(-39.1deg);
+		animation: topMove 4s cubic-bezier(.23, 1, .32, 1) infinite;
 		@media #{$md,$sm,$xs,$xxs} {
 			height: 350px;
 			transform: rotate(0);
@@ -69,6 +71,17 @@
 	border-radius: 10px;
 	padding: 50px 40px 0px;
 	background-color: #F5F5F5;
+	transition: all 1500ms ease-in-out;
+	clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+	&.active {
+		transition-delay: 800ms;
+		clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+	}
+	&:nth-child(even) {
+		&.active {
+			transition-delay: 1200ms;
+		}
+	}
 	@media #{$md,$sm,$xs} {
 		width: 50%;
 	}

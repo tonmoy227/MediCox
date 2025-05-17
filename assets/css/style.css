@@ -1436,7 +1436,7 @@ Font load
 }
 .mc-header-section:is(.header_style_six) .mc-header-cta a:hover {
   color: #fff;
-  background-color: #7EB392;
+  background-color: var(--mc-pr-c10);
 }
 
 .txa_sticky_header {
@@ -12363,6 +12363,16 @@ a:hover, a:focus {
     opacity: 0;
   }
 }
+.mc-ab6-shape1 {
+  top: 15%;
+  right: 0;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 481px) and (max-width: 575px), (max-width: 480px) {
+  .mc-ab6-shape1 {
+    display: none;
+  }
+}
+
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 481px) and (max-width: 575px), (max-width: 480px) {
   .mc-ab6-content {
     padding: 100px 0px;
@@ -12666,6 +12676,7 @@ a:hover, a:focus {
 .mc-ser6-sec .mc-ser6-bg:before {
   top: 0;
   left: 0;
+  z-index: 1;
   width: 100%;
   content: "";
   height: 100%;
@@ -12968,6 +12979,8 @@ a:hover, a:focus {
   border-radius: 100%;
   -webkit-transform: rotate(-39.1deg);
           transform: rotate(-39.1deg);
+  -webkit-animation: topMove 4s cubic-bezier(0.23, 1, 0.32, 1) infinite;
+          animation: topMove 4s cubic-bezier(0.23, 1, 0.32, 1) infinite;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 481px) and (max-width: 575px), (max-width: 480px) {
   .mc-wc6-img .inner-img {
@@ -13020,6 +13033,18 @@ a:hover, a:focus {
   border-radius: 10px;
   padding: 50px 40px 0px;
   background-color: #F5F5F5;
+  -webkit-transition: all 1500ms ease-in-out;
+  transition: all 1500ms ease-in-out;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+}
+.mc-wc6-item.active {
+  -webkit-transition-delay: 800ms;
+          transition-delay: 800ms;
+  clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+}
+.mc-wc6-item:nth-child(even).active {
+  -webkit-transition-delay: 1200ms;
+          transition-delay: 1200ms;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 481px) and (max-width: 575px) {
   .mc-wc6-item {

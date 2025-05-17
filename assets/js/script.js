@@ -370,7 +370,7 @@ Last change:    00/00/00
 					});
 					function updateCounter(swiper) {
 						const total = swiper.params.loop ? 
-						swiper.slides.length - (swiper.loopedSlides * 2) : 
+						swiper.slides.length - (swiper.params.loopedSlides || 0) * 2 : 
 						swiper.slides.length;
 
 						const formatTwoDigits = (num) => num < 10 ? `0${num}` : num;
