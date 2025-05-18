@@ -378,10 +378,44 @@ Last change:    00/00/00
 						document.querySelector('.mc-slide-counter .total').textContent = formatTwoDigits(total);
 					}
 				};
+				if($(".mc-hero7-slider").length) {
+					var TZS2lider = new Swiper(".mc-hero7-slider", {
+						loop: true,
+						speed: 1000,
+						effect: "fade",
+						fadeEffect: {
+							crossFade: true
+						},
+						autoplay:  {
+							delay: 5000,
+						},
+						navigation: {
+							nextEl: ".mc-hs-next",
+							prevEl: ".mc-hs-prev",
+						},
+					});
+				};
 
 			}, 700);
 })		
 });
+if($(".mc-ab7-img-active").length) {
+	var TZS2lider = new Swiper(".mc-ab7-img-active", {
+		loop: true,
+		speed: 1000,
+		effect: "fade",
+		fadeEffect: {
+			crossFade: true
+		},
+		// autoplay:  {
+		// 	delay: 5000,
+		// },
+		navigation: {
+			nextEl: ".mc-ab-next",
+			prevEl: ".mc-ab-prev",
+		},
+	});
+};
 if($('.tx-split-text').length) {
 	var st = jQuery(".tx-split-text");
 	if(st.length == 0) return;

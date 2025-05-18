@@ -1,0 +1,39 @@
+.mc-cta9-sec {
+	margin: 0px 52px;
+	@media #{$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+}
+.mc-cta9-content {
+	z-index: 1;
+	border-radius: 20px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+	.mc-cta9-bg {
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		position: absolute;
+	}
+	.mc-cta9-shape {
+		bottom: 0;
+		right: -65px;
+		@media #{$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
+			display: none;
+		}
+	}
+}
+.mc-cta9-wrap {
+	width: 100%;
+	padding: 60px;
+	max-width: 630px;
+	border-radius: 20px;
+	background-color: #E7EFF8;
+	@media #{$sm,$xs,$xxs} {
+		padding: 50px 30px;
+	}
+}

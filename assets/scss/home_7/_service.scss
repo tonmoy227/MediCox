@@ -1,0 +1,146 @@
+.mc-service7-sec {
+	margin: 0px 52px;
+	margin-top: 52px;
+	border-radius: 20px;
+	background-color: var(--mc-title-color3);
+	@media #{$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+}
+.mc-service7-content {
+	margin: 0 auto;
+	max-width: 1573px;
+	padding-left: 15px;
+	padding-right: 15px;
+	.mc-ser7-side {
+		top: 135px;
+		right: 0px;
+		overflow: hidden;
+		max-width: 675px;
+		max-height: 646px;
+		border-radius: 16px;
+		@media #{$xxxl} {
+			right: -80px;
+		}
+		@media #{$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
+			right: -210px;
+		}
+		@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+			width: 100%;
+			max-width: 100%;
+			margin-top: 40px;
+			max-height: 646px;
+			position: static !important;
+		}
+	}
+}
+.mc-service7-text {
+	.mc-sec-title7 {
+		max-width: 615px;
+		.subtitle {
+			color: rgba(255, 255, 255, .72);
+		}
+		.sec_title {
+			color: #fff;
+		}
+	}
+}
+.mc-service7-item-wrap {
+	max-width: 1310px;
+	@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+		padding-top: 50px;
+	}
+}
+.mc-ser7-item {
+	padding: 40px;
+	max-width: 426px;
+	border-radius: 12px;
+	background-color: #F4E9E3;
+	@media #{$xxs} {
+		width: 100%;
+		max-width: 100%;
+	}
+	h3 {
+		font-size: 28px;
+		font-weight: 500;
+		padding-bottom: 28px;
+	}
+	.item-img-text {
+		gap: 20px;
+		@media #{$sm,$xs,$xxs} {
+			flex-wrap: wrap;
+		}
+	}
+	.item-icon {
+		margin-bottom: 25px;
+	}
+	.item-img {
+		width: 120px;
+		height: 246px;
+		overflow: hidden;
+		border-radius: 10px;
+		@media #{$xxs} {
+			width: 100%;
+			height: 80px;
+		}
+	}
+	.item-text {
+		max-width: 205px;
+	}
+}
+.mc-service7-items-1 {
+	gap: 16px;
+	margin-bottom: 16px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+.mc-service7-items-2 {
+	gap: 16px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+		justify-content: center;
+		
+	}
+}
+.mc-ser7-thumb {
+	max-width: 426px;
+	border-radius: 12px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		display: none;
+	}
+}
+.mc-ser7-arrow {
+	width: 100%;
+	max-width: 426px;
+	a {
+		width: 280px;
+		height: 280px;	
+		display: flex;
+		position: relative;
+		align-items: center;
+		justify-content: center;
+		@media #{$xxs} {
+			width: 240px;
+			height: 240px;
+		}
+		&:before,
+		&:after {
+			top: 0;
+			width: 100%;
+			content: '';
+			height: 100%;
+			position: absolute;
+			border-radius: 100%;
+			border: 1px solid #fff;
+		}
+		&:before {
+			left: -10px;
+		}
+		&:after {
+			right: -10px;
+		}
+	}
+}

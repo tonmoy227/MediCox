@@ -2,6 +2,7 @@
 Font load
 ===========*/
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @font-face {
 	font-family: 'RecoletaAlt';
 	font-style: normal;
@@ -66,6 +67,30 @@ Font load
 	src: url("../fonts/RecoletaAlt-Thin.ttf") format("truetype");
 
 }
+@font-face {
+	font-family: 'GT-Walsheim';
+	font-style: normal;
+	font-weight: 700;
+	font-display: auto;
+	src: url("../fonts/GT-Walsheim-Bold-Trial-BF651b7fc737c57.ttf") format("truetype");
+
+}
+@font-face {
+	font-family: 'GT-Walsheim';
+	font-style: normal;
+	font-weight: 500;
+	font-display: auto;
+	src: url("../fonts/GT-Walsheim-Medium-Trial-BF651b7fc728fb3.ttf") format("truetype");
+
+}
+@font-face {
+	font-family: 'GT-Walsheim';
+	font-style: normal;
+	font-weight: 400;
+	font-display: auto;
+	src: url("../fonts/GT-Walsheim-Regular-Trial-BF651b7fc71a47d.ttf") format("truetype");
+
+}
 :root {
 	--mc-pr-c1: #095091;
 	--mc-pr-c2: #FFCC53;
@@ -77,17 +102,23 @@ Font load
 	--mc-pr-c8: #C4FDA0;
 	--mc-pr-c9: #F2D5C7;
 	--mc-pr-c10: #C7857A;
+	--mc-pr-c11: #FFD162;
+	--mc-pr-c12: #C4FDA0;
 	--mc-body-color: #032532;
 	--mc-body-color2: #4B5563;
+	--mc-body-color3: #515F66;
 	--mc-title-color: #043460;
 	--mc-title-color2: #262626;
+	--mc-title-color3: #09243C;
 	--mc-heading1: "Montserrat Alternates", sans-serif;
 	--mc-heading2: "RecoletaAlt";
 	--mc-heading3: "Cabinet Grotesk", sans-serif;
 	--mc-heading4: "Satoshi", sans-serif;
 	--mc-heading5: "Noto Serif", sans-serif;
+	--mc-heading6: "GT-Walsheim";
 	--mc-body-font: "Satoshi", sans-serif;
 	--mc-body-font2: "Lexend", sans-serif;
+	--mc-body-font3: "Inter", sans-serif;
 	--cube-1: cubic-bezier(0.55, 0.085, 0, 0.99);
 	--cube-2: all .25s cubic-bezier(.645,.045,.355,1);
 	--cube-3: cubic-bezier(0.25, 1, 0.5, 1);
