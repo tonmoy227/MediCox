@@ -14962,6 +14962,71 @@ a:hover, a:focus {
 }
 
 /*---------------------------------------------------- */
+/*Why choose area*/
+/*----------------------------------------------------*/
+.mc-why-c7-text {
+  max-width: 860px;
+}
+.mc-why-c7-text .mc-sec-title7 {
+  max-width: 535px;
+}
+
+.mc-why-c7-wrap {
+  gap: 20px;
+}
+
+.mc-wc7-exp {
+  width: 180px;
+  height: 180px;
+  padding: 20px;
+  border-radius: 16px;
+  background-color: #F1F2F2;
+}
+.mc-wc7-exp h3 {
+  font-size: 80px;
+  font-weight: 500;
+}
+.mc-wc7-exp p {
+  line-height: 1.2;
+  font-size: 20px;
+  font-family: var(--mc-heading6);
+}
+
+.mc-wc7-list-wrap {
+  max-width: 632px;
+}
+
+.wc7-list-area {
+  gap: 20px 30px;
+}
+.wc7-list-area li {
+  margin-bottom: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  color: var(--mc-title-color3);
+}
+.wc7-list-area span {
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 12px;
+  border-radius: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: var(--mc-pr-c12);
+}
+
+/*---------------------------------------------------- */
 /*Footer Section*/
 /*----------------------------------------------------*/
 .mc-footer1-sec {

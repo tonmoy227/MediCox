@@ -1,0 +1,47 @@
+.mc-why-c7-text {
+	max-width: 860px;
+	.mc-sec-title7 {
+		max-width: 535px;
+	}
+}
+.mc-why-c7-wrap {
+	gap: 20px;
+}
+.mc-wc7-exp {
+	width: 180px;
+	height: 180px;
+	padding: 20px;
+	border-radius: 16px;
+	background-color: #F1F2F2;
+	h3 {
+		font-size: 80px;
+		font-weight: 500;
+	}
+	p {
+		line-height: 1.2;
+		font-size: 20px;
+		font-family: var(--mc-heading6);
+	}
+}
+.mc-wc7-list-wrap {
+	max-width: 632px;
+}
+.wc7-list-area {
+	gap: 20px 30px;
+	li {
+		margin-bottom: 20px;
+		align-items: center;
+		display: flex !important;
+		color: var(--mc-title-color3);
+	}
+	span {
+		width: 30px;
+		height: 30px;
+		display: flex;
+		margin-right: 12px;
+		border-radius: 100%;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--mc-pr-c12);
+	}
+}
