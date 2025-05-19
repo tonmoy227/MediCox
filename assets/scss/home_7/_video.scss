@@ -1,0 +1,63 @@
+.mc-vd7-sec {
+	z-index: 1;
+	margin: 0px 52px;
+	margin-top: 32px;
+	border-radius: 20px;
+	@media #{$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+}
+.mc-vd7-img {
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+}
+.mc-vd7-video {
+	padding: 320px 0px;
+	@media #{$lg,$md,$sm} {
+		padding: 280px 0px;
+	}
+	@media #{$xs,$xxs} {
+		padding: 220px 0px;
+	}
+}
+.mc-vd7-play {
+	left: 0;
+	top: 50%;
+	right: 0;
+	width: 96px;
+	height: 96px;
+	display: flex;
+	margin: 0 auto;
+	font-size: 14px;
+	position: absolute;
+	border-radius: 100%;
+	align-items: center;
+	background-color: #fff;
+	justify-content: center;
+	color: var(--mc-title-color2);
+	transform: translateY(-50%);
+	.video_btn_border {
+		top: 0;
+		left: 0;
+		opacity: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 60px;
+		position: absolute;
+		-webkit-animation-play-state: running;
+		animation-play-state: running;
+		border: 1px solid #fff;
+		-webkit-animation: border_animation 3.9s linear 0s infinite;
+		animation: border_animation 3.9s linear 0s infinite;
+		&:is(.border_wrap-2) {
+			animation-delay: 1.3s;
+		}
+		&:is(.border_wrap-3) {
+			animation-delay: 2.6s;
+		}
+	}
+}

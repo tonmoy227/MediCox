@@ -1,3 +1,41 @@
+.mc-why-c7-sec {
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		padding: 80px 0px;
+	}
+	.mc-why-c7-img {
+		top: 52px;
+		right: 52px;
+		overflow: hidden;
+		border-radius: 20px;
+		@media #{$xxxl} {
+			right: -50px;
+		}
+		@media #{$xxl} {
+			right: -150px;
+		}
+		@media #{$xl} {
+			right: -350px;
+		}
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			max-height: 450px;
+			margin-bottom: 40px;
+			position: static !important;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		span {
+			right: 0;
+			bottom: 0;
+			position: absolute;
+			@media #{$lg,$md,$sm,$xs,$xxs} {
+				display: none;
+			}
+		}
+	}
+}
 .mc-why-c7-text {
 	max-width: 860px;
 	.mc-sec-title7 {
@@ -6,6 +44,9 @@
 }
 .mc-why-c7-wrap {
 	gap: 20px;
+	@media #{$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+	}
 }
 .mc-wc7-exp {
 	width: 180px;
@@ -28,6 +69,9 @@
 }
 .wc7-list-area {
 	gap: 20px 30px;
+	@media #{$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+	}
 	li {
 		margin-bottom: 20px;
 		align-items: center;

@@ -399,6 +399,23 @@ Last change:    00/00/00
 			}, 700);
 })		
 });
+if($(".mc-testi7-slider").length) {
+	var TZS2lider = new Swiper(".mc-testi7-slider", {
+		loop: true,
+		speed: 1000,
+		effect: "fade",
+		fadeEffect: {
+			crossFade: true
+		},
+		autoplay:  {
+			delay: 5000,
+		},
+		pagination: {
+			el: ".mc-testi7-pagi",
+			type: "fraction",
+		},
+	});
+};
 if($(".mc-ab7-img-active").length) {
 	var TZS2lider = new Swiper(".mc-ab7-img-active", {
 		loop: true,
@@ -407,9 +424,9 @@ if($(".mc-ab7-img-active").length) {
 		fadeEffect: {
 			crossFade: true
 		},
-		// autoplay:  {
-		// 	delay: 5000,
-		// },
+		autoplay:  {
+			delay: 5000,
+		},
 		navigation: {
 			nextEl: ".mc-ab-next",
 			prevEl: ".mc-ab-prev",

@@ -33,6 +33,46 @@
 	@media #{$xxs} {
 		padding: 40px 20px;
 	}
+	&:is(.ver_2) {
+		z-index: 2;
+		max-width: 530px;
+		position: relative;
+		background-color: #E7EFF8;
+		@media #{$md,$sm,$xs,$xxs} {
+			max-width: 100%;
+		}
+		.input-field {
+			label {
+				color: var(--mc-title-color3);
+				font-family: var(--mc-heading6);
+			}
+			input,textarea {
+				border-bottom: 1px solid #515F66;
+			}
+		}
+		button {
+			display: flex;
+			font-weight: 500;
+			border-radius: 100px;
+			align-items: center;
+			font-family: var(--mc-heading6);
+			padding: 10px 10px 10px 28px;
+			background-color: var(--mc-title-color3);
+			i {
+				width: 36px;
+				height: 36px;
+				display: flex;
+				font-size: 14px;
+				margin-left: 10px;
+				align-items: center;
+				border-radius: 100%;
+				background-color: #fff;
+				justify-content: center;
+				color: var(--mc-title-color3);;
+				transform: rotate(-45deg);
+			}
+		}
+	}
 }
 .mc-contact6-form-area {
 	width: 100%;

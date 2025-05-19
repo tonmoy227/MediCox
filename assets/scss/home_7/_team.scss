@@ -1,0 +1,120 @@
+.mc-tm7-sec {
+	margin: 0px 52px;
+	border-radius: 20px;
+	background-color: #F1F2F2;
+	@media #{$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+	.mc-sec-title7 {
+		max-width: 725px;
+	}
+}
+.mc-tm7-content {
+	gap: 32px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+.mc-tm7-btn-wrap {
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		gap: 32px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+.mc-tm7-item {
+	padding: 16px;
+	max-width: 347px;
+	overflow: hidden;
+	border-radius: 17px;
+	background-color: #fff;
+	border-bottom: 4px solid #E2E2E2;
+	.item-img {
+		overflow: hidden;
+		border-radius: 14px;
+	}
+	.item-text {
+		span {
+			color: #4CB0B3;
+			padding-bottom: 5px;
+			letter-spacing: -1px;
+		}
+		h3 {
+			font-size: 24px;
+			font-weight: 500;
+			letter-spacing: -1px;
+		}
+	}
+	.item-bottom {
+		width: 100%;
+		padding: 10px 20px;
+		border-radius: 7px;
+		position: relative;
+		border: 1px solid rgba(9, 36, 60, .12);
+		&:before {
+			top: 0;
+			left: 50%;
+			width: 1px;
+			content: '';
+			height: 100%;
+			position: absolute;
+			transform: translateX(-50%);
+			background-color: rgba(9, 36, 60, .12);;
+		}
+		span {
+			display: flex;
+			font-size: 16px;
+			align-items: center;
+			letter-spacing: -1px;
+			@media #{$xxs} {
+				font-size: 14px;
+			}
+			i {
+				margin-right: 8px;	
+			}
+			strong {
+				font-weight: 400;
+				transform: translateY(2px);
+			}
+		}
+	}
+}
+
+.mc-tm7-btn {
+	height: 50%;
+	width: 183px;
+	display: flex;
+	padding: 24px;
+	height: 215px;
+	border-radius: 10px;
+	align-items: center;
+	background-color: var(--mc-pr-c12);
+	.item-icon {
+		width: 48px;
+		height: 48px;
+		border-radius: 7px;
+		margin-bottom: 75px;
+		background-color: #FFFFFF7A;
+		border-bottom: 2px solid #AACC95
+	}
+	.item-text {
+		line-height: 1.2;
+		max-width: 100px;
+		color: var(--mc-title-color3);
+		font-family: var(--mc-heading6);
+	}
+	&:is(.ver_2) {
+		margin-top: 20px;
+		background-color: #fff;
+		.item-icon {
+			background-color: #F1F2F27A;
+			border-bottom: 2px solid #CED3D8;
+		}
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			margin-top: 0px;
+		}
+	}
+}
