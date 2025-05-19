@@ -1440,6 +1440,14 @@
 						justify-content: center;
 						color: var(--mc-title-color3);
 						transform: rotate(-45deg);
+						transition: all 300ms ease-in-out;
+					}
+					&:hover {
+						color: var(--mc-title-color3);
+						background-color: var(--mc-pr-c11);
+						i {
+							transform: rotate(0deg);
+						}
 					}
 				}
 			}
