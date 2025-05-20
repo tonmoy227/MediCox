@@ -36,12 +36,34 @@
 	}
 	.item-btn {
 		a {
+			z-index: 1;
 			width: 100%;
+			overflow: hidden;
+			position: relative;
 			padding: 14px 15px;
 			border-radius: 100px;
 			background-color: #fff;
 			color: var(--mc-title-color3);
 			font-family: var(--mc-heading6);
+			&:before {
+				top: 0;
+				left: 0;
+				width: 0%;
+				right: 0;
+				content: '';
+				height: 100%;
+				z-index: -1;
+				margin: 0 auto;
+				position: absolute;
+				border-radius: 100px;
+				transition: all 400ms ease-in-out;
+				background-color: var(--mc-pr-c11);
+			}
+			&:hover {
+				&:before {
+					width: 100%;
+				}
+			}
 		}
 	}
 }
@@ -69,6 +91,7 @@
 		border-radius: 20px;
 		&:before {
 			left: 0;
+			z-index: 1;
 			bottom: 0;
 			height: 40%;
 			width: 100%;
@@ -122,6 +145,9 @@
 	}
 	.item-rate {
 		margin-bottom: 25px;
+		opacity: 0;
+		transform: translateY(20px);
+		transition: 1000ms cubic-bezier(0.5, -0.75, 0.3, 2.5);
 		li {
 			color: #E4354A;
 			margin-right: 4px;
@@ -130,6 +156,9 @@
 	.item-text {
 		width: 100%;
 		max-width: 395px;
+		opacity: 0;
+		transform: translateY(20px);
+		transition: 1000ms cubic-bezier(0.5, -0.75, 0.3, 2.5);
 		h3 {
 			font-size: 26px;
 			font-weight: 500;
@@ -141,6 +170,9 @@
 	.item-author {
 		margin-top: 32px;
 		position: relative;
+		opacity: 0;
+		transform: translateY(20px);
+		transition: 1000ms cubic-bezier(0.5, -0.75, 0.3, 2.5);
 		&:before {
 			top: 50%;
 			left: 0;
@@ -167,6 +199,9 @@
 	.item-img {
 		overflow: hidden;
 		border-radius: 12px;
+		opacity: 0;
+		transform: translateY(20px);
+		transition: 1000ms cubic-bezier(0.5, -0.75, 0.3, 2.5);
 		@media #{$sm,$xs,$xxs} {
 			width: 100%;
 			height: 200px;
@@ -175,6 +210,29 @@
 				height: 100%;
 				object-fit: cover;
 			}
+		}
+	}
+}
+.swiper-slide-active {
+	.mc-testi7-item {
+		.item-rate {
+			opacity: 1;
+			transform: translateY(0px);
+		}
+		.item-text {
+			opacity: 1;
+			transform: translateY(0px);
+			transition-delay: 300ms;
+		}
+		.item-author {
+			opacity: 1;
+			transform: translateY(0px);
+			transition-delay: 500ms;
+		}
+		.item-img {
+			opacity: 1;
+			transform: translateY(0px);
+			transition-delay: 400ms;
 		}
 	}
 }

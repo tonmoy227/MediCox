@@ -10,6 +10,9 @@
 	.item-img {
 		margin-bottom: 20px;
 		border-radius: 16px;
+		img {
+			transition: all 500ms ease-in-out;
+		}
 	}
 	.item-text {
 		.item-author {
@@ -41,6 +44,9 @@
 			background-color: #F1F2F2;
 			i {
 				transform: rotate(-45deg);
+			}
+			&:hover {
+				background-color: var(--mc-pr-c11);
 			}
 		}
 		.blog_title {
@@ -80,6 +86,13 @@
 			.item-meta2 {
 				font-size: 16px;
 				color: var(--mc-title-color3);
+			}
+		}
+	}
+	&:hover {
+		.item-img {
+			img {
+				transform: scale(1.1) rotate(-5deg);
 			}
 		}
 	}

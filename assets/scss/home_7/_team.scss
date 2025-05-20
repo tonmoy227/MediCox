@@ -32,9 +32,13 @@
 	border-radius: 17px;
 	background-color: #fff;
 	border-bottom: 4px solid #E2E2E2;
+	transition: all 400ms ease-in-out;
 	.item-img {
 		overflow: hidden;
 		border-radius: 14px;
+		img {
+			transition: all 400ms ease-in-out;
+		}
 	}
 	.item-text {
 		span {
@@ -81,8 +85,32 @@
 			}
 		}
 	}
+	&:hover {
+		transform: translateY(-10px);
+		.item-img {
+			img {
+				transform: scale(1.1);
+			}
+		}
+	}
 }
-
+@keyframes TXTANIM {
+	0% {
+		transform: skewX(-2deg) scale(1);
+		filter: hue-rotate(0deg);
+		opacity: 1;
+	}
+	50% {
+		transform: skewX(2deg) translateZ(5px) scale(1.05);
+		filter: hue-rotate(2deg);
+		opacity: 1;
+	}
+	100% {
+		transform: skewX(-2deg) scale(1);
+		filter: hue-rotate(0deg);
+		opacity: 1;
+	}
+}
 .mc-tm7-btn {
 	height: 50%;
 	width: 183px;
@@ -98,7 +126,8 @@
 		border-radius: 7px;
 		margin-bottom: 75px;
 		background-color: #FFFFFF7A;
-		border-bottom: 2px solid #AACC95
+		border-bottom: 2px solid #AACC95;
+		transition: all 500ms ease-in-out;
 	}
 	.item-text {
 		line-height: 1.2;
@@ -115,6 +144,12 @@
 		}
 		@media #{$lg,$md,$sm,$xs,$xxs} {
 			margin-top: 0px;
+		}
+	}
+	&:hover {
+		animation: TXTANIM 2s ease infinite;
+		.item-icon {
+			transform: scale(-1) rotate(180deg);
 		}
 	}
 }

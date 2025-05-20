@@ -1,3 +1,29 @@
+@keyframes TXT12 {
+	0% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	40% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	50% {
+		-webkit-transform: rotate(-15deg);
+		transform: rotate(-15deg);
+	}
+	65% {
+		-webkit-transform: rotate(15deg);
+		transform: rotate(15deg);
+	}
+	80% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	to {
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+}
 .mc-ab7-content {
 	gap: 40px 50px;
 	@media #{$xxl,$xl} {
@@ -15,8 +41,19 @@
 	margin-right: -80px;
 	.mc-ab7-shape7 {
 		left: 0;
-		z-index: 2;
 		bottom: 0;
+		z-index: 2;
+		-webkit-animation-duration: 5s;
+		animation-duration: 5s;
+		-webkit-animation-iteration-count: infinite;
+		animation-iteration-count: infinite;
+		-webkit-animation-name: TXT12;
+		animation-name: TXT12;
+		-webkit-animation-timing-function: ease-in-out;
+		animation-timing-function: ease-in-out;
+		transform-box: fill-box;
+		-webkit-transform-origin: center;
+		transform-origin: center;
 		@media #{$sm,$xs,$xxs} {
 			display: none;
 		}
@@ -26,6 +63,19 @@
 		max-width: 100%;
 		margin-right: 0;
 		max-height: 700px;
+	}
+}
+.mc-ab7-img {
+	img {
+		transform: scale(1.2);
+		transition: all 1000ms ease-in-out;
+	}
+}
+.swiper-slide-active {
+	.mc-ab7-img {
+		img {
+			transform: scale(1);
+		}
 	}
 }
 .mc-ab7-img-active {

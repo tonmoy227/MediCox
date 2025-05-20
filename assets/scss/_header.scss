@@ -1287,9 +1287,15 @@
 					i {
 						margin-left: 5px;
 						transform: rotate(-45deg);
+						transition: all 500ms ease-in-out;
 					}
 					&:first-child {
 						margin-left: 0;
+					}
+					&:hover {
+						i {
+						transform: rotate(0deg);	
+						}
 					}
 				}
 			}
@@ -1396,6 +1402,9 @@
 					height: 44px;
 					border-radius: 100%;
 					border: 1px solid #09243C1F;
+					img {
+						animation: ring 2s ease infinite;
+					}
 				}
 				.item-text {
 					a,span {
@@ -1453,6 +1462,26 @@
 			}
 		}
 	}
+}
+@keyframes ring {
+    0% {
+        transform: skew(0deg) scale(1);
+    }
+    20% {
+        transform: skew(5deg) translateZ(20px) scale(1.1);
+    }
+    40% {
+        transform: skew(-5deg) scale(1.1);
+    }
+    60% {
+        transform: skew(3deg) translateZ(20px) scale(1.1);
+    }
+    80% {
+        transform: skew(-3deg) scale(1.1);
+    }
+    100% {
+        transform: skew(0deg) scale(1);
+    }
 }
 .txa_sticky_header {
 	position: fixed;

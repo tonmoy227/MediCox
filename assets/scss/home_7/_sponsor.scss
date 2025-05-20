@@ -21,7 +21,30 @@
 		max-width: 545px;
 	}
 }
+@keyframes TXTANIM10 {
+	0% {
+		transform: translate(0, 0) scale(1);
+		filter: hue-rotate(0deg);
+	}
+	25% {
+		transform: translate(2px, 2px) translateZ(15px) scale(1.02);
+		filter: hue-rotate(15deg);
+	}
+	50% {
+		transform: translate(-2px, -2px) translateZ(15px) scale(1.02);
+		filter: hue-rotate(-15deg);
+	}
+	75% {
+		transform: translate(-2px, 2px) translateZ(15px) scale(1.02);
+		filter: hue-rotate(15deg);
+	}
+	100% {
+		transform: translate(0, 0) scale(1);
+		filter: hue-rotate(0deg);
+	}
+}
 .mc-spon7-item {
+	cursor: pointer;
 	@media #{$md,$sm,$xs,$xxs} {
 		width: 50%;
 	}
@@ -44,6 +67,11 @@
 		}
 		@media #{$md,$sm,$xs,$xxs} {
 			width: 100%;
+		}
+	}
+	&:hover {
+		img {
+			animation: TXTANIM10 2s ease infinite;
 		}
 	}
 }

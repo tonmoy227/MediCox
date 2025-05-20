@@ -106,6 +106,9 @@
 			background-color: #76AE52;
 			border: 5px solid #BAF593;
 			box-shadow: 0px 0px 14px 0px #00000040;
+			img {
+				animation: ring 1s ease infinite;
+			}
 		}
 		.item-text {
 			font-family: var(--mc-heading6);
@@ -127,14 +130,27 @@
 	}
 }
 .appt-btn {
-	color: #fff;
+	color: #fff !important;
 	width: 100%;
+	overflow: hidden;
 	font-weight: 500;
-	padding: 14px 20px;
+	padding: 12px 20px;
+	position: relative;
 	border-radius: 10px;
 	font-family: var(--mc-heading6);
+	border: 2px solid var(--mc-title-color3);
 	background-color: var(--mc-title-color3);
+	&:before {
+		top: 0;
+		left: 0;
+		content: '';
+		height: 110%;
+		position: absolute;
+		background-color: #fff;
+	}
 	&:hover {
-		color: #fff;
+		background-color: transparent;
+		color: var(--mc-title-color3) !important;
+		box-shadow: 0 -4px 0 0 var(--mc-title-color3);
 	}
 }

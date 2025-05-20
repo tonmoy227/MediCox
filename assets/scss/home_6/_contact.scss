@@ -68,8 +68,12 @@
 				border-radius: 100%;
 				background-color: #fff;
 				justify-content: center;
-				color: var(--mc-title-color3);;
+				color: var(--mc-title-color3);
 				transform: rotate(-45deg);
+			}
+			&:hover {
+				color: var(--mc-title-color3);
+				background-color: var(--mc-pr-c11);
 			}
 		}
 	}

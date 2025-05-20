@@ -1,3 +1,25 @@
+@keyframes TXT9 {
+	0% {
+		-webkit-transform: rotateY(0);
+		transform: rotateY(0);
+	}
+	30% {
+		-webkit-transform: rotateY(0);
+		transform: rotateY(0);
+	}
+	40% {
+		-webkit-transform: rotateY(45deg);
+		transform: rotateY(45deg);
+	}
+	80% {
+		-webkit-transform: rotateY(-10turn);
+		transform: rotateY(-10turn);
+	}
+	to {
+		-webkit-transform: rotateY(-10turn);
+		transform: rotateY(-10turn);
+	}
+}
 .mc-why-c7-sec {
 	@media #{$lg,$md,$sm,$xs,$xxs} {
 		padding: 80px 0px;
@@ -30,6 +52,19 @@
 			right: 0;
 			bottom: 0;
 			position: absolute;
+			-webkit-animation-duration: 20s;
+			animation-duration: 20s;
+			-webkit-animation-iteration-count: infinite;
+			animation-iteration-count: infinite;
+			-webkit-animation-name: TXT9;
+			animation-name: TXT9;
+			-webkit-animation-timing-function: ease-in-out;
+			animation-timing-function: ease-in-out;
+			-webkit-animation-timing-function: ease-out;
+			animation-timing-function: ease-out;
+			transform-box: fill-box;
+			-webkit-transform-origin: center;
+			transform-origin: center;
 			@media #{$lg,$md,$sm,$xs,$xxs} {
 				display: none;
 			}
