@@ -41,6 +41,7 @@
 		margin-bottom: 120px;
 		background-color: #F1F2F2;
 		font-family: var(--mc-heading6);
+		transition: all 500ms ease-in-out;
 	}
 	.item-text {
 		max-width: 266px;
@@ -64,6 +65,12 @@
 		@media #{$md,$sm,$xs,$xxs} {
 			padding-left: 30px;
 			border: 1px solid  #09243C29;
+		}
+	}
+	&:hover {
+		.item-serial {
+			background-color: var(--mc-pr-c11);
+			animation: flip 1s infinite;
 		}
 	}
 }

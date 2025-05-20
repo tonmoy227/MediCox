@@ -3823,6 +3823,7 @@ a:hover, a:focus {
 }
 .mc-sec-title7 .sec_title {
   font-size: 48px;
+  line-height: 1.08;
   font-weight: 500;
   letter-spacing: -1px;
 }
@@ -14723,7 +14724,6 @@ a:hover, a:focus {
 .mc-appoint7-schedule h3 {
   font-size: 28px;
   font-weight: 500;
-  letter-spacing: -1px;
 }
 .mc-appoint7-schedule .info-schedule {
   padding: 32px;
@@ -15300,6 +15300,12 @@ a:hover, a:focus {
   border-radius: 12px;
   background-color: #F4E9E3;
 }
+.mc-ser7-item:is(.ver_2) {
+  background-color: #FFFFFF;
+}
+.mc-ser7-item:is(.ver_3) {
+  background-color: #E0ECE5;
+}
 @media (max-width: 480px) {
   .mc-ser7-item {
     width: 100%;
@@ -15395,6 +15401,7 @@ a:hover, a:focus {
   max-width: 426px;
 }
 .mc-ser7-arrow a {
+  z-index: 1;
   width: 280px;
   height: 280px;
   display: -webkit-box;
@@ -15414,14 +15421,27 @@ a:hover, a:focus {
     height: 240px;
   }
 }
+.mc-ser7-arrow a svg .line_1 {
+  fill: #8B99A1;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+.mc-ser7-arrow a svg .line_2 {
+  fill: #FFD162;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
 .mc-ser7-arrow a:before, .mc-ser7-arrow a:after {
   top: 0;
+  z-index: -1;
   width: 100%;
   content: "";
   height: 100%;
   position: absolute;
   border-radius: 100%;
   border: 1px solid #fff;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 .mc-ser7-arrow a:before {
   left: -10px;
@@ -15432,6 +15452,20 @@ a:hover, a:focus {
   right: -10px;
   -webkit-animation: moveLeftRight 3s ease-in-out infinite;
           animation: moveLeftRight 3s ease-in-out infinite;
+}
+.mc-ser7-arrow a:hover:before {
+  border: 1px solid var(--mc-pr-c11);
+  background-color: var(--mc-pr-c11);
+}
+.mc-ser7-arrow a:hover:after {
+  background-color: #E0ECE5;
+  border: 1px solid #E0ECE5;
+}
+.mc-ser7-arrow a:hover svg .line_1 {
+  fill: var(--mc-title-color3);
+}
+.mc-ser7-arrow a:hover svg .line_2 {
+  fill: var(--mc-pr-c11);
 }
 
 /*---------------------------------------------------- */
@@ -15982,6 +16016,8 @@ a:hover, a:focus {
   margin-bottom: 120px;
   background-color: #F1F2F2;
   font-family: var(--mc-heading6);
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
 .mc-proc7-item .item-text {
   max-width: 266px;
@@ -16012,6 +16048,11 @@ a:hover, a:focus {
     padding-left: 30px;
     border: 1px solid rgba(9, 36, 60, 0.1607843137);
   }
+}
+.mc-proc7-item:hover .item-serial {
+  background-color: var(--mc-pr-c11);
+  -webkit-animation: flip 1s infinite;
+          animation: flip 1s infinite;
 }
 
 /*---------------------------------------------------- */
@@ -17753,7 +17794,6 @@ a:hover, a:focus {
 }
 .mc-ftr6-widget .widget-title:is(.ver_2) {
   font-size: 24px;
-  letter-spacing: -1px;
 }
 .mc-ftr6-widget .widget-title:is(.ver_2):before {
   background-color: var(--mc-pr-c12);
@@ -17782,6 +17822,9 @@ a:hover, a:focus {
 }
 .mc-ftr6-widget .menu-widget li a:hover {
   color: var(--mc-pr-c10);
+}
+.mc-ftr6-widget .menu-widget:is(.ver_2) li a {
+  font-weight: 300;
 }
 .mc-ftr6-widget .menu-widget:is(.ver_2) li a:hover {
   color: var(--mc-pr-c12);
